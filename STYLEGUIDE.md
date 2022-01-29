@@ -206,7 +206,7 @@
 ```
 
 ### Vertical rhythm
-Responsive vertical rhythm is a CSS pattern that we use on the Austyle Theme. [This article](https://zellwk.com/blog/responsive-vertical-rhythm/) explains the concept in more detail. Below is a quick example of how line-height and margins should match in order to create this consistent spacing.
+Responsive vertical rhythm is a CSS pattern that we use on the Exuberant Theme. [This article](https://zellwk.com/blog/responsive-vertical-rhythm/) explains the concept in more detail. Below is a quick example of how line-height and margins should match in order to create this consistent spacing.
 ```css
 /* set line height on html */
 html {
