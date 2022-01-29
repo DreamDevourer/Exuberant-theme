@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <a href="#">Styleguides</a> |
+  <a href="./STYLEGUIDE.md">Styleguides</a> |
   <a href="https://marketplace.remotish.agency/exuberant-theme">Demo website</a> |
   <a href="#">Contributing</a> |
   <a href="./LICENSE">License</a>
