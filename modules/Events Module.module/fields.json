@@ -1,0 +1,274 @@
+[ {
+  "id" : "82910573-3d81-e33c-8963-56238ae4ba1a",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "Next Events",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Next Events"
+}, {
+  "id" : "8ced0d55-835f-cbd5-e5a6-3d1123fb90c3",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "00392bd0-caf4-226b-6fe9-9a68de522e9f",
+    "name" : "title_color",
+    "display_width" : null,
+    "label" : "Title Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "title_color" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "568e1dcf-d3aa-12f6-bd9e-02a954632b52",
+  "name" : "event",
+  "display_width" : null,
+  "label" : "Event",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 10,
+    "sorting_label_field" : "a021bb90-a305-89ee-2bbd-a428017b8a64",
+    "default" : 6
+  },
+  "children" : [ {
+    "id" : "9a288ee2-8550-5f7e-5a09-1e5bc5aea7b5",
+    "name" : "date_field",
+    "display_width" : null,
+    "label" : "Date",
+    "required" : false,
+    "locked" : false,
+    "type" : "date",
+    "default" : 1642665600000
+  }, {
+    "id" : "a021bb90-a305-89ee-2bbd-a428017b8a64",
+    "name" : "event_title",
+    "display_width" : null,
+    "label" : "Event Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Plants to save / San Diego",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Plants to save / San Diego"
+  }, {
+    "id" : "f82c3b65-634f-378c-6497-2a77cc7a6846",
+    "name" : "button_link",
+    "display_width" : null,
+    "label" : "Button Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "dbc4af1e-d2aa-c339-c254-31c0e1398b6a",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Details",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Details"
+  }, {
+    "id" : "6a233da3-6949-80b3-270d-15edb4d9743b",
+    "name" : "event_image",
+    "display_width" : null,
+    "label" : "Event Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/unsplash_oRWRlTgBrPo.jpeg",
+      "alt" : "unsplash_oRWRlTgBrPo",
+      "loading" : "lazy",
+      "width" : 93,
+      "height" : 93,
+      "max_width" : 93,
+      "max_height" : 93
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "date_field" : 1642665600000,
+    "event_title" : "Plants to save / San Diego",
+    "button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "button_text" : "Details",
+    "event_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/unsplash_oRWRlTgBrPo.jpeg",
+      "alt" : "unsplash_oRWRlTgBrPo",
+      "loading" : "lazy",
+      "width" : 93,
+      "height" : 93,
+      "max_width" : 93,
+      "max_height" : 93
+    }
+  }, {
+    "date_field" : 1642665600000,
+    "event_title" : "Plants to save / San Diego",
+    "button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "button_text" : "Details",
+    "event_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/unsplash_oRWRlTgBrPo.jpeg",
+      "alt" : "unsplash_oRWRlTgBrPo",
+      "loading" : "lazy",
+      "width" : 93,
+      "height" : 93,
+      "max_width" : 93,
+      "max_height" : 93
+    }
+  }, {
+    "date_field" : 1642665600000,
+    "event_title" : "Plants to save / San Diego",
+    "button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "button_text" : "Details",
+    "event_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/unsplash_oRWRlTgBrPo.jpeg",
+      "alt" : "unsplash_oRWRlTgBrPo",
+      "loading" : "lazy",
+      "width" : 93,
+      "height" : 93,
+      "max_width" : 93,
+      "max_height" : 93
+    }
+  }, {
+    "date_field" : 1642665600000,
+    "event_title" : "Plants to save / San Diego",
+    "button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "button_text" : "Details",
+    "event_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/unsplash_oRWRlTgBrPo.jpeg",
+      "alt" : "unsplash_oRWRlTgBrPo",
+      "loading" : "lazy",
+      "width" : 93,
+      "height" : 93,
+      "max_width" : 93,
+      "max_height" : 93
+    }
+  }, {
+    "date_field" : 1642665600000,
+    "event_title" : "Plants to save / San Diego",
+    "button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "button_text" : "Details",
+    "event_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/unsplash_oRWRlTgBrPo.jpeg",
+      "alt" : "unsplash_oRWRlTgBrPo",
+      "loading" : "lazy",
+      "width" : 93,
+      "height" : 93,
+      "max_width" : 93,
+      "max_height" : 93
+    }
+  }, {
+    "date_field" : 1642665600000,
+    "event_title" : "Plants to save / San Diego",
+    "button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "button_text" : "Details",
+    "event_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/unsplash_oRWRlTgBrPo.jpeg",
+      "alt" : "unsplash_oRWRlTgBrPo",
+      "loading" : "lazy",
+      "width" : 93,
+      "height" : 93,
+      "max_width" : 93,
+      "max_height" : 93
+    }
+  } ]
+} ]

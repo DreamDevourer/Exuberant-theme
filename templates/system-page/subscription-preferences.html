@@ -1,0 +1,41 @@
+<!--
+  templateType: email_subscription_preferences_page
+  isAvailableForNewContent: true
+  label: Email Subscription Preferences
+-->
+{% extends '../layouts/base.html' %}
+
+{% block body %}
+<main class="body-container-wrapper">
+ 
+  
+  <section class="content-wrapper subsc-perferences">
+    <div class="error-page" >
+      <div class="systems-body">
+        <div class="container">
+          <div class="systems-inner">
+            <div class="custom_error_message">
+              {% module 'subscription_preferences'
+        path='@hubspot/email_subscriptions'
+      %}
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+      
+    </div>
+  </section>
+  
+
+  
+  
+  
+  
+  
+</main>
+{% endblock body %}
+
+
+

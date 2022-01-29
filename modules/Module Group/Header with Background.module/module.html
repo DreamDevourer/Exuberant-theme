@@ -1,0 +1,21 @@
+
+  <div class="chapter-section " style=" background-image:url('{{ module.background_image.src }}')" id="tab{{ module.section_id }}">
+       <div class="container titleborder">
+           <h2>
+              {{ module.section_title }}
+         </h2>
+    </div>
+  </div>
+
+{% require_css %}
+    <style>
+      #hs_cos_wrapper_{{name}} .chapter-section:before { opacity:1; background:rgba({{ module.overlay.color|convert_rgb }},{{module.overlay.opacity / 100 }}); } 
+    
+   {% if module.divider %}
+       #hs_cos_wrapper_{{name}} .titleborder:before {     background:rgba({{ module.divider_color.color|convert_rgb }},{{ module.divider_color.opacity / 100 }}) }
+   {% endif %}
+      
+</style>
+{% end_require_css %}
+
+

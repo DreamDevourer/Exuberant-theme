@@ -1,0 +1,85 @@
+<section  class="product_gallery__main">
+    <div class="container">
+       <div class="product_gallery__row">
+            <div class="product_gallery__left">
+                 <div class="product_gallery__image1">
+                   {% for item in module.image_gallery %}
+                   {% if loop.first %}
+                   <div class="product_gallery__image1in" style="background-image:url('{{ item.image_field.src }}')">
+
+                   </div>
+                   {% endif %}
+                   {% endfor %}   
+                </div>
+                <div class="product_gallery__image2">
+                  {% for item in module.image_gallery %}
+                   {% if loop.index > 1 and loop.index < 4  %}
+                   <div class="product_gallery__imagein2" style="background-image:url('{{ item.image_field.src }}')">
+
+                   </div>
+                   {% endif %}
+                   {% endfor %} 
+                </div>
+                <div class="product_gallery__image3">
+                    {% for item in module.image_gallery %}
+                    {% if loop.index > 3   %}
+                   <div class="product_gallery__imagein3" style="background-image:url('{{ item.image_field.src }}')">
+
+                   </div>
+                   {% endif %}
+                   {% endfor %} 
+                </div>
+            </div>
+            <div class="product_gallery__right">
+                <div class="product_gallery__header">
+                    <h2 class="header2">
+                      {{ module.right_group.title }}
+                   </h2>
+                  <span class="galla_rpice"> {{ module.right_group.price }} </span>
+                  <div class="pricemulti__text">
+                      {{ module.right_group.price_text }}
+                  </div>
+                  <div class="pricemulti__btn button_design">
+                    
+                    {% set href = module.right_group.button_link.url.href %}
+                    {% if module.right_group.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+                    {% set href = "mailto:" + href %}
+                    {% endif %}
+                    {% set rel = [] %}
+                    {% if module.right_group.button_link.no_follow %}
+                    {% do rel.append("nofollow") %}
+                    {% endif %}
+                    {% if module.right_group.button_link.open_in_new_tab %}
+                    {% do rel.append("noopener") %}
+                    {% endif %}
+                    <a href="{{ href }}"
+                       {% if module.right_group.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                       {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                       >
+                      {{ module.right_group.button_text }}
+                    </a>
+                     
+                  </div>
+                  <div class="items__typs">
+                    {% for item in module.right_group.product_review %}
+                      <div class="items__typscolumn">
+                        <h4>
+                          {{ item.title }}
+                        </h4>
+                        <span> {{ item.text_field }} </span>
+                     </div>
+                    {% endfor %}
+                  </div>
+                  <div class="pricemulti__details">
+                         <h4>
+                         {{ module.right_group.text_field_1 }}
+                        </h4>
+                        <span> {{ module.right_group.details }} </span>
+                  </div>
+                  
+                  
+                </div>
+           </div>
+       </div>
+   </div>
+</section>

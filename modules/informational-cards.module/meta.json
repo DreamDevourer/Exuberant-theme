@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:Adversal",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 64386996045,
+  "label" : "Informational Cards",
+  "is_available_for_new_content" : true
+}

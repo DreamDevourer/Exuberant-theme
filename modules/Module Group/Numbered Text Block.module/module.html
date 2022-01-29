@@ -1,0 +1,41 @@
+<div class="work-optimization-section animatedParent animateOnce" style="overflow: hidden;" id="{{ module.id_dev }}">
+    <div class="container">
+   
+      {% for item in module.main_group %}
+         <div class="work-optimization-details count-style animated fadeInRightShort delay-250">
+               <h3> 
+                  {% icon
+		name="{{ item.title_icon.name }}"
+		style="{{ item.title_icon.type }}"
+		unicode="{{ item.title_icon.unicode }}"
+	%}   <div class="inner-title">
+                 {{ item.title }}
+                 </div> 
+               </h3>
+                <div class="work-optimization-details1">
+                   {{ item.details1 }}
+               </div>
+               <div class="work-optimization-details2 ">  
+                   {{ item.details2 }}
+               </div>
+         </div>
+      {% endfor %}
+    </div>
+</div>
+
+{% require_css %}
+    <style>
+      #hs_cos_wrapper_{{name}} .work-optimization-details .hs_cos_wrapper_type_icon svg{ fill:rgba({{ module.icon_color.color |convert_rgb }},{{ module.icon_color.opacity / 100 }}); } 
+      #hs_cos_wrapper_{{name}} .count-style ul>li {     margin: 25px 0;  }
+      #hs_cos_wrapper_{{name}} .count-style ul>li:before { background:rgba({{ module.number_bg_color.color|convert_rgb }},{{ module.number_bg_color.opacity / 100 }}); top: -5px;  }
+      #hs_cos_wrapper_{{name}} {    padding-top: 8px;      padding-left: 18px;  }  
+</style>
+
+
+{% end_require_css %}
+
+
+
+
+
+

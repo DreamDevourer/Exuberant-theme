@@ -1,0 +1,184 @@
+[ {
+  "id" : "1162a4dd-c303-7273-1851-7bb635ce6a64",
+  "name" : "logo",
+  "display_width" : null,
+  "label" : "Logo",
+  "required" : false,
+  "locked" : true,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://www.remotish.agency/hubfs/Exuberant%20Theme/Group%201327.svg",
+    "alt" : "Group 1327",
+    "loading" : "lazy",
+    "width" : 272,
+    "height" : 55,
+    "max_width" : 272,
+    "max_height" : 55
+  }
+}, {
+  "id" : "113400ed-dcae-d5be-3385-0ac3b10e8dbd",
+  "name" : "column_1",
+  "display_width" : null,
+  "label" : "Column 1",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "d9adb7bf-9d7c-8eb4-2fa9-c11870bc1a56",
+    "name" : "text_field",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Visit"
+  }, {
+    "id" : "007c03d5-523f-ab36-70bd-45b3c6be23da",
+    "name" : "richtext_field",
+    "display_width" : null,
+    "label" : "Rich text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>999 S. Road Ave<br>San Diego IL 99999<br><a href=\"tel:999-999-999\">999-999-999</a><br><a href=\"mailto:exuberante@exu.com\">exuberante@exu.com</a></p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "text_field" : "Visit",
+    "richtext_field" : "<p>999 S. Road Ave<br>San Diego IL 99999<br><a href=\"tel:999-999-999\">999-999-999</a><br><a href=\"mailto:exuberante@exu.com\">exuberante@exu.com</a></p>"
+  }
+}, {
+  "id" : "54c22ac9-3658-699f-26fe-20dc76bd6c64",
+  "name" : "column_2",
+  "display_width" : null,
+  "label" : "Column 2",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "c82386af-3b90-e9e4-bd9e-e8553a2a19c8",
+    "name" : "text_field",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Connect"
+  }, {
+    "id" : "f0744038-611d-1540-fe82-6ffa337c35f3",
+    "name" : "facebook",
+    "display_width" : null,
+    "label" : "Facebook",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "#"
+  }, {
+    "id" : "03c7b2ac-4ff1-53b7-2306-c0a3b2f75eb6",
+    "name" : "instagram",
+    "display_width" : null,
+    "label" : "Instagram",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "#"
+  }, {
+    "id" : "08e03fc2-b163-6caa-d184-12e077d835dd",
+    "name" : "youtube",
+    "display_width" : null,
+    "label" : "Youtube",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "#"
+  }, {
+    "id" : "63c5a750-bf68-a234-066b-2e814ee6f18d",
+    "name" : "twitter",
+    "display_width" : null,
+    "label" : "Twitter",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "#"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "text_field" : "Connect",
+    "facebook" : "#",
+    "instagram" : "#",
+    "youtube" : "#",
+    "twitter" : "#"
+  }
+}, {
+  "id" : "4e11a0ee-5f27-2b5b-4357-f57fd6f11d00",
+  "name" : "column_3",
+  "display_width" : null,
+  "label" : "Column 3",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "bf102115-20f2-2f86-1212-ecad4eca982d",
+    "name" : "text_field_1",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "About"
+  }, {
+    "id" : "7d69ebe9-14c1-d4e3-661c-145367129111",
+    "name" : "richtext_field_1",
+    "display_width" : null,
+    "label" : "Rich text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames enim habitant at cursus arcu velit.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "text_field_1" : "About",
+    "richtext_field_1" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames enim habitant at cursus arcu velit.</p>"
+  }
+}, {
+  "id" : "9d4f5d47-4f84-930c-2468-0457e5145975",
+  "name" : "text_field_2",
+  "display_width" : null,
+  "label" : "Text",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Copyright @{{year}} <br> Developed by Remotish Agency"
+} ]

@@ -1,0 +1,48 @@
+<header class="exuberant__header"> 
+     <div class="container">
+         <div class="exuberant__row">
+            <div class="exuberant__left">
+             <div class="exwhitelogo__row">
+															
+															<a href="/">
+               <div class="exwhite__logo">
+                 {% if module.field_group.white_logo.src %}
+                 {% set sizeAttrs = 'width="{{ module.field_group.white_logo.width }}" height="{{ module.field_group.white_logo.height }}"' %}
+                 {% if module.field_group.white_logo.size_type == 'auto' %}
+                 {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                 {% elif module.field_group.white_logo.size_type == 'auto_custom_max' %}
+                 {% set sizeAttrs = 'width="{{ module.field_group.white_logo.max_width }}" height="{{ module.field_group.white_logo.max_height }}" style="max-width: 100%; height: auto;"' %}
+                 {% endif %}
+                 {% set loadingAttr = module.field_group.white_logo.loading != 'disabled' ? 'loading="{{ module.field_group.white_logo.loading }}"' : '' %}
+                 <img src="{{ module.field_group.white_logo.src }}" alt="{{ module.field_group.white_logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                 {% endif %}
+               </div>
+															</a>
+															
+															
+															<a href="/">
+               <div class="exblack__logo" >
+                 {% if module.field_group.black_logo.src %}
+                 {% set sizeAttrs = 'width="{{ module.field_group.black_logo.width }}" height="{{ module.field_group.black_logo.height }}"' %}
+                 {% if module.field_group.black_logo.size_type == 'auto' %}
+                 {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                 {% elif module.field_group.black_logo.size_type == 'auto_custom_max' %}
+                 {% set sizeAttrs = 'width="{{ module.field_group.black_logo.max_width }}" height="{{ module.field_group.black_logo.max_height }}" style="max-width: 100%; height: auto;"' %}
+                 {% endif %}
+                 {% set loadingAttr = module.field_group.black_logo.loading != 'disabled' ? 'loading="{{ module.field_group.black_logo.loading }}"' : '' %}
+                 <img src="{{ module.field_group.black_logo.src }}" alt="{{ module.field_group.black_logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                 {% endif %}
+               </div>
+																	</a>
+               
+              </div>
+
+            </div>
+            <div class="exuberant__right">
+                <nav class="mainmenu">
+                  {% menu id="{{ module.menu_field }}" %}
+                </nav>
+           </div>
+         </div>
+     </div>
+</header>

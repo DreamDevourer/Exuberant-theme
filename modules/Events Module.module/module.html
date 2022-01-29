@@ -1,0 +1,69 @@
+<style>
+		{% scope_css %}
+		.titleEve {
+				color: {{module.style.title_color.color}} !important;
+				border-color: {{module.style.title_color.color}} !important;
+		}
+		{% end_scope_css %}
+</style>
+
+<section>
+		
+		<div class="titleContainerEve">
+				
+		
+		<div class="event_titlemain">
+      <h2 class="titleEve">
+        {{module.title}}
+      </h2>
+      </div>
+				
+				</div>
+		
+		
+		{% for event in module.event %}
+<div class="eventsModule">
+		<div class="mainEventIMG">
+				<img src="{{event.event_image.src}}">
+		</div>
+		
+		<div class="dateTime">
+				<span class="mainNum">{{event.date_field|datetimeformat('%e') }}</span>
+				<div class="dayMonth">
+						<span class="dayArea">{{event.date_field|datetimeformat('%a')|upper }}</span>
+						<span class="monthArea">{{event.date_field|datetimeformat('%b')|upper }}</span>
+				</div>
+		</div>
+		
+		<div class="eventTitle">
+				<p>
+						{{event.event_title}}
+				</p>
+		</div>
+		
+		<div class="button_design bttEveArea">
+				                {% set href = event.button_link.url.href %}
+                {% if event.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                {% set rel = [] %}
+                {% if event.button_link.no_follow %}
+                {% do rel.append("nofollow") %}
+                {% endif %}
+                {% if event.button_link.open_in_new_tab %}
+                {% do rel.append("noopener") %}
+                {% endif %}
+				<a href="{{href}}" {% if event.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                   {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}> {{event.button_text}} </a>
+		</div>
+</div>
+		{% endfor %}
+
+  
+  <div class="event_button button__deaign">
+      <span>
+          Load More
+      </span>
+  </div>
+  
+</section>

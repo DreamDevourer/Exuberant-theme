@@ -1,0 +1,77 @@
+{
+  "img.default.alt" : {
+    "message" : "placeholder_200x200",
+    "description" : "",
+    "placeholders" : null
+  },
+  "img.default.loading" : {
+    "message" : "lazy",
+    "description" : null,
+    "placeholders" : null
+  },
+  "img.default.src" : {
+    "message" : "https://static.hubspot.com/final/img/content/email-template-images/placeholder_200x200.png",
+    "description" : null,
+    "placeholders" : null
+  },
+  "img.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "img.inline_help_text" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "img.placeholder" : {
+    "message" : "",
+    "description" : null,
+    "placeholders" : null
+  },
+  "link.default" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "This is where you'd like to send your visitors when they click on the image. Please include a protocol (i.e. \"http://\") in the URL.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "Link (optional)",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "optimized image",
+    "description" : "",
+    "placeholders" : null
+  },
+  "target.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "Open link in new tab",
+    "description" : "",
+    "placeholders" : null
+  }
+}

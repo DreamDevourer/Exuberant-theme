@@ -1,0 +1,37 @@
+{
+  "img.default.alt" : {
+    "message" : "placeholder_200x200",
+    "description" : "",
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "Изображение",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "Тук искате да изпратите посетителите си, когато щракнат върху изображението. Включете протокол (т.е. \"http://\") в URL адреса.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "Връзка (опционално)",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Изображение",
+    "description" : "",
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "Отваряне на връзката в нов раздел",
+    "description" : "",
+    "placeholders" : null
+  }
+}

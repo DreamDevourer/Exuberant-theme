@@ -1,0 +1,37 @@
+<!--
+  templateType: email_subscriptions_confirmation_page
+  isAvailableForNewContent: true
+  label: Email Subscriptions Confirmation
+-->
+{% extends '../layouts/base.html' %}
+
+{% block body %}
+<main class="body-container-wrapper">
+     
+   
+  <section class="content-wrapper">
+    <div class="error-page" >
+      <div class="systems-body">
+        <div class="container">
+          <div class="systems-inner">
+            <div class="custom_error_message">
+                    {% module 'subscriptions_confirmation'
+        path='@hubspot/email_subscriptions_confirmation'
+      %}
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      
+      
+    </div>
+  </section>
+  
+  
+  
+</main>
+{% endblock body %}
+
+
+

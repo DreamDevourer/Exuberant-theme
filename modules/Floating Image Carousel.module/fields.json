@@ -1,0 +1,106 @@
+[ {
+  "id" : "cd4995a8-6aa5-935a-66df-519647000b3e",
+  "name" : "image_carousel_group",
+  "display_width" : null,
+  "label" : "Image Carousel Group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : 20,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "8002d367-b5e4-055e-36f5-04c4467ccfb8",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : true,
+    "type" : "image",
+    "default" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Future.png",
+      "alt" : "Future",
+      "width" : 452,
+      "height" : 700,
+      "loading" : "lazy",
+      "max_width" : 2288,
+      "max_height" : 3543
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "image_field" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Future.png",
+      "alt" : "Future",
+      "width" : 452,
+      "height" : 700,
+      "loading" : "lazy",
+      "max_width" : 2288,
+      "max_height" : 3543
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Future.png",
+      "alt" : "Future",
+      "width" : 452,
+      "height" : 700,
+      "loading" : "lazy",
+      "max_width" : 2288,
+      "max_height" : 3543
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Future.png",
+      "alt" : "Future",
+      "width" : 452,
+      "height" : 700,
+      "loading" : "lazy",
+      "max_width" : 2288,
+      "max_height" : 3543
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Future.png",
+      "alt" : "Future",
+      "width" : 452,
+      "height" : 700,
+      "loading" : "lazy",
+      "max_width" : 2288,
+      "max_height" : 3543
+    }
+  } ]
+}, {
+  "id" : "7c390623-b406-0e20-6d95-de8fe34ed79a",
+  "name" : "autoplay_",
+  "display_width" : null,
+  "label" : "Autoplay?",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "44ae0d11-e788-4c36-bc0a-98ad43a581bf",
+  "name" : "back_shape_color",
+  "display_width" : null,
+  "label" : "Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#4CBA79",
+    "opacity" : 100
+  }
+} ]

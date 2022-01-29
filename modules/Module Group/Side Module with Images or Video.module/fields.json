@@ -1,0 +1,357 @@
+[ {
+  "id" : "79b586a1-005f-ce98-f67e-b44d5d01ab2c",
+  "name" : "side_module_with_images_or_video",
+  "display_width" : null,
+  "label" : "Side Module with Images or Video",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "9394710b-78c1-0baf-1de9-3a16d6c520ec",
+    "name" : "column",
+    "display_width" : null,
+    "label" : "Column",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "eight", "6/6" ], [ "six", "4/8" ], [ "ten", "3/10" ] ],
+    "type" : "choice",
+    "default" : "six"
+  }, {
+    "id" : "e858b9e7-64fa-7ae7-38e2-6809b231837c",
+    "name" : "bg_color",
+    "display_width" : null,
+    "label" : "BG Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "bb2ad5c5-2fbe-9105-e5b0-82dc2b746555",
+    "name" : "row_loop",
+    "display_width" : null,
+    "label" : "Row",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : 50,
+      "sorting_label_field" : null,
+      "default" : 1
+    },
+    "children" : [ {
+      "id" : "0b3e01b6-fffc-8e89-9b88-a7b76545457c",
+      "name" : "video_",
+      "display_width" : null,
+      "label" : "Video?",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "b91f4fbc-4398-11e6-5fa6-7d6d89b6e1af",
+      "name" : "embed_field",
+      "display_width" : null,
+      "label" : "Embed",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "0b3e01b6-fffc-8e89-9b88-a7b76545457c",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "supported_source_types" : [ "html" ],
+      "supported_oembed_types" : [ "photo", "video", "link", "rich" ],
+      "resizable" : true,
+      "show_preview" : true,
+      "supported_media_bridge_providers" : [ ],
+      "type" : "embed",
+      "default" : {
+        "source_type" : "html",
+        "embed_html" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/9xwazD5SyVg\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+      }
+    }, {
+      "id" : "c149e51d-963e-9e33-34ce-67f933fa7a79",
+      "name" : "image_field",
+      "display_width" : null,
+      "label" : "Image",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "0b3e01b6-fffc-8e89-9b88-a7b76545457c",
+        "controlling_value_regex" : "false",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "responsive" : false,
+      "resizable" : true,
+      "show_loading" : true,
+      "type" : "image",
+      "default" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/FEATUREDIMG.jpeg",
+        "alt" : "FEATUREDIMG",
+        "width" : 458,
+        "height" : 456,
+        "loading" : "lazy",
+        "max_width" : 458,
+        "max_height" : 456
+      }
+    }, {
+      "id" : "0fde4a13-5cb5-a555-2e5c-85e8cba136e3",
+      "name" : "image_size",
+      "display_width" : null,
+      "label" : "Image Size (%)",
+      "help_text" : "Image size set on %",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "0b3e01b6-fffc-8e89-9b88-a7b76545457c",
+        "controlling_value_regex" : "false",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "display" : "slider",
+      "min" : 10,
+      "max" : 100,
+      "step" : 1,
+      "type" : "number",
+      "default" : 100
+    }, {
+      "id" : "2cf467ce-47d7-d7b1-ec6c-e4f597338c78",
+      "name" : "title",
+      "display_width" : null,
+      "label" : "Header",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "This Is a Header"
+    }, {
+      "id" : "13f36c47-b848-5a2f-73f7-f686d2195af9",
+      "name" : "select_tag_for_title",
+      "display_width" : null,
+      "label" : "Select Tag for Header",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "h1", "H1" ], [ "h2", "H2" ], [ "h3", "H3" ], [ "h4", "H4" ] ],
+      "type" : "choice",
+      "default" : "h2"
+    }, {
+      "id" : "8f458d11-ea66-e774-106e-38929e38fccf",
+      "name" : "sub_header",
+      "display_width" : null,
+      "label" : "Sub Header",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text"
+    }, {
+      "id" : "b9872f96-61ee-1c59-ea04-983fa58e1098",
+      "name" : "multi_content",
+      "display_width" : null,
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "type" : "richtext",
+      "default" : "<p>You can pair this subtext with either a video or an image. By toggling on the \"Right\" option in the settings, the visual will move to the right and the text will move to the left.</p>\n<p>Create a cool back-and-forth effect by adding several rows and alternating which side the image appears on.</p>"
+    }, {
+      "id" : "062712d3-9d50-a550-43b9-5792ad3b74b3",
+      "name" : "right_image_or_video_",
+      "display_width" : null,
+      "label" : "Right Image or Video?",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : true
+    }, {
+      "id" : "c7ad3b8e-1de9-914e-871e-5e09f8f1d1af",
+      "name" : "button",
+      "display_width" : null,
+      "label" : "Button?",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "c43ce373-313c-d34b-52ae-393ea4dd7fc7",
+      "name" : "button_text",
+      "display_width" : null,
+      "label" : "Button Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "c7ad3b8e-1de9-914e-871e-5e09f8f1d1af",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Contact Us"
+    }, {
+      "id" : "c07235a2-6354-0e8e-dd6b-a01f91008667",
+      "name" : "button_link",
+      "display_width" : null,
+      "label" : "Button Link",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "c7ad3b8e-1de9-914e-871e-5e09f8f1d1af",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "video_" : false,
+      "embed_field" : {
+        "source_type" : "html",
+        "embed_html" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/9xwazD5SyVg\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+      },
+      "image_field" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/FEATUREDIMG.jpeg",
+        "alt" : "FEATUREDIMG",
+        "width" : 458,
+        "height" : 456,
+        "loading" : "lazy",
+        "max_width" : 458,
+        "max_height" : 456
+      },
+      "image_size" : 100,
+      "title" : "This Is a Header",
+      "select_tag_for_title" : "h2",
+      "multi_content" : "<p>You can pair this subtext with either a video or an image. By toggling on the \"Right\" option in the settings, the visual will move to the right and the text will move to the left.</p>\n<p>Create a cool back-and-forth effect by adding several rows and alternating which side the image appears on.</p>",
+      "right_image_or_video_" : true,
+      "button" : false,
+      "button_text" : "Contact Us",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "id" : "eecd88f1-7983-07ec-6dd0-64a0423f707c",
+    "name" : "on_off_divider",
+    "display_width" : null,
+    "label" : "ON/Off Divider",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "37b3c311-8302-9d67-0d39-f65f2d2a5de6",
+    "name" : "divider_color",
+    "display_width" : null,
+    "label" : "Divider Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#4CBA79",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "d2bbd560-8cc2-73c1-6e4e-5c293892b08d",
+    "name" : "image_rdaius",
+    "display_width" : null,
+    "label" : "Radius",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "min" : 0,
+    "max" : 30,
+    "step" : 1,
+    "type" : "number",
+    "default" : 0
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "column" : "six",
+    "bg_color" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    },
+    "row_loop" : [ {
+      "video_" : false,
+      "embed_field" : {
+        "source_type" : "html",
+        "embed_html" : "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/9xwazD5SyVg\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+      },
+      "image_field" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/FEATUREDIMG.jpeg",
+        "alt" : "FEATUREDIMG",
+        "width" : 458,
+        "height" : 456,
+        "loading" : "lazy",
+        "max_width" : 458,
+        "max_height" : 456
+      },
+      "image_size" : 100,
+      "title" : "This Is a Header",
+      "select_tag_for_title" : "h2",
+      "multi_content" : "<p>You can pair this subtext with either a video or an image. By toggling on the \"Right\" option in the settings, the visual will move to the right and the text will move to the left.</p>\n<p>Create a cool back-and-forth effect by adding several rows and alternating which side the image appears on.</p>",
+      "right_image_or_video_" : true,
+      "button" : false,
+      "button_text" : "Contact Us",
+      "button_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "on_off_divider" : false,
+    "divider_color" : {
+      "color" : "#4CBA79",
+      "opacity" : 100
+    },
+    "image_rdaius" : 0
+  }
+} ]

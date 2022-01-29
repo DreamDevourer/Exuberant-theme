@@ -1,0 +1,26 @@
+.post-filter-dropdown {  float: left;  width: 100%;   border-top: 1px solid #ccc;    padding-top: 55px;}
+.post-filter-row ul { margin: 0; display:none;    position: absolute; padding: 0; margin-top: 12px; max-width: 232px; width:100%; list-style: none; background: #FFFFFF; border: 1px solid #DBE3EB; box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08); border-radius: 4px; z-index: 3; }
+.post-filter-row ul li { }
+.post-filter-row ul li a { font-size: 14px; line-height: 290%; color: #000; display: inline-block; text-transform: capitalize; width: 100%; padding: 0 15px;     border-bottom: 1px solid #ccc; }  
+.post-filter-row ul li a:hover {background: #E3A872;    border-radius: inherit;    opacity: 1;    color: #fff; }
+.post-filter-row ul li a.all-topics {   color: #082244;    }
+.post-filter-row {   float: left;   width: 100%; padding-bottom:6px; }
+span.post-filter-select {    text-align: center;position: relative;     min-width: 130px;     display: inline-block;   background-color: transparent;
+    color: #000;    padding: 12px 20px;    font-size: 16px;    font-weight: 500;    border: 2px solid #000;    border-radius: 0px;
+    padding-right: 38px;cursor: pointer;     min-width: 234px;}
+span.post-filter-select:hover {  background-color: rgba(25,17,11,1.0);    color: #fff;    transition: 0.4s;    border-color: rgba(25,17,11,1.0);}
+
+span.post-filter-select:before {    content: "\f105";    font-family: 'fontawesome';
+    right: 0;    position: absolute;    font-size: 19px; right: 42px;}
+
+.post-filter-row ul li a.all-topics:hover{     color: #fff; }  
+span.post-filter-select.active {   background-color: rgba(25,17,11,1.0); color:#fff;  border-color: rgba(25,17,11,1.0); }
+
+.post-filter-row ul{     max-height: 293px;    overflow-y: auto !important; }
+.post-filter-row ul::-webkit-scrollbar {  width: 7px;}
+ .post-filter-row ul::-webkit-scrollbar-track {  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);}
+ .post-filter-row ul::-webkit-scrollbar-thumb {  background-color: #000;  outline: 1px solid slategrey; }
+
+
+
+

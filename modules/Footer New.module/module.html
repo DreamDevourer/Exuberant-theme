@@ -1,0 +1,75 @@
+<footer class="footer__main">
+      <div class="container">
+        
+         <div class="footer__logo">
+            <a href="/">
+              {% if module.logo.src %}
+              {% set sizeAttrs = 'width="{{ module.logo.width }}" height="{{ module.logo.height }}"' %}
+              {% if module.logo.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif module.logo.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="{{ module.logo.max_width }}" height="{{ module.logo.max_height }}" style="max-width: 100%; height: auto;"' %}
+              {% endif %}
+              {% set loadingAttr = module.logo.loading != 'disabled' ? 'loading="{{ module.logo.loading }}"' : '' %}
+              <img src="{{ module.logo.src }}" alt="{{ module.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+              {% endif %}  
+           </a>
+         </div>
+        
+         <div class="footer__row">
+             <div class="footer__visit">
+                <h5>
+                   {{ module.column_1.text_field }}
+                </h5>
+                <div class="footer__address">
+                   {{ module.column_1.richtext_field }}
+                </div>
+            </div>
+            <div class="footer__content">
+              <h5>
+                {{ module.column_2.text_field }}
+              </h5>
+              <div class="social_area">
+                  <ul>
+                    
+                    
+                    <li> 
+                      <a href="{{ module.column_2.facebook }}"> <img src="https://www.remotish.agency/hubfs/Exuberant%20Theme/et_facebook%20(1).svg" alt="facebook">  </a>
+                    </li>
+                    
+                    <li> 
+                      <a href="{{ module.column_2.instagram }}"> <img src="https://www.remotish.agency/hubfs/Exuberant%20Theme/ph_instagram-logo-light.svg" alt="ph_instagram">  </a>
+                    </li>
+                    
+                    <li> 
+                      <a href="{{ module.column_2.youtube }}"> <img src="https://www.remotish.agency/hubfs/Exuberant%20Theme/ph_youtube-logo-thin.svg" alt="ph_youtube">  </a>
+                    </li>
+                    
+                    
+                    <li> 
+                      <a href="{{ module.column_2.twitter }}"> <img src="https://www.remotish.agency/hubfs/Exuberant%20Theme/iconoir_twitter.svg" alt="ph_youtube">  </a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+              </div>
+           </div>
+           <div class="footer__about">
+               <h5>
+                 {{ module.column_3.text_field_1 }}
+               </h5>
+              <div class="footer__abouttext">
+                {{ module.column_3.richtext_field_1 }}
+             </div>
+           </div>
+           
+           
+         </div>
+         <div class="footer__copyright_new">
+             {{ module.text_field_2 }}
+         </div>
+        
+        
+      </div>
+</footer>

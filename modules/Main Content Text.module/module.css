@@ -1,0 +1,32 @@
+.sideBySideControllerNormal {  display: grid;
+  grid-template-columns: 10% 100% 0%;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "DecoratorSSC leftArea rightArea"
+    ". leftArea rightArea"
+    ". leftArea rightArea";
+		justify-content: center;
+		max-width: 1000px;
+		margin: auto;
+}
+
+.DecoratorSSC { grid-area: DecoratorSSC; }
+
+.leftArea { grid-area: leftArea; padding: 74px 50px; }
+
+.rightArea { grid-area: rightArea; 
+    padding: 0;
+		  display: none;
+}
+
+
+@media (max-width:768px){
+.sideBySideController {
+    display: flex;
+    flex-direction: column;
+		  text-align: center;
+		}
+.DecoratorSSC { display: none; }
+}

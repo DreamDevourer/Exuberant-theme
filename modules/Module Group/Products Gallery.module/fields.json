@@ -1,0 +1,1049 @@
+[ {
+  "id" : "87ed128c-ce2c-ba26-0b26-7d850a05494f",
+  "name" : "select_image_gallery_style",
+  "display_width" : null,
+  "label" : "Select Image Gallery Style",
+  "required" : false,
+  "locked" : true,
+  "display" : "select",
+  "choices" : [ [ "style2", "Products" ], [ "style3", "Masonry Style" ] ],
+  "type" : "choice",
+  "default" : "style2"
+}, {
+  "id" : "1bb7f94a-e09d-7cf7-ef2c-77a9afcfea89",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "39293e67-8e3f-29f8-38bf-dae8573acdf8",
+    "name" : "title_sub_color",
+    "display_width" : null,
+    "label" : "Title/Sub Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "title_sub_color" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "5661b806-827d-36e5-7ffe-70ee093c0598",
+  "name" : "square_style",
+  "display_width" : null,
+  "label" : "Products",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "87ed128c-ce2c-ba26-0b26-7d850a05494f",
+    "controlling_value_regex" : "style2",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "a9f16d72-2187-9f92-7f80-f665035fe154",
+    "name" : "on_off_filter",
+    "display_width" : null,
+    "label" : "On/Off Filter",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "37173935-fa61-2ec2-328b-d5008a626649",
+    "name" : "top_filter_navigation",
+    "display_width" : null,
+    "label" : "Top Filter Navigation",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 0,
+      "max" : 50,
+      "sorting_label_field" : "46f4d96b-09db-0fe4-288a-e40bec8bd9b7",
+      "default" : 2
+    },
+    "visibility" : {
+      "controlling_field" : "a9f16d72-2187-9f92-7f80-f665035fe154",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "children" : [ {
+      "id" : "46f4d96b-09db-0fe4-288a-e40bec8bd9b7",
+      "name" : "filter_name",
+      "display_width" : null,
+      "label" : "Filter Name",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "placeholder" : "Conifers",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Conifers"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "filter_name" : "Conifers"
+    }, {
+      "filter_name" : "Conifers"
+    } ]
+  }, {
+    "id" : "10dc70eb-fd20-316c-263e-da6a91783d2e",
+    "name" : "image_group",
+    "display_width" : null,
+    "label" : "Image Group",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 0,
+      "max" : 100,
+      "sorting_label_field" : null,
+      "default" : 12
+    },
+    "children" : [ {
+      "id" : "0f74dcbd-a54a-3f3e-4a46-7837cbb70009",
+      "name" : "image_field_1",
+      "display_width" : null,
+      "label" : "Image",
+      "required" : false,
+      "locked" : false,
+      "responsive" : false,
+      "resizable" : true,
+      "show_loading" : true,
+      "type" : "image",
+      "default" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      }
+    }, {
+      "id" : "9ade421b-6752-0744-ceac-934526362f5b",
+      "name" : "title",
+      "display_width" : null,
+      "label" : "Title",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Title"
+    }, {
+      "id" : "c5ed2e46-15c6-a615-c60d-f99e4d949bf3",
+      "name" : "off_on_text",
+      "display_width" : null,
+      "label" : "Off/On text",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : true
+    }, {
+      "id" : "c475ad0d-a3ae-4de8-6972-093b90eea46d",
+      "name" : "richtext_field",
+      "display_width" : null,
+      "label" : "Rich text",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "c5ed2e46-15c6-a615-c60d-f99e4d949bf3",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "type" : "richtext",
+      "default" : "<p>$59.99</p>"
+    }, {
+      "id" : "c3e7f259-edfe-ade8-21dc-5bad47f80361",
+      "name" : "hide_date",
+      "display_width" : null,
+      "label" : "ON/ Off - Date",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "33a917fe-fb75-383f-4d77-d0f3869a839b",
+      "name" : "date_field",
+      "display_width" : null,
+      "label" : "Date",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "c3e7f259-edfe-ade8-21dc-5bad47f80361",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "type" : "date",
+      "default" : 1605772800000
+    }, {
+      "id" : "e959b7f3-23bb-fe86-236a-27d322e0f2b2",
+      "name" : "divider",
+      "display_width" : null,
+      "label" : "Divider",
+      "required" : false,
+      "locked" : true,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "650e0b47-546b-379e-91a8-a4f94d75c661",
+      "name" : "divider_color",
+      "display_width" : null,
+      "label" : "Divider Color",
+      "required" : false,
+      "locked" : true,
+      "visibility" : {
+        "controlling_field" : "e959b7f3-23bb-fe86-236a-27d322e0f2b2",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "type" : "color",
+      "default" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      }
+    }, {
+      "id" : "529e47ea-2a3b-5c0b-51e2-a97f7813630e",
+      "name" : "categories_group",
+      "display_width" : null,
+      "label" : "Categories Group",
+      "required" : false,
+      "locked" : false,
+      "occurrence" : {
+        "min" : 1,
+        "max" : 20,
+        "sorting_label_field" : null,
+        "default" : null
+      },
+      "visibility" : {
+        "controlling_field" : "a9f16d72-2187-9f92-7f80-f665035fe154",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "children" : [ {
+        "id" : "bf012a36-d257-af7e-836a-3b361826a415",
+        "name" : "add_category_name",
+        "display_width" : null,
+        "label" : "Add Category Name",
+        "inline_help_text" : "Add the name of categories. ",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "placeholder" : "Conifers",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "Conifers"
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "type" : "group",
+      "default" : [ {
+        "add_category_name" : "Conifers"
+      } ]
+    }, {
+      "id" : "43d29591-6093-09c5-6c4b-4e98ba6f4d51",
+      "name" : "link_product",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "placeholder" : "#",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "#"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    } ]
+  }, {
+    "id" : "5ca9bbff-ccfd-ce53-c906-510ef43c2080",
+    "name" : "image_radius",
+    "display_width" : null,
+    "label" : "Image Radius",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "min" : 0,
+    "max" : 100,
+    "step" : 1,
+    "type" : "number",
+    "default" : 0
+  }, {
+    "id" : "694c0c71-0600-917f-e8a6-18bbd5de2045",
+    "name" : "desktop_view_",
+    "display_width" : null,
+    "label" : "Desktop View ",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "41e34a96-33b4-2241-d6ab-2854dfd50eb3",
+      "name" : "image_height_px_",
+      "display_width" : null,
+      "label" : "Image Height(px)",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 100,
+      "max" : 800,
+      "step" : 1,
+      "type" : "number",
+      "default" : 300
+    }, {
+      "id" : "880a8d77-cea3-4385-5733-7d9c246435ce",
+      "name" : "column",
+      "display_width" : null,
+      "label" : "Column",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "one", "1" ], [ "two", "2" ], [ "three", "3" ], [ "four", "4" ], [ "five", "5" ], [ "six", "6" ], [ "seven", "7" ], [ "eight", "8" ] ],
+      "type" : "choice",
+      "default" : "four"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "image_height_px_" : 300,
+      "column" : "four"
+    }
+  }, {
+    "id" : "a1cae8a5-92f8-37ff-8a23-77bf9a5a8314",
+    "name" : "tablet_view",
+    "display_width" : null,
+    "label" : "Tablet View",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "0405360e-c7d1-a7e6-a6a8-c87ea37f9b3b",
+      "name" : "image_height_px_",
+      "display_width" : null,
+      "label" : "Image Height(px)",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 100,
+      "max" : 800,
+      "step" : 1,
+      "type" : "number",
+      "default" : 200
+    }, {
+      "id" : "1dcc3341-5fda-af91-ccf3-992e85bc0874",
+      "name" : "column",
+      "display_width" : null,
+      "label" : "Column",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "one", "1" ], [ "two", "2" ], [ "three", "3" ], [ "four", "4" ], [ "five", "5" ], [ "six", "6" ], [ "seven", "7" ], [ "eight", "8" ] ],
+      "type" : "choice",
+      "default" : "two"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "image_height_px_" : 200,
+      "column" : "two"
+    }
+  }, {
+    "id" : "d13fab3e-cda1-034b-eb73-7f808d6ce379",
+    "name" : "mobile_view",
+    "display_width" : null,
+    "label" : "Mobile View",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "f6012283-aaf9-7d66-8cf5-47d885000439",
+      "name" : "image_height_px_",
+      "display_width" : null,
+      "label" : "Image Height(px)",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 100,
+      "max" : 800,
+      "step" : 1,
+      "type" : "number",
+      "default" : 200
+    }, {
+      "id" : "6cddbe2a-1386-2eec-403d-017022ca5735",
+      "name" : "column",
+      "display_width" : null,
+      "label" : "Column",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "one", "1" ], [ "two", "2" ], [ "three", "3" ], [ "four", "4" ], [ "five", "5" ], [ "six", "6" ], [ "seven", "7" ], [ "eight", "8" ] ],
+      "type" : "choice",
+      "default" : "one"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "image_height_px_" : 200,
+      "column" : "one"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "on_off_filter" : true,
+    "top_filter_navigation" : [ {
+      "filter_name" : "Conifers"
+    }, {
+      "filter_name" : "Conifers"
+    } ],
+    "image_group" : [ {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 267,
+        "height" : 400,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "Conifers"
+      } ],
+      "link_product" : "#"
+    } ],
+    "image_radius" : 0,
+    "desktop_view_" : {
+      "image_height_px_" : 300,
+      "column" : "four"
+    },
+    "tablet_view" : {
+      "image_height_px_" : 200,
+      "column" : "two"
+    },
+    "mobile_view" : {
+      "image_height_px_" : 200,
+      "column" : "one"
+    }
+  }
+} ]

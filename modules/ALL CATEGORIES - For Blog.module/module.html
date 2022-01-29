@@ -1,0 +1,21 @@
+<div class="container">
+   <div class="post-filter-dropdown">
+     <div class="post-filter-row">
+         {% set my_tags = blog_tags(module.blog_field, module.show_number_of_tag) %}
+         <span class="post-filter-select">ALL CATEGORIES</span>
+         <ul>
+           <li><a class="all-topics" href="{{ group.absolute_url }}">all Categories</a></li>  
+        
+           {% for item in my_tags %}
+           <li>
+             <a href="{{ blog_tag_url(group.id, item.slug) }}">{{ item }}</a>
+                  
+           </li> 
+           {% endfor %}
+          
+         </ul>
+     </div>
+</div>
+
+
+</div>

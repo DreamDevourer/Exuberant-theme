@@ -1,0 +1,1834 @@
+[ {
+  "id" : "87ed128c-ce2c-ba26-0b26-7d850a05494f",
+  "name" : "select_image_gallery_style",
+  "display_width" : null,
+  "label" : "Select Image Gallery Style",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "style2", "Square Style" ], [ "style3", "Masonry Style" ] ],
+  "type" : "choice",
+  "default" : "style2"
+}, {
+  "id" : "ef42565a-3727-a658-4d43-a7e2370f3229",
+  "name" : "landscape_style",
+  "display_width" : null,
+  "label" : "Landscape Style",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "87ed128c-ce2c-ba26-0b26-7d850a05494f",
+    "controlling_value_regex" : "style1",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "05929adc-4808-9efa-df73-e0a706e0811b",
+    "name" : "on_off_filter",
+    "display_width" : null,
+    "label" : "On/Off Filter",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "71f90e70-a3d1-567a-8606-2f36965dbf33",
+    "name" : "image_radius",
+    "display_width" : null,
+    "label" : "Image Radius",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "min" : 0,
+    "max" : 100,
+    "step" : 1,
+    "type" : "number",
+    "default" : 0
+  }, {
+    "id" : "be80c2cc-94ca-fea4-97d4-0c4333689ff9",
+    "name" : "top_filter_navigation",
+    "display_width" : null,
+    "label" : "Top Filter Navigation",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 0,
+      "max" : 30,
+      "sorting_label_field" : "5adb8451-a692-c310-eaf9-876c75b36e88",
+      "default" : 2
+    },
+    "visibility" : {
+      "controlling_field" : "05929adc-4808-9efa-df73-e0a706e0811b",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "children" : [ {
+      "id" : "5adb8451-a692-c310-eaf9-876c75b36e88",
+      "name" : "filter_name",
+      "display_width" : null,
+      "label" : "Filter Name",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "3 Month"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "filter_name" : "3 Month"
+    }, {
+      "filter_name" : "3 Month"
+    } ]
+  }, {
+    "id" : "9ab55d6e-d8d7-9d7a-4f5b-2ff8322e85c2",
+    "name" : "image_gallery_landscape_",
+    "display_width" : null,
+    "label" : "Image Gallery Landscape ",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : 1000,
+      "sorting_label_field" : null,
+      "default" : 4
+    },
+    "children" : [ {
+      "id" : "256ddc37-215a-3678-d1e7-1bbc9251559e",
+      "name" : "image_field",
+      "display_width" : null,
+      "label" : "Image",
+      "required" : false,
+      "locked" : false,
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : true,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      }
+    }, {
+      "id" : "130e117e-48e2-c949-b87c-2b7545c671de",
+      "name" : "image_link_",
+      "display_width" : null,
+      "label" : "Image Link?",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "a57b0a00-c8e5-ea7e-94e3-ff1563c79170",
+      "name" : "image_link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "130e117e-48e2-c949-b87c-2b7545c671de",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "id" : "93a666a4-1646-deee-f40b-ccd611941b50",
+      "name" : "categories_group",
+      "display_width" : null,
+      "label" : "Categories Group",
+      "required" : false,
+      "locked" : false,
+      "occurrence" : {
+        "min" : 0,
+        "max" : 20,
+        "sorting_label_field" : null,
+        "default" : 1
+      },
+      "visibility" : {
+        "controlling_field" : "05929adc-4808-9efa-df73-e0a706e0811b",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "children" : [ {
+        "id" : "5650f6b1-7ba3-5824-51f2-b2e5a296b4bc",
+        "name" : "add_category_name",
+        "display_width" : null,
+        "label" : "Add Category Name",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "3 Month"
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "type" : "group",
+      "default" : [ {
+        "add_category_name" : "3 Month"
+      } ]
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Month"
+      } ]
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Month"
+      } ]
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Month"
+      } ]
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Month"
+      } ]
+    } ]
+  }, {
+    "id" : "8c11f082-a43c-a9ec-7df5-2b7096215fb9",
+    "name" : "desktop_view_",
+    "display_width" : null,
+    "label" : "Desktop View ",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "8242c7ab-6242-df7d-b635-5f684b2b1699",
+      "name" : "image_height",
+      "display_width" : null,
+      "label" : "Image Height",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 50,
+      "max" : 800,
+      "step" : 1,
+      "type" : "number",
+      "default" : 200
+    }, {
+      "id" : "2d961b52-3879-3279-ce62-82465bb4eaa4",
+      "name" : "column",
+      "display_width" : null,
+      "label" : "Column",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "one", "1" ], [ "two", "2" ], [ "three", "3" ], [ "four", "4" ], [ "five", "5" ], [ "six", "6" ] ],
+      "type" : "choice",
+      "default" : "four"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "image_height" : 200,
+      "column" : "four"
+    }
+  }, {
+    "id" : "c5cc2cf1-ad47-5849-3083-afafad8e8123",
+    "name" : "tablet_view",
+    "display_width" : null,
+    "label" : "Tablet View",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "7940c838-76a5-425d-a7d1-4d4c40c5e8ad",
+      "name" : "image_height",
+      "display_width" : null,
+      "label" : "Image Height",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 100,
+      "max" : 800,
+      "step" : 1,
+      "type" : "number",
+      "default" : 200
+    }, {
+      "id" : "391f6813-1e94-0c0b-175a-1b2ade3b1913",
+      "name" : "column",
+      "display_width" : null,
+      "label" : "Column",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "one", "1" ], [ "two", "2" ], [ "three", "3" ], [ "four", "4" ], [ "five", "5" ], [ "six", "6" ] ],
+      "type" : "choice",
+      "default" : "three"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "image_height" : 200,
+      "column" : "three"
+    }
+  }, {
+    "id" : "06700b5c-319b-3720-e81d-3ed75c2be0fd",
+    "name" : "mobile_view_",
+    "display_width" : null,
+    "label" : "Mobile View ",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "116c4d6a-39e7-b35e-8f61-cd22766b892c",
+      "name" : "image_height",
+      "display_width" : null,
+      "label" : "Image Height",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 100,
+      "max" : 800,
+      "step" : 1,
+      "type" : "number",
+      "default" : 200
+    }, {
+      "id" : "14f5056e-5896-30e2-8b94-3966b9a7f7f3",
+      "name" : "column",
+      "display_width" : null,
+      "label" : "Column",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "one", "1" ], [ "two", "2" ], [ "three", "3" ], [ "four", "4" ], [ "five", "5" ], [ "six", "6" ] ],
+      "type" : "choice",
+      "default" : "one"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "image_height" : 200,
+      "column" : "one"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "on_off_filter" : false,
+    "image_radius" : 0,
+    "top_filter_navigation" : [ {
+      "filter_name" : "3 Month"
+    }, {
+      "filter_name" : "3 Month"
+    } ],
+    "image_gallery_landscape_" : [ {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Month"
+      } ]
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Month"
+      } ]
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Month"
+      } ]
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Month"
+      } ]
+    } ],
+    "desktop_view_" : {
+      "image_height" : 200,
+      "column" : "four"
+    },
+    "tablet_view" : {
+      "image_height" : 200,
+      "column" : "three"
+    },
+    "mobile_view_" : {
+      "image_height" : 200,
+      "column" : "one"
+    }
+  }
+}, {
+  "id" : "5661b806-827d-36e5-7ffe-70ee093c0598",
+  "name" : "square_style",
+  "display_width" : null,
+  "label" : "Square Style",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "87ed128c-ce2c-ba26-0b26-7d850a05494f",
+    "controlling_value_regex" : "style2",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "a9f16d72-2187-9f92-7f80-f665035fe154",
+    "name" : "on_off_filter",
+    "display_width" : null,
+    "label" : "On/Off Filter",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "37173935-fa61-2ec2-328b-d5008a626649",
+    "name" : "top_filter_navigation",
+    "display_width" : null,
+    "label" : "Top Filter Navigation",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 0,
+      "max" : 50,
+      "sorting_label_field" : null,
+      "default" : 2
+    },
+    "visibility" : {
+      "controlling_field" : "a9f16d72-2187-9f92-7f80-f665035fe154",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "children" : [ {
+      "id" : "46f4d96b-09db-0fe4-288a-e40bec8bd9b7",
+      "name" : "filter_name",
+      "display_width" : null,
+      "label" : "Filter Name",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "3 Months"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "filter_name" : "3 Months"
+    }, {
+      "filter_name" : "3 Months"
+    } ]
+  }, {
+    "id" : "10dc70eb-fd20-316c-263e-da6a91783d2e",
+    "name" : "image_group",
+    "display_width" : null,
+    "label" : "Image Group",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 0,
+      "max" : 100,
+      "sorting_label_field" : null,
+      "default" : 4
+    },
+    "children" : [ {
+      "id" : "0f74dcbd-a54a-3f3e-4a46-7837cbb70009",
+      "name" : "image_field_1",
+      "display_width" : null,
+      "label" : "Image",
+      "required" : false,
+      "locked" : false,
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "max_width" : 2624,
+        "max_height" : 3936
+      }
+    }, {
+      "id" : "9ade421b-6752-0744-ceac-934526362f5b",
+      "name" : "title",
+      "display_width" : null,
+      "label" : "Title",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Title"
+    }, {
+      "id" : "c5ed2e46-15c6-a615-c60d-f99e4d949bf3",
+      "name" : "off_on_text",
+      "display_width" : null,
+      "label" : "Off/On text",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : true
+    }, {
+      "id" : "c475ad0d-a3ae-4de8-6972-093b90eea46d",
+      "name" : "richtext_field",
+      "display_width" : null,
+      "label" : "Rich text",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "c5ed2e46-15c6-a615-c60d-f99e4d949bf3",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "type" : "richtext",
+      "default" : "<p>$59.99</p>"
+    }, {
+      "id" : "c3e7f259-edfe-ade8-21dc-5bad47f80361",
+      "name" : "hide_date",
+      "display_width" : null,
+      "label" : "ON/ Off - Date",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "33a917fe-fb75-383f-4d77-d0f3869a839b",
+      "name" : "date_field",
+      "display_width" : null,
+      "label" : "Date",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "c3e7f259-edfe-ade8-21dc-5bad47f80361",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "type" : "date",
+      "default" : 1605772800000
+    }, {
+      "id" : "e959b7f3-23bb-fe86-236a-27d322e0f2b2",
+      "name" : "divider",
+      "display_width" : null,
+      "label" : "Divider",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "650e0b47-546b-379e-91a8-a4f94d75c661",
+      "name" : "divider_color",
+      "display_width" : null,
+      "label" : "Divider Color",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "e959b7f3-23bb-fe86-236a-27d322e0f2b2",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "type" : "color",
+      "default" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      }
+    }, {
+      "id" : "529e47ea-2a3b-5c0b-51e2-a97f7813630e",
+      "name" : "categories_group",
+      "display_width" : null,
+      "label" : "Categories Group",
+      "required" : false,
+      "locked" : false,
+      "occurrence" : {
+        "min" : 1,
+        "max" : 20,
+        "sorting_label_field" : null,
+        "default" : null
+      },
+      "visibility" : {
+        "controlling_field" : "a9f16d72-2187-9f92-7f80-f665035fe154",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "children" : [ {
+        "id" : "bf012a36-d257-af7e-836a-3b361826a415",
+        "name" : "add_category_name",
+        "display_width" : null,
+        "label" : "Add Category Name",
+        "inline_help_text" : "Add the name of categories. ",
+        "required" : false,
+        "locked" : false,
+        "validation_regex" : "",
+        "allow_new_line" : false,
+        "show_emoji_picker" : false,
+        "type" : "text",
+        "default" : "3 Months"
+      } ],
+      "tab" : "CONTENT",
+      "expanded" : false,
+      "type" : "group",
+      "default" : [ {
+        "add_category_name" : "3 Months"
+      } ]
+    }, {
+      "id" : "43d29591-6093-09c5-6c4b-4e98ba6f4d51",
+      "name" : "link_product",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "placeholder" : "#",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "#"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Months"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Months"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Months"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Months"
+      } ],
+      "link_product" : "#"
+    } ]
+  }, {
+    "id" : "5ca9bbff-ccfd-ce53-c906-510ef43c2080",
+    "name" : "image_radius",
+    "display_width" : null,
+    "label" : "Image Radius",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "min" : 0,
+    "max" : 100,
+    "step" : 1,
+    "type" : "number",
+    "default" : 0
+  }, {
+    "id" : "694c0c71-0600-917f-e8a6-18bbd5de2045",
+    "name" : "desktop_view_",
+    "display_width" : null,
+    "label" : "Desktop View ",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "41e34a96-33b4-2241-d6ab-2854dfd50eb3",
+      "name" : "image_height_px_",
+      "display_width" : null,
+      "label" : "Image Height(px)",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 100,
+      "max" : 800,
+      "step" : 1,
+      "type" : "number",
+      "default" : 300
+    }, {
+      "id" : "880a8d77-cea3-4385-5733-7d9c246435ce",
+      "name" : "column",
+      "display_width" : null,
+      "label" : "Column",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "one", "1" ], [ "two", "2" ], [ "three", "3" ], [ "four", "4" ], [ "five", "5" ], [ "six", "6" ], [ "seven", "7" ], [ "eight", "8" ] ],
+      "type" : "choice",
+      "default" : "four"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "image_height_px_" : 300,
+      "column" : "four"
+    }
+  }, {
+    "id" : "a1cae8a5-92f8-37ff-8a23-77bf9a5a8314",
+    "name" : "tablet_view",
+    "display_width" : null,
+    "label" : "Tablet View",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "0405360e-c7d1-a7e6-a6a8-c87ea37f9b3b",
+      "name" : "image_height_px_",
+      "display_width" : null,
+      "label" : "Image Height(px)",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 100,
+      "max" : 800,
+      "step" : 1,
+      "type" : "number",
+      "default" : 200
+    }, {
+      "id" : "1dcc3341-5fda-af91-ccf3-992e85bc0874",
+      "name" : "column",
+      "display_width" : null,
+      "label" : "Column",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "one", "1" ], [ "two", "2" ], [ "three", "3" ], [ "four", "4" ], [ "five", "5" ], [ "six", "6" ], [ "seven", "7" ], [ "eight", "8" ] ],
+      "type" : "choice",
+      "default" : "two"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "image_height_px_" : 200,
+      "column" : "two"
+    }
+  }, {
+    "id" : "d13fab3e-cda1-034b-eb73-7f808d6ce379",
+    "name" : "mobile_view",
+    "display_width" : null,
+    "label" : "Mobile View",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "f6012283-aaf9-7d66-8cf5-47d885000439",
+      "name" : "image_height_px_",
+      "display_width" : null,
+      "label" : "Image Height(px)",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "min" : 100,
+      "max" : 800,
+      "step" : 1,
+      "type" : "number",
+      "default" : 200
+    }, {
+      "id" : "6cddbe2a-1386-2eec-403d-017022ca5735",
+      "name" : "column",
+      "display_width" : null,
+      "label" : "Column",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "one", "1" ], [ "two", "2" ], [ "three", "3" ], [ "four", "4" ], [ "five", "5" ], [ "six", "6" ], [ "seven", "7" ], [ "eight", "8" ] ],
+      "type" : "choice",
+      "default" : "one"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "image_height_px_" : 200,
+      "column" : "one"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "on_off_filter" : false,
+    "top_filter_navigation" : [ {
+      "filter_name" : "3 Months"
+    }, {
+      "filter_name" : "3 Months"
+    } ],
+    "image_group" : [ {
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Months"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Months"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Months"
+      } ],
+      "link_product" : "#"
+    }, {
+      "image_field_1" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "title" : "Title",
+      "off_on_text" : true,
+      "richtext_field" : "<p>$59.99</p>",
+      "hide_date" : false,
+      "date_field" : 1605772800000,
+      "divider" : false,
+      "divider_color" : {
+        "color" : "#4CBA79",
+        "opacity" : 100
+      },
+      "categories_group" : [ {
+        "add_category_name" : "3 Months"
+      } ],
+      "link_product" : "#"
+    } ],
+    "image_radius" : 0,
+    "desktop_view_" : {
+      "image_height_px_" : 300,
+      "column" : "four"
+    },
+    "tablet_view" : {
+      "image_height_px_" : 200,
+      "column" : "two"
+    },
+    "mobile_view" : {
+      "image_height_px_" : 200,
+      "column" : "one"
+    }
+  }
+}, {
+  "id" : "17128e98-b9c7-2046-3cc8-a9883b780e2d",
+  "name" : "masonry_style",
+  "display_width" : null,
+  "label" : "Masonry Style",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "87ed128c-ce2c-ba26-0b26-7d850a05494f",
+    "controlling_value_regex" : "style3",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "19f0b161-e198-7836-404e-e96f8388dbfd",
+    "name" : "image_radius",
+    "display_width" : null,
+    "label" : "Image Radius",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "min" : 0,
+    "max" : 100,
+    "step" : 1,
+    "type" : "number",
+    "default" : 0
+  }, {
+    "id" : "8e8dadfc-2eb9-2549-f603-73bed3423d3b",
+    "name" : "image_gallery_landscape_",
+    "display_width" : null,
+    "label" : "Image Gallery Landscape ",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : 1000,
+      "sorting_label_field" : null,
+      "default" : 12
+    },
+    "children" : [ {
+      "id" : "92bfe43e-2f11-b5fd-3d51-31439c27cfda",
+      "name" : "image_field",
+      "display_width" : null,
+      "label" : "Image",
+      "required" : false,
+      "locked" : false,
+      "responsive" : true,
+      "resizable" : false,
+      "show_loading" : true,
+      "type" : "image",
+      "default" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      }
+    }, {
+      "id" : "0fecc218-778f-b255-3bbb-d2d8049ffbd3",
+      "name" : "image_link_",
+      "display_width" : null,
+      "label" : "Image Link?",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "d9b7fb6a-6f0a-722a-6a3c-cf44c2ab6d61",
+      "name" : "image_link",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "0fecc218-778f-b255-3bbb-d2d8049ffbd3",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }, {
+    "id" : "bfc8cd3e-2042-f7b1-7167-ba49c415371a",
+    "name" : "desktop_view",
+    "display_width" : null,
+    "label" : "Desktop View",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "02a3661a-3e93-6167-7cc7-f307c4b03af1",
+      "name" : "column",
+      "display_width" : null,
+      "label" : "Column",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "one", "1" ], [ "two", "2" ], [ "three", "3" ], [ "four", "4" ], [ "five", "5" ], [ "six", "6" ], [ "seven", "7" ], [ "eight", "8" ] ],
+      "type" : "choice",
+      "default" : "four"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "column" : "four"
+    }
+  }, {
+    "id" : "5a90dd4b-f4c8-f29c-969b-9ef156b7fa7d",
+    "name" : "tablet_view",
+    "display_width" : null,
+    "label" : "Tablet View",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "1b8ea02f-e356-f0d9-2e92-afb9215ba6d6",
+      "name" : "column",
+      "display_width" : null,
+      "label" : "Column",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "one", "1" ], [ "two", "2" ], [ "three", "3" ], [ "four", "4" ], [ "five", "5" ], [ "six", "6" ], [ "seven", "7" ], [ "eight", "8" ] ],
+      "type" : "choice",
+      "default" : "three"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "column" : "three"
+    }
+  }, {
+    "id" : "f8a3b7ae-9d8a-a8e6-f1b5-10ad80331898",
+    "name" : "mobile_view",
+    "display_width" : null,
+    "label" : "Mobile View",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "76658a3c-7227-9ed4-0ee4-ef5894339dc2",
+      "name" : "column",
+      "display_width" : null,
+      "label" : "Column",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "one", "1" ], [ "two", "2" ], [ "three", "3" ], [ "four", "4" ], [ "five", "5" ], [ "six", "6" ], [ "seven", "7" ], [ "eight", "8" ] ],
+      "type" : "choice",
+      "default" : "one"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "column" : "one"
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "image_radius" : 0,
+    "image_gallery_landscape_" : [ {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "image_field" : {
+        "size_type" : "auto",
+        "src" : "https://www.remotish.agency/hubfs/toa-heftiba-W1yjvf5idqA-unsplash.jpeg",
+        "alt" : "toa-heftiba-W1yjvf5idqA-unsplash",
+        "width" : 2624,
+        "height" : 3936,
+        "loading" : "lazy",
+        "max_width" : 2624,
+        "max_height" : 3936
+      },
+      "image_link_" : false,
+      "image_link" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "desktop_view" : {
+      "column" : "four"
+    },
+    "tablet_view" : {
+      "column" : "three"
+    },
+    "mobile_view" : {
+      "column" : "one"
+    }
+  }
+} ]

@@ -1,0 +1,37 @@
+{
+  "img.default.alt" : {
+    "message" : "placeholder_200x200",
+    "description" : "",
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "Görüntü",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "Ziyaretçilerinizi resme tıkladıklarında göndermek istediğiniz yer burasıdır. Lütfen URL'ye bir protokol (ör. \"http://\") ekleyin.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "Bağlantı (isteğe bağlı)",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Görüntü",
+    "description" : "",
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "Bağlantıyı yeni sekmede aç",
+    "description" : "",
+    "placeholders" : null
+  }
+}

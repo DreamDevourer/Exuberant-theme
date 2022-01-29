@@ -1,0 +1,560 @@
+{% if module.select_image_gallery_style  == "style1"  %}
+
+<div class="image-gallary-module">
+    <div class="container">
+      {% if module.landscape_style.on_off_filter %}
+      <div class="square-filter">
+           <ul>
+          <li class="active" data-filter="*">All</li>
+
+          {% for item in module.landscape_style.top_filter_navigation  %}
+          <li data-filter=".{{ item.filter_name|lower|replace(' ', '_') }}">{{ item.filter_name }}</li>
+          {% endfor %}
+
+        </ul>
+
+      </div>
+    {% endif %}
+      
+       <div class="image-gallery-row grid">
+         {% for item in module.landscape_style.image_gallery_landscape_ %}
+          <div class="image-gallery-column grid-item {% for item2 in item.categories_group %} {{ item2.add_category_name|lower|replace(' ', '_')  }}  {% endfor %}" style="background-image:url('{{ item.image_field.src }}');">
+             {% if item.image_link_ %} 
+         
+               {% set href = item.image_link.url.href %}
+               {% if item.image_link.url.type is equalto "EMAIL_ADDRESS" %}
+               {% set href = "mailto:" + href %}
+               {% endif %}
+               {% set rel = [] %}
+               {% if module.link_field.no_follow %}
+               {% do rel.append("nofollow") %}
+               {% endif %}
+               {% if module.link_field.open_in_new_tab %}
+               {% do rel.append("noopener") %}
+               {% endif %}
+               <a   href="{{ href }}" 
+                  {% if item.image_link.open_in_new_tab %}target="_blank"{% endif %}
+                  {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                  >
+                    <span> + </span>
+               </a>
+         
+              {% endif %}
+            </div>
+         {% endfor %}
+      </div>
+    </div>
+</div>
+
+{% if module.landscape_style.on_off_filter %}
+
+{{ require_js("https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js", "footer") }}
+
+
+{% require_js %}
+
+
+<script defer>
+  
+$(window).load(function(){
+  $('#hs_cos_wrapper_{{ name }} .grid').isotope({
+    itemSelector: '#hs_cos_wrapper_{{ name }} .grid-item',
+    resizable: false,
+    layoutMode: 'fitRows'
+   
+
+    
+  });
+
+// filter items on button click
+  $('#hs_cos_wrapper_{{ name }} .square-filter').on( 'click', 'li', function() {
+    var filterValue = $(this).attr('data-filter');
+    $('.grid').isotope({ filter: filterValue });
+    $('#hs_cos_wrapper_{{ name }} .square-filter li').removeClass('active');
+    $(this).addClass('active');
+   
+  });
+  
+  
+});
+
+</script>
+  
+{% end_require_js %}
+
+{% endif %}
+
+
+
+{% require_css %}
+
+  <style>
+     
+    #hs_cos_wrapper_{{ name }} .image-gallery-column,#hs_cos_wrapper_{{ name }} .image-gallery-column a { border-radius:{{ module.landscape_style.image_radius }}px; height:{{ module.landscape_style.desktop_view_.image_height }}px; }
+    
+    
+     {% if module.landscape_style.desktop_view_.column == "one" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 1 - 20px); }
+        {% elif module.landscape_style.desktop_view_.column == "two" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 2 - 20px); }
+        {% elif module.landscape_style.desktop_view_.column == "three" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 3 - 20px); }
+
+        {% elif module.landscape_style.desktop_view_.column == "four" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 4 - 20px); }
+        {% elif module.landscape_style.desktop_view_.column == "five" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 5 - 20px); }
+        {% elif module.landscape_style.desktop_view_.column == "six" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 6 - 20px); }
+      
+      {% endif %}
+    
+    
+    
+    @media (max-width:1024px){
+      
+     #hs_cos_wrapper_{{ name }} .image-gallery-column{ height:{{ module.landscape_style.tablet_view.image_height }}px;  }
+     
+      {% if module.landscape_style.tablet_view.column == "one" %}
+      #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 1 - 20px); }
+      {% elif module.landscape_style.tablet_view.column == "two" %}
+       #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 2 - 20px); }
+      {% elif module.landscape_style.tablet_view.column == "three" %}
+       #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 3 - 20px); }
+      
+      {% elif module.landscape_style.tablet_view.column == "four" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 4 - 20px); }
+      {% elif module.landscape_style.tablet_view.column == "five" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 5 - 20px); }
+       {% elif module.landscape_style.tablet_view.column == "six" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 6 - 20px); }
+      
+      {% endif %}
+      
+      
+    }
+    
+    @media (max-width:767px){
+       #hs_cos_wrapper_{{ name }} .row-fluid .container{   padding: 0 10px; } 
+      
+       #hs_cos_wrapper_{{ name }} .image-gallery-column{ height:{{ module.landscape_style.mobile_view_.image_height }}px;  }
+     
+      {% if module.landscape_style.mobile_view_.column == "one" %}
+      #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 1 - 20px); }
+      {% elif module.landscape_style.mobile_view_.column == "two" %}
+       #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 2 - 20px); }
+      {% elif module.landscape_style.mobile_view_.column == "three" %}
+       #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 3 - 20px); }
+      
+      {% elif module.landscape_style.mobile_view_.column == "four" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 4 - 20px); }
+      {% elif module.landscape_style.mobile_view_.column == "five" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 5 - 20px); }
+       {% elif module.landscape_style.mobile_view_.column == "six" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 6 - 20px); }
+      
+      {% endif %}
+    
+    }
+
+    
+
+  </style>
+
+
+{% end_require_css %}
+
+
+
+
+
+{% elif module.select_image_gallery_style  == "style2" %}
+
+
+
+<div class="square-imagestyle">
+    <div class="container">
+      {% if module.square_style.on_off_filter %}
+        <div class="square-filter">
+          
+          <ul>
+            <li class="active" data-filter="*">All</li>
+
+            {% for item in module.square_style.top_filter_navigation  %}
+            <li data-filter=".{{ item.filter_name|lower|replace(' ', '_') }}">{{ item.filter_name }}</li>
+            {% endfor %}
+
+          </ul>
+          
+          
+        </div>
+     {% endif %}
+      
+        <div class="squareimage-row grid">
+          {% for item in module.square_style.image_group %}
+          
+           <div class="squere-column grid-item {% for item2 in item.categories_group %} {{ item2.add_category_name|lower|replace(' ', '_')  }}  {% endfor %}">
+              <a href="{{item.link_product}}"> <div class="squereimage" style="background-image:url('{{ item.image_field_1.src }}')">  
+               </div></a>
+              <a href="{{item.link_product}}">
+               <div class="squereimage-text  {% if item.divider %} border-divide {% endif %}"> 
+                   <h4>
+                     {{ item.title }}
+                  </h4>
+                  {% if item.off_on_text %} <span class="squereimage-text"> {{ item.richtext_field }} </span>{% endif %}
+                  {% if item.hide_date %}  <span class="squereimage-date"> {{ item.date_field|datetimeformat('%d %b %Y') }} </span> {% endif %}
+                  {% if item.off_on_text %} <span style="display:block;height:30px;" class="mtext-height">  </span>  {% endif %}
+               </div>
+                </a>
+           </div>
+            
+          {% endfor %}
+          
+        </div>
+    </div>
+</div>
+
+
+{% require_css %}
+
+  <style>
+    
+      {% for coloredItem in module.square_style.image_group %}
+        #hs_cos_wrapper_{{ name }}  .squereimage-text.border-divide{ position:relative;     padding-top: 12px; margin-top:10px; } 
+        #hs_cos_wrapper_{{ name }}  .squereimage-text.border-divide:before {    content: "";   position: absolute;   height: 3px;  width: 68px; border-bottom: 3px solid {{coloredItem.divider_color.color}};  margin: 0 auto;
+        top: 12px;  left: 0;   right: 0;   border-radius: 8px;  }
+       #hs_cos_wrapper_{{ name }} .squereimage-text h4{ margin-bottom: 5px; }   
+    
+       #hs_cos_wrapper_{{ name }}  span.squereimage-text {    font-size: 16px;   line-height: 22px;   color: #737B7D;    padding-bottom: 12px;   display: block;   max-width: 300px;    margin: 0 auto; }
+    
+    
+    #hs_cos_wrapper_{{ name }} .squereimage { border-radius:{{ module.square_style.image_radius }}px; height:{{ module.square_style.desktop_view_.image_height_px_ }}px; }
+    {% endfor %}
+    
+     {% if module.square_style.desktop_view_.column == "one" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 1 - 30px); }
+        {% elif module.square_style.desktop_view_.column == "two" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 2 - 30px); }
+        {% elif module.square_style.desktop_view_.column == "three" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 3 - 30px); }
+
+        {% elif module.square_style.desktop_view_.column == "four" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 4 - 30px); }
+        {% elif module.square_style.desktop_view_.column == "five" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 5 - 30px); }
+        {% elif module.square_style.desktop_view_.column == "six" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 6 - 30px); }
+    
+      {% elif module.square_style.desktop_view_.column == "seven" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 7 - 30px); }
+    
+        {% elif module.square_style.desktop_view_.column == "eight" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 8 - 30px); }
+      
+      {% endif %}
+    
+    
+    
+    @media (max-width:1024px){
+      
+      
+    #hs_cos_wrapper_{{ name }} .squereimage { height:{{ module.square_style.tablet_view.image_height_px_ }}px; }
+    
+    
+     {% if module.square_style.tablet_view.column == "one" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 1 - 30px); }
+        {% elif module.square_style.tablet_view.column == "two" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 2 - 30px); }
+        {% elif module.square_style.tablet_view.column == "three" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 3 - 30px); }
+
+        {% elif module.square_style.tablet_view.column == "four" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 4 - 30px); }
+        {% elif module.square_style.tablet_view.column == "five" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 5 - 30px); }
+        {% elif module.square_style.tablet_view.column == "six" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 6 - 30px); }
+    
+      {% elif module.square_style.tablet_view.column == "seven" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 7 - 30px); }
+    
+        {% elif module.square_style.tablet_view.column == "eight" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 8 - 30px); }
+      
+      {% endif %}
+      
+      
+      
+    }
+     
+      
+    @media (max-width:767px){
+      
+       #hs_cos_wrapper_{{ name }} .squereimage { height:{{ module.square_style.mobile_view.image_height_px_ }}px; }
+      #hs_cos_wrapper_{{ name }}  .row-fluid .container{  padding: 0 5px; }
+    
+     {% if module.square_style.mobile_view.column == "one" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 1 - 30px); }
+        {% elif module.square_style.mobile_view.column == "two" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 2 - 30px); }
+        {% elif module.square_style.mobile_view.column == "three" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 3 - 30px); }
+
+        {% elif module.square_style.mobile_view.column == "four" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 4 - 30px); }
+        {% elif module.square_style.mobile_view.column == "five" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 5 - 30px); }
+        {% elif module.square_style.mobile_view.column == "six" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 6 - 30px); }
+    
+      {% elif module.square_style.mobile_view.column == "seven" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 7 - 30px); }
+    
+        {% elif module.square_style.mobile_view.column == "eight" %}
+        #hs_cos_wrapper_{{ name }} .squere-column{     width: calc(100% / 8 - 30px); }
+      
+      {% endif %}
+      
+     
+    }
+
+    
+
+  </style>
+
+
+{% end_require_css %}
+
+
+{% if module.square_style.on_off_filter %}
+
+{{ require_js("https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js", "footer") }}
+
+
+{% require_js %}
+
+
+<script defer>
+  
+$(window).load(function(){
+  $('#hs_cos_wrapper_{{ name }} .grid').isotope({
+    itemSelector: '#hs_cos_wrapper_{{ name }} .grid-item',
+    resizable: false,
+    layoutMode: 'fitRows'
+   
+
+    
+  });
+
+// filter items on button click
+  $('#hs_cos_wrapper_{{ name }} .square-filter').on( 'click', 'li', function() {
+    var filterValue = $(this).attr('data-filter');
+    $('.grid').isotope({ filter: filterValue });
+    $('#hs_cos_wrapper_{{ name }} .square-filter li').removeClass('active');
+    $(this).addClass('active');
+   
+  });
+  
+  
+});
+
+</script>
+  
+{% end_require_js %}
+
+{% endif %}
+
+
+{% elif module.select_image_gallery_style  == "style3" %}
+
+
+
+<div class="image-gallary-module">
+    <div class="container">
+       <div class="image-gallery-row">
+         {% for item in module.masonry_style.image_gallery_landscape_ %}
+          <div class="image-gallery-column" style="height:auto;">
+            {% if item.image_field.src %}
+            {% set sizeAttrs = 'width="{{ item.image_field.width }}" height="{{ item.image_field.height }}"' %}
+            {% if item.image_field.size_type == 'auto' %}
+            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+            {% elif item.image_field.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ item.image_field.max_width }}px; max-height: {{ item.image_field.max_height }}px"' %}
+            {% endif %}
+            {% set loadingAttr = item.image_field.loading != 'lazy' ? 'loading="{{ item.image_field.loading }}"' : '' %}
+            <img loading="lazy" src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}" {{ sizeAttrs }} {{ loadingAttr }}>
+            {% endif %}
+            
+             {% if item.image_link_ %} 
+         
+               {% set href = item.image_link.url.href %}
+               {% if item.image_link.url.type is equalto "EMAIL_ADDRESS" %}
+               {% set href = "mailto:" + href %}
+               {% endif %}
+               {% set rel = [] %}
+               {% if module.link_field.no_follow %}
+               {% do rel.append("nofollow") %}
+               {% endif %}
+               {% if module.link_field.open_in_new_tab %}
+               {% do rel.append("noopener") %}
+               {% endif %}
+               <a   href="{{ href }}" 
+                  {% if item.image_link.open_in_new_tab %}target="_blank"{% endif %}
+                  {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                  >
+                    <span> + </span>
+               </a>
+         
+              {% endif %}
+            </div>
+         {% endfor %}
+      </div>
+    </div>
+</div>
+
+
+{% require_css %}
+
+  <style>
+     
+    #hs_cos_wrapper_{{ name }} .image-gallery-column img,#hs_cos_wrapper_{{ name }} .image-gallery-column a { border-radius:{{ module.masonry_style.image_radius }}px; }
+    #hs_cos_wrapper_{{ name }} .image-gallery-column img{ display:block; } 
+  
+     
+     
+     {% if module.masonry_style.desktop_view.column == "one" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 1 - 20px); }
+        {% elif module.masonry_style.desktop_view.column == "two" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 2 - 20px); }
+        {% elif module.masonry_style.desktop_view.column == "three" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 3 - 20px); }
+
+        {% elif module.masonry_style.desktop_view.column == "four" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 4 - 20px); }
+        {% elif module.masonry_style.desktop_view.column == "five" %}
+    
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 5 - 20px); }
+        {% elif module.masonry_style.desktop_view.column == "six" %}
+    
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 6 - 20px); }
+     
+      {% elif module.masonry_style.desktop_view.column == "seven" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 7 - 20px); }
+    
+        {% elif module.masonry_style.desktop_view.column == "eight" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 8 - 20px); }
+      
+      {% endif %}
+    
+      
+    
+    @media (max-width:1024px){
+    
+         
+     {% if module.masonry_style.tablet_view.column == "one" %}
+      
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 1 - 20px); }
+      
+        {% elif module.masonry_style.tablet_view.column == "two" %}
+      
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 2 - 20px); }
+      
+        {% elif module.masonry_style.tablet_view.column == "three" %}
+      
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 3 - 20px); }
+
+        {% elif module.masonry_style.tablet_view.column == "four" %}
+      
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 4 - 20px); }
+      
+        {% elif module.masonry_style.tablet_view.column == "five" %}
+      
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 5 - 20px); }
+      
+        {% elif module.masonry_style.tablet_view.column == "six" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 6 - 20px); }
+    
+        {% elif module.masonry_style.tablet_view.column == "seven" %}
+      
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 7 - 20px); }
+    
+        {% elif module.masonry_style.tablet_view.column == "eight" %}
+      
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 8 - 20px); }
+       
+      {% endif %}
+      
+      
+    
+    }
+    
+    
+    @media (max-width:767px){
+       #hs_cos_wrapper_{{ name }} .image-gallery-column img{ display:inline-block; } 
+      #hs_cos_wrapper_{{ name }} .image-gallery-column{ text-align:center; }
+      
+      
+      #hs_cos_wrapper_{{ name }} .image-gallary-module .container{    padding: 0 5px; }
+   
+       
+           {% if module.masonry_style.mobile_view.column == "one" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 1 - 20px); }
+        {% elif module.masonry_style.mobile_view.column == "two" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 2 - 20px); }
+        {% elif module.masonry_style.mobile_view.column == "three" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 3 - 20px); }
+
+        {% elif module.masonry_style.mobile_view.column == "four" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 4 - 20px); }
+        {% elif module.masonry_style.mobile_view.column == "five" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 5 - 20px); }
+        {% elif module.masonry_style.mobile_view.column == "six" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 6 - 20px); }
+    
+      {% elif module.masonry_style.mobile_view.column == "seven" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 7 - 20px); }
+    
+        {% elif module.masonry_style.mobile_view.column == "eight" %}
+        #hs_cos_wrapper_{{ name }} .image-gallery-column{     width: calc(100% / 8 - 20px); }
+       
+      {% endif %}
+    
+    }
+    
+    
+    
+  </style>
+
+
+{% end_require_css %}
+
+
+
+
+
+
+{{ require_js("https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js", "footer") }}
+
+{% require_js %}
+
+
+<script defer>
+  
+$(window).load(function(){
+  $('.image-gallery-row').isotope({
+    itemSelector: '.image-gallery-column',
+    
+  });
+
+  
+  
+});
+
+</script>
+  
+{% end_require_js %}
+
+
+
+{% endif %}
+

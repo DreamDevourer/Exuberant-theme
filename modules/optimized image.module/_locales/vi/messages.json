@@ -1,0 +1,37 @@
+{
+  "img.default.alt" : {
+    "message" : "chỗ_dành_sẵn_200x200",
+    "description" : "",
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "Hình ảnh",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "Đây là nơi bạn muốn đưa khách truy cập tới khi họ bấm vào hình ảnh. Vui lòng cung cấp URL có bao gồm giao thức (như \"http://\").",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "Liên kết (tùy chọn)",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Hình ảnh",
+    "description" : "",
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "Mở liên kết trong tab mới",
+    "description" : "",
+    "placeholders" : null
+  }
+}

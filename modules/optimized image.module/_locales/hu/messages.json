@@ -1,0 +1,37 @@
+{
+  "img.default.alt" : {
+    "message" : "placeholder_200x200",
+    "description" : "",
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "Kép",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "Ide szeretné küldeni a látogatóit, amikor a képre kattintanak. Az URL-cím tartalmazzon protokollt (pl. „http://).",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "Hivatkozás (opcionális)",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Kép",
+    "description" : "",
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "Hivatkozás megnyitása új lapon",
+    "description" : "",
+    "placeholders" : null
+  }
+}

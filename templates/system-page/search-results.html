@@ -1,0 +1,33 @@
+<!--
+  templateType: search_results_page
+  isAvailableForNewContent: true
+  label: Search Results
+-->
+{% extends '../layouts/base.html' %}
+
+{% block body %}
+<main class="body-container-wrapper">
+  
+ <section class="content-wrapper">
+    <div class="error-page" >
+      <div class="systems-body">
+        <div class="container">
+          <div class="systems-inner">
+            <div class="custom_error_message">
+                          <h1>Results for "{{ request.query_dict.term|escape }}"</h1>
+                          {% module 'search_results'
+                    path='@hubspot/search_results'
+                  %}
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+  </section>
+</main>
+{% endblock body %}
+
+
+
+ 
+    

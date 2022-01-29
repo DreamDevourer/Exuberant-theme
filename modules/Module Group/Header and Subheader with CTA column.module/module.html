@@ -1,0 +1,54 @@
+<div class="onlyheader-module hm{{ module.custom_class }}" id="{{ module.id_dev }}">
+    <div class="">
+        <div class="onlyheader-row {{ module.text_position }}" style="max-width: {% if module.auto_size %} {{ module.accordion_row_width }} {% endif %}px;">
+          
+          <div class="onlyheader-text titleborder">
+              {{ module.richtext_field }}
+          </div>
+         
+          {% if module.on_off_cta %}
+          <div class="onlyheader-cta" style="padding-left: 10px;">
+            {% for item in module.button_group %}
+              <div class="cta-design 	{% if item.active_button %} border {% endif %}">
+                {% set href = item.link_field.url.href %}
+                {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                {% set rel = [] %}
+                {% if module.link_field.no_follow %}
+                {% do rel.append("nofollow") %}
+                {% endif %}
+                {% if module.link_field.open_in_new_tab %}
+                {% do rel.append("noopener") %}
+                {% endif %}
+               <a href="{{ href }}"
+                   {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                   {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                   >
+                     {{ item.button_text }}
+                </a>
+             </div>
+           {% endfor %} 
+          </div>
+        {% endif %}  
+          
+       </div>
+       
+    </div>
+</div>
+
+{% require_css %}
+    <style>
+      {% if module.divider_ %}
+      
+      #hs_cos_wrapper_{{name}} .hm .onlyheader-text.titleborder:before{ background: rgba({{ module.divider_color.color|convert_rgb }},{{ module.divider_color.opacity / 100 }}); }
+      {% else %}
+       #hs_cos_wrapper_{{name}}  .hm .onlyheader-text.titleborder:before{ display:none; }
+       {% endif %}
+  
+      
+</style>
+
+
+{% end_require_css %}
+

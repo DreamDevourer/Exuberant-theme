@@ -1,0 +1,33 @@
+<!--
+  templateType: error_page
+  isAvailableForNewContent: true
+  label: 404 error
+-->
+{% extends '../layouts/base.html' %}
+
+{% block body %}
+<main class="body-container-wrapper">
+  <section class="content-wrapper">
+    <div class="error-page" data-error="404">
+      <div class="systems-body">
+         <div class="container">
+            <div class="systems-inner">
+               <div class="custom_error_message">
+                 <h1>Error 404</h1>
+                 <br>
+                 <h2>Page not found</h2>
+                 <p>Sorry, the page you were looking for at this URL was not found.</p>
+              </div>
+           </div>
+        </div>
+      </div>
+     <div class="row-fluid">
+        <div class="cta-design">
+         <a class="button" href="/">Go Home</a>
+      </div>
+      </div>
+     
+    </div>
+  </section>
+</main>
+{% endblock body %}

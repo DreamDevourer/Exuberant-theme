@@ -1,0 +1,37 @@
+{
+  "img.default.alt" : {
+    "message" : "placeholder_200x200",
+    "description" : "",
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "รูปภาพ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "นี่คือหน้าที่คุณต้องการส่งผู้เยี่ยมชมของคุณไปเมื่อพวกเขาคลิกที่รูปภาพ โปรดใส่โปรโตคอล (เช่น \"http://\") ใน URL",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "ลิงก์ (ไม่บังคับ)",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "รูปภาพ",
+    "description" : "",
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "เปิดลิงก์ในแท็บใหม่",
+    "description" : "",
+    "placeholders" : null
+  }
+}

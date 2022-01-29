@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "images",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 64387876272,
+  "label" : "Gallery Image - Multi Style",
+  "is_available_for_new_content" : true
+}

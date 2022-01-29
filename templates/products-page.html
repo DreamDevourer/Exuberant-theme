@@ -1,0 +1,115 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Shop
+  screenshotPath: ../images/thumbnails/CoverM.png
+-->
+ 
+{% extends './layouts/base.html' %}
+
+{% block body %}
+<main class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about', label='Main section' %}
+  
+		   {# HERO SECTION START #}
+    {% dnd_section 
+     margin={
+        'top': -100,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+      },
+						padding={
+        'top': 0,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+      },
+						full_width='true'
+      
+       %}
+      
+          {% dnd_module
+            path='../modules/Exuberant Hero',
+            flexbox_positioning="TOP_CENTER",
+         
+          %}
+  
+  
+  
+     {% end_dnd_module %}
+		{% end_dnd_section %}
+   {# HERO SECTION END #}
+	
+      {#  start header Section #}
+    {% dnd_section
+      
+         padding={
+        'top': 30,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+      },
+      full_width='true',
+      flexbox_positioning="MIDDLE_LEFT"
+
+    
+    %}
+   
+    
+    
+          {% dnd_module
+            path='../modules/Module Group/Header and Subheader with CTA',
+            text_position="center",
+            divider_= true,
+            richtext_field = "<h2>Support the Environment</h2>"
+            flexbox_positioning="TOP_CENTER",
+        
+            
+            
+          %}
+  
+          {% end_dnd_module %}
+   
+  
+    {% end_dnd_section %}
+  
+  
+     {# Product 2 Section #}
+    {% dnd_section
+      
+         padding={
+        'top': 0,
+        'bottom': 70,
+        'left': 0,
+        'right': 0
+      },
+      full_width='true',
+      flexbox_positioning="MIDDLE_LEFT"
+
+    
+    %}
+   
+
+    
+          {% dnd_module
+            path='../modules/Module Group/Products Gallery.module', 
+            flexbox_positioning="TOP_CENTER",
+            testimonial_style = "style2"
+            
+          %}
+  
+          {% end_dnd_module %}
+   
+  
+    {% end_dnd_section %}
+    {#  end Product 2 section#}
+ 
+  
+  {# ADD HERE THE NEW TEXT/IMAGE SECTION WHEN READY #}
+  
+  
+  
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

@@ -1,0 +1,60 @@
+<div class="accordion-module" >
+   <div class="container">
+      {% if module.richtext_field %}
+         <div class="header-ofaccordion titleborder">
+             {{ module.richtext_field }}
+         </div>
+      {% endif %} 
+     
+     <div class="accordion-row">
+       {% for item in module.accordion_group %}
+         <div class="accordion-column {% if loop.index == 1 %} active-accordion {% endif %}">
+           <h4 class="arccodion-tab">
+              {{ item.quetion }}
+           </h4>
+           <div class="accordion-text">
+             {{ item.answer }}
+           </div>
+        </div>
+     {% endfor %}  
+     </div>
+     
+   </div>
+</div>
+
+{% require_css %}
+    <style>
+      {% if module.divider_ %}
+	       .titleborder:before{ background: rgba({{ module.divider_color.color|convert_rgb }},{{ module.divider_color.opacity / 100 }}); }
+      {% else %}
+         .titleborder:before{ display:none; }
+       {% endif %}
+      .accordion-column>h4{ border-radius:{{ module.border_radius }}px }
+      .accordion-column > h4:hover{  background:rgba({{ module.active_and_hover_color.color|convert_rgb }},{{ module.active_and_hover_color.opacity / 100 }}); }
+      .accordion-column.active-accordion > h4{ background: rgba({{ module.active_and_hover_color.color|convert_rgb }},{{ module.active_and_hover_color.opacity / 100 }}); }
+      .accordion-row{  max-width: {{ module.accordion_row_width }}px; width: {{ module.accordion_row_width }}px;  }
+						
+						@media (max-width: 767px){
+								.accordion-row {width: 100%;}
+						}
+</style>
+
+
+{% end_require_css %}
+
+{% require_js %}
+    <script defer>
+        $(document).ready(function(){
+           $('.arccodion-tab').click(function(){
+               $(this).parent().siblings().removeClass('active-accordion'); 
+               $(this).next().slideToggle();
+               $(this).parent().toggleClass('active-accordion');
+               $(this).parent().siblings().find('.accordion-text').slideUp();
+           });
+          
+        })
+    </script>
+  {% end_require_js %}
+
+
+

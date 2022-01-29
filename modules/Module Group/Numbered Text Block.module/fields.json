@@ -1,0 +1,107 @@
+[ {
+  "id" : "db3ddee9-aebe-bdbc-7bef-a58680d57e0f",
+  "name" : "main_group",
+  "display_width" : null,
+  "label" : "Main Group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 20,
+    "sorting_label_field" : null,
+    "default" : 1
+  },
+  "children" : [ {
+    "id" : "b7868305-fa48-6af8-479e-e4ecd2fe105c",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "A Subtopic"
+  }, {
+    "id" : "746b70b0-d800-edd0-719e-c52b3c0fec56",
+    "name" : "title_icon",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-5.0.10",
+    "type" : "icon",
+    "default" : {
+      "name" : "briefcase",
+      "unicode" : "f0b1",
+      "type" : "SOLID"
+    }
+  }, {
+    "id" : "f37e9846-5bc1-f0d0-9f86-eaa71fa3f033",
+    "name" : "details1",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>A sentence introing your amazing numbered list of very important points.</p>"
+  }, {
+    "id" : "22a3b32a-d70c-dd65-e13d-a8e7875bf56d",
+    "name" : "details2",
+    "display_width" : null,
+    "label" : "List",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<ul>\n<li>A numbered bullet point.</li>\n<li>A numbered bullet point.</li>\n<li>A numbered bullet point.</li>\n<li>A numbered bullet point.</li>\n<li>A numbered bullet point.</li>\n<li>A numbered bullet point.</li>\n<li>A numbered bullet point.</li>\n</ul>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "A Subtopic",
+    "title_icon" : {
+      "name" : "briefcase",
+      "unicode" : "f0b1",
+      "type" : "SOLID"
+    },
+    "details1" : "<p>A sentence introing your amazing numbered list of very important points.</p>",
+    "details2" : "<ul>\n<li>A numbered bullet point.</li>\n<li>A numbered bullet point.</li>\n<li>A numbered bullet point.</li>\n<li>A numbered bullet point.</li>\n<li>A numbered bullet point.</li>\n<li>A numbered bullet point.</li>\n<li>A numbered bullet point.</li>\n</ul>"
+  } ]
+}, {
+  "id" : "e05ca56c-6a39-4693-fd22-360df7af97e6",
+  "name" : "number_bg_color",
+  "display_width" : null,
+  "label" : "Circle Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#19110B",
+    "opacity" : 100
+  }
+}, {
+  "id" : "bde8d81c-a588-316b-d60c-626a21af5aba",
+  "name" : "icon_color",
+  "display_width" : null,
+  "label" : "Icon Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#4CBA79",
+    "opacity" : 100
+  }
+}, {
+  "id" : "f1983565-c62a-ba3b-f558-3f2aba899f08",
+  "name" : "id_dev",
+  "display_width" : null,
+  "label" : "Id",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+} ]

@@ -1,0 +1,37 @@
+{
+  "img.default.alt" : {
+    "message" : "প্লেসহোল্ডার_200x200",
+    "description" : "",
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "ছবি",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "আপনার দর্শকরা যখন ছবিটিতে ক্লিক করেন তখন আপনি তাদের এই জায়গায় পাঠাতে চান। অনুগ্রহ করে URL এ একটি প্রোটোকল (অর্থাৎ \"http: //\") অন্তর্ভুক্ত করুন।",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "লিংক (ঐচ্ছিক)",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "ছবি",
+    "description" : "",
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "লিংকটিকে নতুন ট্যাবে খুলুন",
+    "description" : "",
+    "placeholders" : null
+  }
+}

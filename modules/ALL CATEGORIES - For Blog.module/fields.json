@@ -1,0 +1,23 @@
+[ {
+  "id" : "da37a294-485d-6716-dc9a-9cf840fd64fa",
+  "name" : "blog_field",
+  "display_width" : null,
+  "label" : "Blog",
+  "required" : false,
+  "locked" : false,
+  "type" : "blog",
+  "default" : 15122972839
+}, {
+  "id" : "7cd75933-7afb-7ccf-5485-c726fd60e76e",
+  "name" : "show_number_of_tag",
+  "display_width" : null,
+  "label" : "Show Number Of tag",
+  "required" : false,
+  "locked" : false,
+  "display" : "slider",
+  "min" : 1,
+  "max" : 250,
+  "step" : 1,
+  "type" : "number",
+  "default" : 10
+} ]

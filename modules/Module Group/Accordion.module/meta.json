@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "question",
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 64387782537,
+  "label" : "Accordion",
+  "is_available_for_new_content" : true
+}

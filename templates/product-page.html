@@ -1,0 +1,149 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Individual Product Page
+  screenshotPath: ../images/thumbnails/CoverM.png
+--> 
+
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main class="body-container-wrapper">
+  {# All templates are recommended to have an h1 present for both accessibility and SEO best practice. This should be at the top of the template before any other textual content. The h1 element below is within a dnd area to allow content editors the ability to adjust the content and alignment of the text. #}
+   
+    
+  {% dnd_area 'dnd_area' class='body-container body-container--about', label='Main section' %}
+		
+				   {# HERO SECTION START #}
+    {% dnd_section 
+     margin={
+        'top': -100,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+      },
+						padding={
+        'top': 0,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+      },
+						full_width='true'
+      
+       %}
+      
+          {% dnd_module
+            path='../modules/Exuberant Hero',
+            flexbox_positioning="TOP_CENTER",
+         
+          %}
+  
+  
+  
+     {% end_dnd_module %}
+		{% end_dnd_section %}
+   {# HERO SECTION END #}
+     
+   {# about us First section #}
+    {% dnd_section 
+     padding={
+        'top': 120,
+        'bottom': 172,
+        'left': 0,
+        'right': 0
+      },
+      
+       %}
+      
+          {% dnd_module
+            path='../modules/Product Gallery.module',
+            flexbox_positioning="TOP_CENTER",
+          
+             
+                
+            
+          %}
+  
+  
+          {% end_dnd_module %}
+   
+      
+   
+         
+  
+    {% end_dnd_section %}
+   {# end about us First section #}
+  
+  
+  {# Video Section #}
+    {% dnd_section
+      
+         padding={
+        'top': 0,
+        'bottom': 70,
+        'left': 0,
+        'right': 0
+      },
+      full_width='true',
+      flexbox_positioning="MIDDLE_LEFT"
+
+    
+    %}
+   
+    
+    
+          {% dnd_module
+            path='../modules/Module Group/Header and Subheader with CTA.module', 
+            flexbox_positioning="TOP_CENTER",
+        
+            
+            
+          %}
+  
+          {% end_dnd_module %}
+   
+  
+    {% end_dnd_section %}
+    {# End Value section#}
+  
+  
+  
+  {#  start header Section #}
+    {% dnd_section
+      
+         padding={
+        'top': 30,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+      },
+      full_width='true',
+      flexbox_positioning="MIDDLE_LEFT"
+
+    
+    %}
+   
+    
+    
+          {% dnd_module
+            path='../modules/Module Group/Accordion.module', 
+            flexbox_positioning="TOP_CENTER",
+        
+            
+            
+          %}
+  
+          {% end_dnd_module %}
+   
+  
+    {% end_dnd_section %}
+    {# header section#}
+
+  {% end_dnd_area %}
+  
+ {# end DND Area #}   
+  
+  
+  
+</main>
+{% endblock body %}

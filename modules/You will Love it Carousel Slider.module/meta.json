@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:Alternate%20Arrows%20Horizontal:SOLID",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 64387854218,
+  "label" : "Carousel Slider",
+  "is_available_for_new_content" : true
+}

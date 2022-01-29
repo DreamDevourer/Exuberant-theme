@@ -1,0 +1,83 @@
+[ {
+  "id" : "d58cafb3-9251-e340-5f37-2259addfe557",
+  "name" : "background_image",
+  "display_width" : null,
+  "label" : "Background Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : true,
+  "type" : "image",
+  "default" : {
+    "src" : "https://cdn2.hubspot.net/hubfs/3428648/legal-problems-associated-with-offic.jpg",
+    "alt" : "Background Image",
+    "width" : 2174,
+    "height" : 1227,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "efc5e133-9278-5589-770b-a5d99900839f",
+  "name" : "section_title",
+  "display_width" : null,
+  "label" : "Section Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "A Main Topic"
+}, {
+  "id" : "61d40307-25e9-abd3-8d18-cebbcbee8f2b",
+  "name" : "overlay",
+  "display_width" : null,
+  "label" : "Overlay",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#4CBA79",
+    "opacity" : 80
+  }
+}, {
+  "id" : "196a18cc-23b3-14e9-bdb9-323e480f7102",
+  "name" : "divider",
+  "display_width" : null,
+  "label" : "Divider",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "df3c2b9b-e5f1-1cb7-60c6-0c9e8f4f0041",
+  "name" : "divider_color",
+  "display_width" : null,
+  "label" : "Divider Color",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "196a18cc-23b3-14e9-bdb9-323e480f7102",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "type" : "color",
+  "default" : {
+    "color" : "#4CBA79",
+    "opacity" : 80
+  }
+}, {
+  "id" : "f73784fd-a475-a311-d774-4e5c2e21f60d",
+  "name" : "section_id",
+  "display_width" : null,
+  "label" : "Id",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+} ]

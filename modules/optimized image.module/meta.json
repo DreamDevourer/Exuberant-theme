@@ -1,0 +1,17 @@
+{
+  "content_tags" : [ {
+    "name" : "NONPROFIT",
+    "source" : "MARKETPLACE"
+  }, {
+    "name" : "COMPATIBLE_ANY",
+    "source" : "MARKETPLACE"
+  } ],
+  "extra_classes" : "widget-type-linked_image",
+  "global" : false,
+  "master_language" : "en",
+  "icon" : "fontawesome-5.14.0:Border%20None:SOLID",
+  "host_template_types" : [ "ANY" ],
+  "module_id" : 64386996046,
+  "label" : "Optimized Image module",
+  "is_available_for_new_content" : true
+}

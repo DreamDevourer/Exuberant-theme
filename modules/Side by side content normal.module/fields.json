@@ -1,0 +1,173 @@
+[ {
+  "id" : "6a0b6e5c-16a6-57e3-4173-ba28a0397737",
+  "name" : "decorator",
+  "display_width" : null,
+  "label" : "Decorator Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://www.remotish.agency/hubfs/DECORATOR.png",
+    "alt" : "DECORATOR",
+    "loading" : "lazy",
+    "width" : 65,
+    "height" : 260,
+    "max_width" : 65,
+    "max_height" : 260
+  }
+}, {
+  "id" : "466c3dbd-e83c-a5b9-c9d3-3960bf89a572",
+  "name" : "left_side",
+  "display_width" : null,
+  "label" : "Left Side",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "838a57cc-ffdd-3880-30f1-84f0f3a8daa4",
+    "name" : "richtext_field",
+    "display_width" : null,
+    "label" : "Rich text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>\n<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>\n<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>\n<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>"
+  }, {
+    "id" : "87ed9d30-e47d-cf3a-1a24-0482311a9d70",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Our values",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Our values"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "richtext_field" : "<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>\n<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>\n<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>\n<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>",
+    "title" : "Our values"
+  }
+}, {
+  "id" : "cb88406b-47e0-ef24-aa25-739e147b0645",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "cb6eda4f-d03c-0acd-02c6-afa378051012",
+    "name" : "right_background_color",
+    "display_width" : null,
+    "label" : "Right Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "83a336cf-acfe-da2a-8e33-11ab9a4b7097",
+    "name" : "heading_colors",
+    "display_width" : null,
+    "label" : "Heading Colors",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#4CBA79",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "ba17ef8d-06c7-eff4-3bfb-a40c479e4609",
+    "name" : "right_text_color",
+    "display_width" : null,
+    "label" : "Right Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "d80d5d9e-ec19-8a1a-40db-3a783ab6f5a8",
+    "name" : "left_text_color",
+    "display_width" : null,
+    "label" : "Left Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "right_background_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "heading_colors" : {
+      "color" : "#4CBA79",
+      "opacity" : 100
+    },
+    "right_text_color" : {
+      "color" : "#000000",
+      "opacity" : 100
+    },
+    "left_text_color" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "fcde2cd4-4731-3022-895c-ccf33ab43dc3",
+  "name" : "right_side",
+  "display_width" : null,
+  "label" : "Right Side",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "dc032d78-a32f-758a-1fed-f23efd63b46f",
+    "name" : "richtext_field_1",
+    "display_width" : null,
+    "label" : "Rich text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>\n<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>\n<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>\n<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>"
+  }, {
+    "id" : "88be5d81-9966-e6f6-0007-3a31b7b7497e",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "WHAT WE BELIEVE",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "WHAT WE BELIEVE"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "richtext_field_1" : "<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>\n<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>\n<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>\n<h3>Nature is pleased with simplicity</h3>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu pulvinar id et, orci ullamcorper consequat praesent euismod. Aliquet a morbi in risus. Elementum mauris, consequat accumsan, leo mattis tellus. Tortor egestas venenatis quam eget mauris.</p>",
+    "title" : "WHAT WE BELIEVE"
+  }
+} ]

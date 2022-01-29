@@ -1,0 +1,57 @@
+[ {
+  "id" : "c0659ae1-c6f6-be47-f874-aee733929395",
+  "name" : "img",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : true,
+  "type" : "image",
+  "default" : {
+    "src" : "https://static.hubspot.com/final/img/content/email-template-images/placeholder_200x200.png",
+    "alt" : "placeholder_200x200",
+    "loading" : "lazy",
+    "width" : 200,
+    "height" : 200
+  }
+}, {
+  "id" : "63e5353d-6345-69dd-c6dc-bbd2a3049d97",
+  "name" : "link",
+  "display_width" : null,
+  "label" : "Link (optional)",
+  "help_text" : "This is where you'd like to send your visitors when they click on the image. Please include a protocol (i.e. \"http://\") in the URL.",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : "c0659ae1-c6f6-be47-f874-aee733929395",
+    "controlling_value_regex" : null,
+    "operator" : "NOT_EMPTY",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "placeholder" : "http://...",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : ""
+}, {
+  "id" : "4e826dd6-cf20-b308-cbb3-de456080195e",
+  "name" : "target",
+  "display_width" : null,
+  "label" : "Open link in new tab",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "63e5353d-6345-69dd-c6dc-bbd2a3049d97",
+    "controlling_value_regex" : null,
+    "operator" : "NOT_EMPTY",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+} ]

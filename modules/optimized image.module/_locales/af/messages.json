@@ -1,0 +1,37 @@
+{
+  "img.default.alt" : {
+    "message" : "plekhouer_200x200",
+    "description" : "",
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "Beeld",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "Dis waarheen jy jou besoekers moet stuur as hulle op die beeld klik. Sluit asseblief 'n protokol (d.w.s. \"http://\") in by die URL.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "Skakel (opsioneel)",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Beeld",
+    "description" : "",
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "Maak skakel oop in 'n nuwe oortjie",
+    "description" : "",
+    "placeholders" : null
+  }
+}

@@ -1,0 +1,80 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Individual Event
+  screenshotPath: ../images/thumbnails/CoverM.png
+-->
+ 
+{% extends './layouts/base.html' %}
+
+{% block body %}
+<main class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about', label='Main section' %}
+     
+   {# HERO SECTION START #}
+    {% dnd_section 
+     margin={
+        'top': -100,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+      },
+						padding={
+        'top': 0,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+      },
+						full_width='true'
+      
+       %}
+      
+          {% dnd_module
+            path='../modules/Exuberant Hero',
+            flexbox_positioning="TOP_CENTER",
+         
+          %}
+  
+  
+  
+          {% end_dnd_module %}
+   {# HERO SECTION END #}
+      
+   
+         
+  
+    {% end_dnd_section %}
+
+		
+		
+		   {% dnd_section 
+     padding={
+        'top': 65,
+        'bottom': 65,
+        'left': 0,
+        'right': 0
+      },
+						margin={
+        'top': 0,
+        'bottom': 35,
+        'left': 0,
+        'right': 0
+      },
+      
+       %}
+      
+          {% dnd_module
+            path='../modules/Main Content Text',
+          %}
+  
+  
+          {% end_dnd_module %}
+  
+   {% end_dnd_section %} 
+      {# end sendond section #}
+
+		{# ADD HERE THE NEW TEXT/IMAGE SECTION WHEN READY #}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

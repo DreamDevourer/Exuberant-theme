@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "images",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 64387865397,
+  "label" : "Products Gallery",
+  "is_available_for_new_content" : true
+}

@@ -1,0 +1,134 @@
+{% require_css %}
+<style>
+{% scope_css %}
+   .imag_img {
+   
+   {% if module.styles.boxes_bg.bg_color.color %}
+   background-color: {{ module.styles.boxes_bg.bg_color.color }};
+   {% endif %}
+   
+   {% if module.styles.corner.radius %}
+   border-radius:{{ module.styles.corner.radius ~ 'px' }};
+   {% endif %}
+   
+   {% if module.styles.boxes_padding.padding.bottom %}
+   padding-bottom:{{ module.styles.boxes_padding.padding.bottom.value ~ 'px' }};
+   {% endif %}
+   
+   {% if module.styles.boxes_padding.padding.top %}
+   padding-top:{{ module.styles.boxes_padding.padding.top.value ~ 'px' }};
+   {% endif %}
+   
+   {% if module.styles.boxes_padding.padding.left %}
+   padding-left:{{ module.styles.boxes_padding.padding.left.value ~ 'px' }};
+   {% endif %}
+   
+   {% if module.styles.boxes_padding.padding.right %}
+   padding-right:{{ module.styles.boxes_padding.padding.right.value ~ 'px' }};
+   {% endif %}
+   
+   {% if module.styles.boxes_padding.margin.bottom %}
+   margin-bottom:{{ module.styles.boxes_padding.margin.bottom.value ~ 'px' }};
+   {% endif %}
+   
+   {% if module.styles.boxes_padding.margin.top %}
+   margin-top:{{ module.styles.boxes_padding.margin.top.value ~ 'px' }};
+   {% endif %} 
+    
+ } 
+{% end_scope_css %}
+</style>
+{% end_require_css %}
+<section class="carousel_love__main">
+    <div class="">
+        <div class="carousel_love__row">
+            <div class="carousel_love__left">
+               <div class="carousel_love__content">
+                  <h2 class="header2">
+                 {{ module.title }}
+              </h2>
+              <div class="carousel_love__text">
+                 {{ module.richtext_field }}
+              </div>
+              <div  class="carousel_love__btn button_design">
+                {% set href = module.button_link.url.href %}
+                {% if module.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                {% set rel = [] %}
+                {% if module.button_link.no_follow %}
+                {% do rel.append("nofollow") %}
+                {% endif %}
+                {% if module.button_link.open_in_new_tab %}
+                {% do rel.append("noopener") %}
+                {% endif %}
+                <a href="{{ href }}"
+                   {% if module.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                   {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                   >
+                 {{ module.button_text }}
+                </a>
+              </div>
+              </div>
+           
+            </div>
+            <div class="carousel_love__right">
+                 <div class="carousel__slider_row">
+                   {% for item in module.slider_group %}
+                   <div class="carousel_love__column imag_main">
+                     {% if item.image_field.src %}
+                     {% set sizeAttrs = 'width="{{ item.image_field.width }}" height="{{ item.image_field.height }}"' %}
+                     {% if item.image_field.size_type == 'auto' %}
+                     {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                     {% elif item.image_field.size_type == 'auto_custom_max' %}
+                     {% set sizeAttrs = 'width="{{ item.image_field.max_width }}" height="{{ item.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+                     {% endif %}
+                     {% set loadingAttr = item.image_field.loading != 'lazy' ? 'loading="{{ item.image_field.loading }}"' : '' %}
+                     <img loading="lazy" class="imag_img" src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                     {% endif %}
+                  </div>
+                   {% endfor %}
+                </div>
+                <div class="carousel__slider_arrow">
+                    <span class="sliderarrow_left"> <i class="fa fa-angle-left" aria-hidden="true"></i> </span>
+                    <span class="sliderarrow_right"> <i class="fa fa-angle-right" aria-hidden="true"></i></span>
+               </div>
+            </div>
+        </div>
+   </div>
+</section>
+
+{{ require_js("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js") }}
+
+
+{% require_js %}
+
+
+<script>
+  $(document).ready(function(){
+  
+    $('.carousel__slider_row').slick({
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: false,
+      prevArrow: $('.sliderarrow_left'),
+      nextArrow: $('.sliderarrow_right')
+      
+   });
+  
+});
+   
+</script>
+
+
+{% end_require_js %}
+
+
+
+
+
+
+
+

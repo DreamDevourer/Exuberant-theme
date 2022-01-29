@@ -1,0 +1,32 @@
+{
+  "name" : {
+    "message" : "Related_Articles - Blog",
+    "description" : "",
+    "placeholders" : null
+  },
+  "title.default" : {
+    "message" : "Related Articles",
+    "description" : "",
+    "placeholders" : null
+  },
+  "title.help_text" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "title.label" : {
+    "message" : "Title",
+    "description" : "",
+    "placeholders" : null
+  },
+  "title.placeholder" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  },
+  "title.validation_regex" : {
+    "message" : "",
+    "description" : "",
+    "placeholders" : null
+  }
+}

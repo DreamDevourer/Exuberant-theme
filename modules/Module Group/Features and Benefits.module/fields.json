@@ -1,0 +1,391 @@
+[ {
+  "id" : "f4304307-9244-8b32-5d8d-366c22cafa42",
+  "name" : "background_image",
+  "display_width" : null,
+  "label" : "Background Image",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "008ac44b-6d11-0ec5-7f8e-9393f84af8e6",
+  "name" : "select_background_image",
+  "display_width" : null,
+  "label" : "Select Background Image",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f4304307-9244-8b32-5d8d-366c22cafa42",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : true,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://www.remotish.agency/hubfs/IMG_1758%20%281%29-compressed.jpg",
+    "alt" : "IMG_1758%20%281%29-compressed",
+    "width" : 2016,
+    "height" : 1512,
+    "max_width" : 2016,
+    "max_height" : 1512,
+    "loading" : "lazy"
+  }
+}, {
+  "id" : "96d3fcf4-7a2f-5ef3-0b55-97277104aa27",
+  "name" : "image_overlay",
+  "display_width" : null,
+  "label" : "Image Overlay",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f4304307-9244-8b32-5d8d-366c22cafa42",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "type" : "color",
+  "default" : {
+    "color" : "#4CBA79",
+    "opacity" : 100
+  }
+}, {
+  "id" : "1b91b935-2d4c-f32b-4453-075458693e09",
+  "name" : "bg_color",
+  "display_width" : null,
+  "label" : "Background Color",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "f4304307-9244-8b32-5d8d-366c22cafa42",
+    "controlling_value_regex" : "false",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "type" : "color",
+  "default" : {
+    "color" : "#ffffff",
+    "opacity" : 100
+  }
+}, {
+  "id" : "f6d16008-5748-b091-7785-2f080cdbff8b",
+  "name" : "all_text_color_white_",
+  "display_width" : null,
+  "label" : "White Text?",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "fa9c1439-b9b5-c7ce-ba81-dbea9bd9661f",
+  "name" : "text_alignment",
+  "display_width" : null,
+  "label" : "Box Alignment",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "left", "Left" ], [ "right", "Right" ], [ "center", "Center" ] ],
+  "type" : "choice",
+  "default" : "center"
+}, {
+  "id" : "640d1329-57b2-6144-2ed6-a7b4e513f1ab",
+  "name" : "remove_icon",
+  "display_width" : null,
+  "label" : "Remove Icon?",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "ac2405fb-f1fc-4746-b88f-ccc9ced37b05",
+  "name" : "icon_filed_group",
+  "display_width" : null,
+  "label" : "Feature/Benefit",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : 9,
+    "sorting_label_field" : "45b4ac98-7fcc-9ead-bb21-bda6587e9831",
+    "default" : 6
+  },
+  "children" : [ {
+    "id" : "2bfa9b02-7ea2-6cd1-71ef-335b59dbc3b6",
+    "name" : "icon_image",
+    "display_width" : null,
+    "label" : "Image (Icon)",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/audit.svg",
+      "alt" : "audit",
+      "width" : 93,
+      "height" : 72,
+      "max_width" : 93,
+      "max_height" : 72
+    }
+  }, {
+    "id" : "45b4ac98-7fcc-9ead-bb21-bda6587e9831",
+    "name" : "rich_text",
+    "display_width" : null,
+    "label" : "Regular Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<h3>Value #1</h3>\n<p>Tell us what are the values of your company. Or, your e-commerce benefits.</p>"
+  }, {
+    "id" : "76890de5-eaea-2726-c2b5-99a921b14973",
+    "name" : "box_link_",
+    "display_width" : null,
+    "label" : "Box Link?",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "424528f5-ad4e-847d-4e87-b6c49cf38305",
+    "name" : "add_link",
+    "display_width" : null,
+    "label" : "Add Link",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "76890de5-eaea-2726-c2b5-99a921b14973",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "icon_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/audit.svg",
+      "alt" : "audit",
+      "width" : 93,
+      "height" : 72,
+      "max_width" : 93,
+      "max_height" : 72
+    },
+    "rich_text" : "<h3>Value #1</h3>\n<p>Tell us what are the values of your company. Or, your e-commerce benefits.</p>",
+    "box_link_" : false,
+    "add_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "icon_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/audit.svg",
+      "alt" : "audit",
+      "width" : 93,
+      "height" : 72,
+      "max_width" : 93,
+      "max_height" : 72
+    },
+    "rich_text" : "<h3>Value #1</h3>\n<p>Tell us what are the values of your company. Or, your e-commerce benefits.</p>",
+    "box_link_" : false,
+    "add_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "icon_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/audit.svg",
+      "alt" : "audit",
+      "width" : 93,
+      "height" : 72,
+      "max_width" : 93,
+      "max_height" : 72
+    },
+    "rich_text" : "<h3>Value #1</h3>\n<p>Tell us what are the values of your company. Or, your e-commerce benefits.</p>",
+    "box_link_" : false,
+    "add_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "icon_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/audit.svg",
+      "alt" : "audit",
+      "width" : 93,
+      "height" : 72,
+      "max_width" : 93,
+      "max_height" : 72
+    },
+    "rich_text" : "<h3>Value #1</h3>\n<p>Tell us what are the values of your company. Or, your e-commerce benefits.</p>",
+    "box_link_" : false,
+    "add_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "icon_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/audit.svg",
+      "alt" : "audit",
+      "width" : 93,
+      "height" : 72,
+      "max_width" : 93,
+      "max_height" : 72
+    },
+    "rich_text" : "<h3>Value #1</h3>\n<p>Tell us what are the values of your company. Or, your e-commerce benefits.</p>",
+    "box_link_" : false,
+    "add_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "icon_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/audit.svg",
+      "alt" : "audit",
+      "width" : 93,
+      "height" : 72,
+      "max_width" : 93,
+      "max_height" : 72
+    },
+    "rich_text" : "<h3>Value #1</h3>\n<p>Tell us what are the values of your company. Or, your e-commerce benefits.</p>",
+    "box_link_" : false,
+    "add_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ]
+}, {
+  "id" : "0d70e4ad-de2e-69a3-06c2-a23d2f11976e",
+  "name" : "cta_trip",
+  "display_width" : null,
+  "label" : "CTA ",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "d0a2e0b3-eb5a-f4ae-7853-b9d577799736",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : "0d70e4ad-de2e-69a3-06c2-a23d2f11976e",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "See more about us"
+}, {
+  "id" : "58ec8317-a5b0-f45f-edc5-05e8d9b84525",
+  "name" : "cta_button_text",
+  "display_width" : null,
+  "label" : "CTA Button Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "visibility" : {
+    "controlling_field" : "0d70e4ad-de2e-69a3-06c2-a23d2f11976e",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Pricing Calculator"
+}, {
+  "id" : "8f2e1107-1490-26ef-1dd7-f913ad8e2d47",
+  "name" : "button_link",
+  "display_width" : null,
+  "label" : "Button Link",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "0d70e4ad-de2e-69a3-06c2-a23d2f11976e",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+} ]

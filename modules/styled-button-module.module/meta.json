@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:Buffer",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 64387695010,
+  "label" : "Styled Button",
+  "is_available_for_new_content" : true
+}

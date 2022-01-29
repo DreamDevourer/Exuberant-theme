@@ -1,0 +1,125 @@
+[ {
+  "id" : "1e75bc5f-3db0-4917-bb24-5efca0bc9103",
+  "name" : "richtext_field",
+  "display_width" : null,
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h2>Frequently Asked Questions</h2>\n<p>Your most common questions and curiosities.</p>"
+}, {
+  "id" : "f173a9b9-e245-39a8-6a2e-b85abfab3da8",
+  "name" : "accordion_group",
+  "display_width" : null,
+  "label" : "Accordion Group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 100,
+    "sorting_label_field" : "3a9918ce-340f-c96e-b283-a80816147a2a",
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "3a9918ce-340f-c96e-b283-a80816147a2a",
+    "name" : "quetion",
+    "display_width" : null,
+    "label" : "Question",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Question #1?"
+  }, {
+    "id" : "7289cf41-5f85-b3d7-0e84-42003b94d167",
+    "name" : "answer",
+    "display_width" : null,
+    "label" : "Answer",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>A thoughtful, informative response.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "quetion" : "Question #1?",
+    "answer" : "<p>A thoughtful, informative response.</p>"
+  }, {
+    "quetion" : "Question #1?",
+    "answer" : "<p>A thoughtful, informative response.</p>"
+  }, {
+    "quetion" : "Question #1?",
+    "answer" : "<p>A thoughtful, informative response.</p>"
+  } ]
+}, {
+  "id" : "cac0daf2-e755-a6a3-53bb-98d3e7f0a932",
+  "name" : "divider_",
+  "display_width" : null,
+  "label" : "Divider?",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "ab31b740-3016-3898-e5fc-443ff17eada7",
+  "name" : "divider_color",
+  "display_width" : null,
+  "label" : "Divider Color",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "cac0daf2-e755-a6a3-53bb-98d3e7f0a932",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "type" : "color",
+  "default" : {
+    "color" : "#4CBA79",
+    "opacity" : 100
+  }
+}, {
+  "id" : "077a16a5-908a-2aad-7b38-6624ece014ca",
+  "name" : "active_and_hover_color",
+  "display_width" : null,
+  "label" : "Active and Hover Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#19110B",
+    "opacity" : 100
+  }
+}, {
+  "id" : "20f13dfc-28a7-1603-8eaa-011b1c22dd0b",
+  "name" : "accordion_row_width",
+  "display_width" : null,
+  "label" : "Accordion Row Width(PX)",
+  "required" : false,
+  "locked" : false,
+  "display" : "slider",
+  "min" : 100,
+  "max" : 1100,
+  "step" : 1,
+  "type" : "number",
+  "default" : 850
+}, {
+  "id" : "61802e2e-0e52-e286-fcf5-551fb0df4671",
+  "name" : "border_radius",
+  "display_width" : null,
+  "label" : "Border Radius",
+  "required" : false,
+  "locked" : false,
+  "display" : "slider",
+  "min" : 0,
+  "max" : 100,
+  "step" : 1,
+  "type" : "number",
+  "default" : 0
+} ]

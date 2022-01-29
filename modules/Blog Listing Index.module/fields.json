@@ -1,0 +1,41 @@
+[ {
+  "id" : "78e53234-6d92-ca1b-9816-69ad737922e0",
+  "name" : "all_posts_link_",
+  "display_width" : null,
+  "label" : "All Posts Link?",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "c639a1eb-5d5f-9c97-0ccf-1929bbf7bb06",
+  "name" : "pagination_",
+  "display_width" : null,
+  "label" : "Pagination?",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "a83847c9-08e7-772f-94c0-3bdd4403bc00",
+  "name" : "description_",
+  "display_width" : null,
+  "label" : "Description?",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "deb8d7b5-40aa-eee0-fba4-cff1a6e5d9fc",
+  "name" : "read_time_",
+  "display_width" : null,
+  "label" : "Read Time?",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+} ]

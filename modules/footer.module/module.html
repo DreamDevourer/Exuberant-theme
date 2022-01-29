@@ -1,0 +1,72 @@
+<div class="row-fluid">
+  <div class="footer">
+   <div class="container">
+     <div class="span4 widget-span widget-type-cell f-column">
+        <div class="f-logo">
+          {% if module.footer_column_1.footer_logo.src %}
+          {% set sizeAttrs = 'width="{{ module.footer_column_1.footer_logo.width }}" height="{{ module.footer_column_1.footer_logo.height }}"' %}
+          {% if module.footer_column_1.footer_logo.size_type == 'auto' %}
+          {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+          {% elif module.footer_column_1.footer_logo.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ module.footer_column_1.footer_logo.max_width }}px; max-height: {{ module.footer_column_1.footer_logo.max_height }}px"' %}
+          {% endif %}
+          {% set loadingAttr = module.footer_column_1.footer_logo.loading != 'lazy' ? 'loading="{{ module.footer_column_1.footer_logo.loading }}"' : '' %}
+          <img loading="lazy" src="{{ module.footer_column_1.footer_logo.src }}" alt="{{ module.footer_column_1.footer_logo.alt }}" {{ sizeAttrs }} {{ loadingAttr }}>
+          {% endif %}
+       </div>  
+     </div>
+     <div class="span3 widget-span widget-type-cell f-column">
+        <div class="footer-logos1">
+          {% if module.footer_coulmn_2.image_field.src %}
+          {% set sizeAttrs = 'width="{{ module.footer_coulmn_2.image_field.width }}" height="{{ module.footer_coulmn_2.image_field.height }}"' %}
+          {% if module.footer_coulmn_2.image_field.size_type == 'auto' %}
+          {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+          {% elif module.footer_coulmn_2.image_field.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ module.footer_coulmn_2.image_field.max_width }}px; max-height: {{ module.footer_coulmn_2.image_field.max_height }}px"' %}
+          {% endif %}
+          <img src="{{ module.footer_coulmn_2.image_field.src }}" alt="{{ module.footer_coulmn_2.image_field.alt }}" {{ sizeAttrs }}>
+        {% endif %}
+       </div>
+       <div class="footer-logos2">
+             {% if module.footer_coulmn_2.image_2.src %}
+      {% set sizeAttrs = 'width="{{ module.footer_coulmn_2.image_2.width }}" height="{{ module.footer_coulmn_2.image_2.height }}"' %}
+      {% if module.footer_coulmn_2.image_2.size_type == 'auto' %}
+        {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+      {% elif module.footer_coulmn_2.image_2.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ module.footer_coulmn_2.image_2.max_width }}px; max-height: {{ module.footer_coulmn_2.image_2.max_height }}px"' %}
+      {% endif %}
+      <img src="{{ module.footer_coulmn_2.image_2.src }}" alt="{{ module.footer_coulmn_2.image_2.alt }}" {{ sizeAttrs }}>
+    {% endif %}
+       </div>
+     </div>
+
+
+  </div>
+</div>
+</div>
+
+<div class="row-fluid" id="darkBack">
+  <div class="copyright text-center">
+    {% for menusFooter in module.menugroup %}
+    <li class="hs-menu-item hs-menu-depth-1 " aria-role="none">
+      <a href="{{menusFooter.link}}" aria-role="menuitem" id="footerText">{{menusFooter.menu_name}}</a>                                          
+     </li>
+    {% endfor %} 
+    <div class="copyrightPara">
+      {{ module.copyright_text }}
+    </div>
+    
+  </div>
+</div>
+
+{% require_js %}
+
+<script>
+  $(window).load(function(){
+       $(".language_switcher").insertAfter(".folap-language");
+   });  
+</script>
+
+{% end_require_js %}
+
+

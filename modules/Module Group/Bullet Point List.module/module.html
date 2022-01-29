@@ -1,0 +1,56 @@
+<div class="should-section what-will-box">
+   <div class="">
+     
+     <div class="h-section3 " style="background-color:rgba({{ module.bg_color.color|convert_rgb }},{{ module.bg_color.opacity / 100 }})">
+
+       <div class="section-title" style="text-align:{{ module.header_alignment }}; max-width: 1100px;">
+         <h2 style="color:rgba({{ module.text_color.color|convert_rgb }},{{ module.text_color.opacity / 100 }});">
+           {{ module.title_main }}
+         </h2>
+       </div>
+
+
+       <div class="should-details-career" style="color:rgba({{ module.text_color.color|convert_rgb }},{{ module.text_color.opacity / 100 }});">
+         {{ module.details_bottom }}
+       </div>
+     </div>
+     
+  </div>
+</div>
+
+{% require_css %}
+    <style>
+    
+      #hs_cos_wrapper_{{name}} .row-fluid .h-section3 .section-title{     max-width: 832px; }
+      #hs_cos_wrapper_{{name}} .should-details-career{     max-width: 1100px; }
+      #hs_cos_wrapper_{{name}} .should-details-career ul ul {   width: 100% !important;  column-count: 1 !important;    padding-top: 7px;}
+     #hs_cos_wrapper_{{name}}  .should-details-career ul li { -moz-column-break-inside: avoid;  -webkit-column-break-inside: avoid;   column-break-inside: avoid; }
+      #hs_cos_wrapper_{{name}} .h-section3{ padding-left:25px; padding-right:25px; }
+      #hs_cos_wrapper_{{name}} .should-details-career ul li{     padding-right: 15px; }
+      
+      {% if module.choice_column == "one" %}
+        #hs_cos_wrapper_{{name}} .should-details-career ul{        column-count: 1; width:100%; }
+      {% elif module.choice_column == "two" %}
+        #hs_cos_wrapper_{{name}} .should-details-career ul{         column-count: 2; width:100%; }
+      {% elif module.choice_column == "there" %}
+       #hs_cos_wrapper_{{name}} .should-details-career ul{      column-count: 3; width:100%; }
+      {% endif %}
+      
+      
+      @media (max-width:991px){
+        #hs_cos_wrapper_{{name}}  .should-details-career ul{ column-count: 2; }
+      
+      }
+      
+      @media (max-width:991px){
+        #hs_cos_wrapper_{{name}}  .should-details-career ul{ column-count:1; }
+      
+      }
+      
+    </style>
+
+
+{% end_require_css %}
+
+
+

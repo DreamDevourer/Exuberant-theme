@@ -1,0 +1,172 @@
+[ {
+  "id" : "1e75bc5f-3db0-4917-bb24-5efca0bc9103",
+  "name" : "richtext_field",
+  "display_width" : null,
+  "label" : "Header",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h2>This Is a Header</h2>\n<p>This is subtext where you can elaborate on the header. You can also add CTAs, toggle the divider on/off, and add an ID that will allow you to anchor link these text sections.</p>"
+}, {
+  "id" : "cac0daf2-e755-a6a3-53bb-98d3e7f0a932",
+  "name" : "divider_",
+  "display_width" : null,
+  "label" : "Divider?",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "ab31b740-3016-3898-e5fc-443ff17eada7",
+  "name" : "divider_color",
+  "display_width" : null,
+  "label" : "Divider Color",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "cac0daf2-e755-a6a3-53bb-98d3e7f0a932",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "type" : "color",
+  "default" : {
+    "color" : "#4CBA79",
+    "opacity" : 100
+  }
+}, {
+  "id" : "e3d0645f-78de-8d05-5081-f17ea22edbc9",
+  "name" : "auto_size",
+  "display_width" : null,
+  "label" : "Auto Size",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "20f13dfc-28a7-1603-8eaa-011b1c22dd0b",
+  "name" : "accordion_row_width",
+  "display_width" : null,
+  "label" : "Header Row Max Width(PX)",
+  "required" : false,
+  "locked" : false,
+  "display" : "slider",
+  "min" : 100,
+  "max" : 1200,
+  "step" : 1,
+  "type" : "number",
+  "default" : 570
+}, {
+  "id" : "5aff2e61-1f23-ebee-1b6c-47953b689b36",
+  "name" : "on_off_cta",
+  "display_width" : null,
+  "label" : "On/OFF CTA",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "d1c1d264-a138-21bb-1523-ecd380caf639",
+  "name" : "button_group",
+  "display_width" : null,
+  "label" : "Button Group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 4,
+    "sorting_label_field" : null,
+    "default" : 1
+  },
+  "visibility" : {
+    "controlling_field" : "5aff2e61-1f23-ebee-1b6c-47953b689b36",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "c43fc5ec-a7ce-3055-74d9-7d98174d3728",
+    "name" : "active_button",
+    "display_width" : null,
+    "label" : "Active Button",
+    "required" : false,
+    "locked" : false,
+    "display" : "checkbox",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "ef0c51dd-d8d0-2a56-21e4-5edfc7c68adc",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Contact us"
+  }, {
+    "id" : "e29456c1-133c-3d48-9ee9-c210087dc28a",
+    "name" : "link_field",
+    "display_width" : null,
+    "label" : "Button Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "button_text" : "Contact us",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "active_button" : false
+  } ]
+}, {
+  "id" : "8328dfe1-246f-d950-542f-602bd613e18e",
+  "name" : "text_position",
+  "display_width" : null,
+  "label" : "Text Position",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "left_position", "Left" ], [ "right_position", "Right" ], [ "center_position", "Center" ] ],
+  "type" : "choice",
+  "default" : "left_position"
+}, {
+  "id" : "06935b4e-a95e-a65f-343c-9dbf7d1ce796",
+  "name" : "id_dev",
+  "display_width" : null,
+  "label" : "ID",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text"
+} ]

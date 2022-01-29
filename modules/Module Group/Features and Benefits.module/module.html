@@ -1,0 +1,99 @@
+<div class="features-benefits">
+  <div class="container">
+      <div class="features-banrow">
+        {% for item in module.icon_filed_group %}
+         <div class="features-bancolumn" style="text-align:{{ module.text_alignment }};">
+           {% set href = item.add_link.url.href %}
+           {% if item.add_link.url.type is equalto "EMAIL_ADDRESS" %}
+           {% set href = "mailto:" + href %}
+           {% endif %}
+           {% set rel = [] %}
+           {% if item.add_link.no_follow %}
+           {% do rel.append("nofollow") %}
+           {% endif %}
+           {% if item.add_link.open_in_new_tab %}
+           {% do rel.append("noopener") %}
+           {% endif %}
+         	{% if item.box_link_ %}   <a href="{{ href }}"
+              {% if item.add_link.open_in_new_tab %}target="_blank"{% endif %}
+              {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+              >  {% endif %}
+            {% if module.remove_icon %} 
+           <div class="features-icon">
+              {% if item.icon_image.src %}
+              {% set sizeAttrs = 'width="{{ item.icon_image.width }}" height="{{ item.icon_image.height }}"' %}
+              {% if item.icon_image.size_type == 'auto' %}
+              {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+              {% elif item.icon_image.size_type == 'auto_custom_max' %}
+              {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ item.icon_image.max_width }}px; max-height: {{ item.icon_image.max_height }}px"' %}
+              {% endif %}
+              {% set loadingAttr = item.icon_image.loading != 'lazy' ? 'loading="{{ item.icon_image.loading }}"' : '' %}
+              <img loading="lazy" src="{{ item.icon_image.src }}" alt="{{ item.icon_image.alt }}" {{ sizeAttrs }} {{ loadingAttr }}>
+              {% endif %}
+           </div>
+           {% endif %}
+           
+           <div class="features-text">
+              {{ item.rich_text }}
+           </div>
+        	{% if item.box_link_ %}   </a>  {% endif %}
+        </div>
+      {% endfor %}  
+      </div>
+    {% if module.cta_trip %}
+     <div class="features-tripe">
+       <h3>
+         {{ module.title }}
+       </h3>
+       <div class="cta-design">
+         {% set href = module.button_link.url.href %}
+         {% if module.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+         {% set href = "mailto:" + href %}
+         {% endif %}
+         {% set rel = [] %}
+         {% if module.link_field.no_follow %}
+         {% do rel.append("nofollow") %}
+         {% endif %}
+         {% if module.link_field.open_in_new_tab %}
+         {% do rel.append("noopener") %}
+         {% endif %}
+         <a href="{{ href }}"
+            {% if module.button_link.open_in_new_tab %}target="_blank"{% endif %}
+            {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+            >
+           {{ module.cta_button_text }}
+         </a>
+       </div>
+       
+     </div>
+  {% endif %}  
+    
+    
+  </div>
+</div>
+
+{% require_css %}
+    <style>
+      {% if module.all_text_color_white_ %}
+         #hs_cos_wrapper_{{name}} .features-text * {   color: #fff; }
+         #hs_cos_wrapper_{{name}} .features-tripe h3 {   color: #fff; }
+         #hs_cos_wrapper_{{name}}  .features-tripe a {    background: #fff ;    color: #000; }
+
+      {% endif %}
+        {% if module.background_image %}
+           
+         #hs_cos_wrapper_{{name}} .features-benefits{ background-image:url({{ module.select_background_image.src }}); z-index:1; }
+         #hs_cos_wrapper_{{name}} .features-benefits:before{     z-index: -1; content:""; background-color:rgba({{ module.image_overlay.color|convert_rgb }},{{ module.image_overlay.opacity / 100 }}); position:absolute; top:0; left:0; right:0; bottom:0;  }
+      
+      
+        {% else %}
+      
+         #hs_cos_wrapper_{{name}} .features-benefits { background-color:rgba({{ module.bg_color.color|convert_rgb }},{{ module.bg_color.opacity / 100 }}) } 
+    
+      {% endif %}
+    </style>
+{% end_require_css %}
+
+
+
+

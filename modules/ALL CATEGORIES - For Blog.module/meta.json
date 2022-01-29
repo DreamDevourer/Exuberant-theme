@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "align-right",
+  "host_template_types" : [ "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 64387853324,
+  "label" : "Blog Categories Filter",
+  "is_available_for_new_content" : true
+}

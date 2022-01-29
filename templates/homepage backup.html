@@ -1,0 +1,203 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Home
+  screenshotPath: ../images/thumbnails/CoverM.png
+-->
+ 
+{% extends './layouts/base.html' %}
+
+{% block body %}
+<main class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about', label='Main section' %}
+     
+   {# about us First section #}
+    {% dnd_section 
+     padding={
+        'top': 120,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+      },
+      
+       %}
+      
+          {% dnd_module
+            path='../modules/Module Group/Side Module with Images or Video',
+            flexbox_positioning="TOP_CENTER",
+         
+          %}
+  
+  
+  
+          {% end_dnd_module %}
+   
+      
+   
+         
+  
+    {% end_dnd_section %}
+   {# end about us First section #}
+
+  
+  
+   {# start sendond  section #} 
+  
+   {% dnd_section 
+     padding={
+        'top': 0,
+        'bottom': 50,
+        'left': 0,
+        'right': 0
+      },
+      
+       %}
+      
+          {% dnd_module
+            path='../modules/You will Love it Carousel Slider.module',
+            flexbox_positioning="TOP_CENTER",
+          
+             
+                
+            
+          %}
+  
+  
+          {% end_dnd_module %}
+  
+   {% end_dnd_section %} 
+      {# end sendond section #}  
+
+  
+      {#  start header Section #}
+    {% dnd_section
+      
+         padding={
+        'top': 30,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+      },
+      full_width='true',
+      flexbox_positioning="MIDDLE_LEFT"
+
+    
+    %}
+   
+    
+    
+          {% dnd_module
+            path='../modules/Module Group/Header and Subheader with CTA',
+            text_position="center",
+            divider_= true,
+            richtext_field = "<h2>Women's Best Seller</h2>"
+            flexbox_positioning="TOP_CENTER",
+        
+            
+            
+          %}
+  
+          {% end_dnd_module %}
+   
+  
+    {% end_dnd_section %}
+    {# header section#}
+  
+  
+   {# Product 1 Section #}
+    {% dnd_section
+      
+         padding={
+        'top': 0,
+        'bottom': 70,
+        'left': 0,
+        'right': 0
+      },
+      full_width='true',
+      flexbox_positioning="MIDDLE_LEFT"
+
+    
+    %}
+   
+
+    
+          {% dnd_module
+            path='../modules/Module Group/Gallery Image.module', 
+            flexbox_positioning="TOP_CENTER",
+            testimonial_style = "style2"
+            
+          %}
+  
+          {% end_dnd_module %}
+   
+  
+    {% end_dnd_section %}
+    {#  end Product 1 section#}
+  
+      {#  start header Section #}
+    {% dnd_section
+      
+         padding={
+        'top': 30,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+      },
+      full_width='true',
+      flexbox_positioning="MIDDLE_LEFT"
+
+    
+    %}
+   
+    
+    
+          {% dnd_module
+            path='../modules/Module Group/Header and Subheader with CTA',
+            text_position="center",
+            divider_= true,
+            richtext_field = "<h2>Men's Best Seller</h2>"
+            flexbox_positioning="TOP_CENTER",
+        
+            
+            
+          %}
+  
+          {% end_dnd_module %}
+   
+  
+    {% end_dnd_section %}
+    {# header section#}
+  
+     {# Product 2 Section #}
+    {% dnd_section
+      
+         padding={
+        'top': 0,
+        'bottom': 70,
+        'left': 0,
+        'right': 0
+      },
+      full_width='true',
+      flexbox_positioning="MIDDLE_LEFT"
+
+    
+    %}
+   
+
+    
+          {% dnd_module
+            path='../modules/Module Group/Gallery Image.module', 
+            flexbox_positioning="TOP_CENTER",
+            testimonial_style = "style2"
+            
+          %}
+  
+          {% end_dnd_module %}
+   
+  
+    {% end_dnd_section %}
+    {#  end Product 2 section#}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

@@ -1,0 +1,37 @@
+{
+  "img.default.alt" : {
+    "message" : "заполнитель_200x200",
+    "description" : "",
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "Изображение",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "Сюда будут попадать ваши посетители при щелчке по изображению. Включите в URL-адрес протокол (напр. http://).",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "Ссылка (необязательно)",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Изображение",
+    "description" : "",
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "Открывать ссылку в новой вкладке",
+    "description" : "",
+    "placeholders" : null
+  }
+}

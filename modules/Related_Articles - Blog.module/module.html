@@ -1,0 +1,85 @@
+<div class="related-title">
+   <h2>
+    {{ module.title }}    
+   </h2>
+</div>
+{% if content.topic_list %}
+    {% set max_posts = 3 %} <!-- Set the max number of related posts to be output to the page here -->
+    {% set count = 0 %}
+    {% for topic in content.topic_list %}
+        {% if loop.index  == 1 %}
+            {% set topic_one = blog_recent_topic_posts(group.id, topic.slug, max_posts + 1 ) %}
+            {% if topic_one|length == 1 %}
+                <p>There are no related posts</p>
+            {% endif %}
+        {% elif loop.index == 2 %}
+            {% set topic_two = blog_recent_topic_posts(group.id, topic.slug, max_posts + 1 ) %}
+        {% elif loop.index == 3 %}
+            {% set topic_three = blog_recent_topic_posts(group.id, topic.slug, max_posts + 1 ) %}
+        {% endif %}
+        {% if loop.length >= 3 and loop.index == 3 %}
+            {% set related_posts = (topic_one + topic_two + topic_three)|sort(true, false, 'publish_date')|unique('name') %}
+            {% set loop_count = 3 %}
+        {% elif loop.length == 2 and loop.index == 2 %}
+            {% set related_posts = (topic_one + topic_two)|sort(true, false, 'publish_date')|unique('name') %}
+            {% set loop_count = 2 %}
+        {% elif loop.length == 1 and loop.index == 1 %}
+            {% set related_posts = topic_one %}
+            {% set loop_count = 1 %}
+        {% endif %}
+        {% if loop.index == loop_count %}
+            {% for post in related_posts %}
+                {% if content.absolute_url != post.absolute_url and count < max_posts %}
+                        <div class="post-item">
+                          {% if post.post_list_summary_featured_image %}
+                          <div class="post-item-featured">
+                            <a href="{{post.absolute_url}}" title="" class="hs-featured-image-link" style="background-image:url('{{ post.post_list_summary_featured_image }}')">
+                            </a>
+                            {% if post.show_summary_in_listing %} 
+                            <a class="more-link" href="{{ post.absolute_url }}">  <svg class="svg svg--readmore" width="23px" height="14px" viewBox="0 0 23 14" version="1.1" role="img" aria-label="Read More">
+                              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-651.000000, -4575.000000)" fill="#FFFFFF">
+                                  <g transform="translate(536.000000, 4479.000000)">
+                                    <g transform="translate(115.000000, 90.000000)">
+                                      <path d="M12.9849919,11.4574074 C13.1724909,11.6492593 13.2774903,11.9162963 13.2774903,12.1911111 C13.2774903,12.4633333 13.1724909,12.7303704 12.9849919,12.9248148 C12.7999929,13.1166667 12.5424943,13.2281481 12.2799958,13.2281481 C12.0149972,13.2281481 11.7574986,13.1166667 11.5724996,12.9248148 C11.3850006,12.7303704 11.2800012,12.4633333 11.2800012,12.1911111 C11.2800012,11.9162963 11.3850006,11.6492593 11.5724996,11.4574074 C11.7574986,11.262963 12.0149972,11.1540741 12.2799958,11.1540741 C12.5424943,11.1540741 12.7999929,11.262963 12.9849919,11.4574074 M13.0832414,15.199037 C12.5214944,15.639 11.8284982,15.8248889 11.133002,15.7232593 C10.4352558,15.6208519 9.81775914,15.2412963 9.39376145,14.6543333 C8.51826621,13.4412593 8.75276493,11.7127778 9.91650861,10.8007037 C10.4787556,10.3607407 11.1722518,10.1743333 11.867998,10.2767407 C12.5654942,10.3794074 13.1829909,10.7587037 13.6062386,11.3451481 C14.4817338,12.5587407 14.2472351,14.2874815 13.0832414,15.199037 M12.0784969,8.73674074 C10.9837528,8.57574074 9.89550872,8.86818519 9.01226352,9.55937037 C9.01226352,9.55937037 9.01226352,9.55962963 9.01201352,9.55962963 C7.19152342,10.9865926 6.82402541,13.6898889 8.19301797,15.5866296 C8.85776436,16.5072593 9.82725909,17.1027778 10.9230031,17.2635185 C11.1187521,17.292037 11.314501,17.3062963 11.50875,17.3062963 C12.3997451,17.3062963 13.2629904,17.0076296 13.9872365,16.4401111 C15.8082266,15.0141852 16.1762246,12.3106296 14.806982,10.4131111 C14.1427356,9.493 13.1737409,8.89748148 12.0784969,8.73674074 M11.5,17.9259259 C6.67177624,17.9259259 3.38454411,14.4108889 2.25880022,12.9979259 C3.37929413,11.5841852 6.65027636,8.07407407 11.5,8.07407407 C16.3272238,8.07407407 19.6137059,11.5872963 20.7396998,13 C19.6124559,14.414 16.3259738,17.9259259 11.5,17.9259259 M22.8306884,12.4226296 C22.6611893,12.1602593 18.5974614,6 11.5,6 C4.40253857,6 0.338810659,12.1602593 0.16931158,12.4226296 C-0.0564371933,12.7718519 -0.0564371933,13.2281481 0.16931158,13.5773704 C0.338810659,13.8397407 4.40253857,20 11.5,20 C18.5974614,20 22.6611893,13.8397407 22.8306884,13.5773704 C23.0564372,13.2281481 23.0564372,12.7718519 22.8306884,12.4226296"></path>
+                                    </g>
+                                  </g>
+                                </g>
+                              </g>
+                              </svg> &nbsp; Read Article</a>
+                            {% endif %}
+                          </div>
+                          {% endif %}
+                          <div class="post-body clearfix">
+                            <!--post summary-->
+                            <div class="post-category">
+                              {% if post.topic_list %}
+                              <div id="hubspot-topic_data"> 
+                                {% for topic in post.topic_list %}
+                                   {% if loop.index < 3 %} <a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %} {% endif %} {% endif %}
+                                {% endfor %}
+                              </div>
+                              {% endif %}
+                            </div>
+                            <div class="post-item-title">
+                              <h3><a href="{{post.absolute_url}}">{{ post.name }}</a></h3>
+                            </div>
+                            <div class="post-item-details">
+                              {{ post.post_list_content|safe|striptags|truncate(200) }}
+                            </div>
+                            <div id="hubspot-author_data" class="hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author">
+                              {%if post.blog_post_author %}
+                              <a class="author-link" href="{{ blog_author_url(group.id, post.blog_post_author.slug) }}">
+                                <img src="{{ post.blog_post_author.avatar }}" alt="Picture of {{ post.blog_post_author.display_name }}">
+                                <span>{{ post.blog_post_author.display_name }}</span>
+                              </a> 
+                                {% endif %}
+                            </div>  
+                          </div>
+                        </div>
+                    {% set count = count + 1 %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endif %} 

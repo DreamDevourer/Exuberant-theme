@@ -1,0 +1,116 @@
+
+<div class="sideimage-module border " style="background-color:rgba({{ module.side_module_with_images_or_video.bg_color.color|convert_rgb }},{{ module.side_module_with_images_or_video.bg_color.opacity / 100 }})">
+    <div class="container">
+      
+   <div class="sideimage-main">
+          {% for item in module.side_module_with_images_or_video.row_loop %}
+
+      <div class="sideimagevideo-row  {% if item.right_image_or_video_ %} image-videoright {% endif %}">
+          
+        <div class="imageor-videoimg {{ module.side_module_with_images_or_video.column }}">
+             
+           {% if item.video_ %}   
+              
+               <div class="side-video">
+                {% if item.embed_field.source_type == 'oembed' %}
+                {{ item.embed_field.oembed_url }}
+                {% else %}
+                {{ item.embed_field.embed_html }}
+                {% endif %}
+              </div>
+            
+            {% else %}  
+              
+              <div class="side-image">
+                {% if item.image_field.src %}
+                {% set sizeAttrs = 'width="{{ item.image_field.width }}" height="{{ item.image_field.height }}"' %}
+                {% if item.image_field.size_type == 'auto' %}
+                {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif item.image_field.size_type == 'auto_custom_max' %}
+                {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ item.image_field.max_width }}px; max-height: {{ item.image_field.max_height }}px"' %}
+                {% endif %}
+                {% set loadingAttr = item.image_field.loading != 'lazy' ? 'loading="{{ item.image_field.loading }}"' : '' %}
+                <img loading="lazy" src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}" {{ sizeAttrs }} style="width:{{ item.image_size }}%" style="border-radius:{{ module.side_module_with_images_or_video.image_rdaius }}px" {{ loadingAttr }}>
+                {% endif %}
+              </div>
+              
+            {% endif %}
+             
+	
+            </div>
+        
+            <div class="imagevideo-text {{ module.side_module_with_images_or_video.column }}">
+              {% if item.select_tag_for_title == "h1" %}
+               {% if item.title %} <h1>
+                   {{ item.title }}
+                 </h1>{% endif %}
+              {% elif  item.select_tag_for_title == "h2" %} 
+                {% if item.title %}  <h2>
+                   {{ item.title }}
+                 </h2>{% endif %}
+              {% elif  item.select_tag_for_title == "h3" %} 
+              {% if item.title %}   <h3>
+                   {{ item.title }}
+                 </h3> {% endif %}
+              {% elif  item.select_tag_for_title == "h4" %} 
+                {% if item.title %} <h4>
+                   {{ item.title }}
+                 </h4>{% endif %}
+              
+               {% else %}
+                    {% if item.title %}  <h2>
+                      {{ item.title }}
+                    </h2>{% endif %}
+              {% endif %}
+              
+              {% if item.sub_header %} 
+                <div class="subheader">
+                   <h4>
+                      {{ item.sub_header }}
+                  </h4>
+                </div>
+              {% endif %}
+              
+                <div class="imagevideo-details">
+                   {{ item.multi_content }}
+               </div>
+              
+              {% if item.button %}
+                <div class="cta-design imagevideo-cta">
+                   {% set href = item.button_link.url.href %}
+                   {% if item.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+                   {% set href = "mailto:" + href %}
+                   {% endif %}
+                   <a href="{{ href }}"
+                      {% if item.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                      {% if item.button_link.no_follow %}rel="nofollow"{% endif %}
+                      >
+                       {{ item.button_text }}
+                   </a>
+                </div>
+              {% endif %}
+              
+            </div> 
+        
+        
+      </div>
+      {% endfor %}
+      </div>
+      
+    </div>
+</div>
+
+{% require_css %}
+<style>
+  
+  {% if module.side_module_with_images_or_video.on_off_divider %}
+   #hs_cos_wrapper_{{name}} .border .imagevideo-text:before{ border-top: 3px solid rgba({{ module.side_module_with_images_or_video.divider_color.color|convert_rgb }},{{  module.side_module_with_images_or_video.divider_color.opacity / 100 }}); }
+  
+  {% else if %}
+   #hs_cos_wrapper_{{name}}  .border .imagevideo-text:before{ display:none; }
+  {% endif %}
+    
+  
+</style>
+{% end_require_css %}
+

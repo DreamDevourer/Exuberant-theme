@@ -1,0 +1,37 @@
+{
+  "img.default.alt" : {
+    "message" : "zástupný_znak_200x200",
+    "description" : "",
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "Obrázok",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "Tu chcete poslať svojich návštevníkov, keď kliknú na obrázok. Vo webovej adrese uveďte protokol  (napríklad. http://).",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "Odkaz (voliteľné)",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Obrázok",
+    "description" : "",
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "Otvoriť odkaz v novej karte",
+    "description" : "",
+    "placeholders" : null
+  }
+}

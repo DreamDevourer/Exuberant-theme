@@ -1,0 +1,104 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  label: Blog Article
+  screenshotPath: ../images/thumbnails/blog_article.jpg
+-->  
+
+{% extends '../layouts/base.html' %}
+
+{% block body %}
+<main class="body-container-wrapper">
+
+
+  <div class="body-container body-container--blog-post">
+
+      <div class="row-fluid">
+         <div class="container">
+            {% module "ebook-section" label="Ebook Section", path="../../modules/Inner_Post - Blog hero" %}
+        </div>
+    </div>
+    
+    
+    
+    <div class="row-fluid">
+    <div class="container">
+      
+           <div class="blog-section">
+    <div class="blog-post-wrapper cell-wrapper">
+       <div class="blog-section">
+            <div class="blog-post-wrapper cell-wrapper post-inner-two">
+            
+              
+              <div class="inner-post-body">
+                <div class="section post-body">
+                    {{ content.post_body }}
+                </div>
+                {% if content.topic_list %}
+                     <p id="hubspot-topic_data" > <span>Topics: </span> &nbsp;
+                        
+                        {% for topic in content.topic_list %}
+                          <a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
+                        {% endfor %}
+                     </p>
+                {% endif %}
+                
+                
+                
+                
+                
+             </div>
+                <div class="social-sharing">
+                    <ul class="share-buttons">
+                      <li>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ content.absolute_url }}&title={{ content.title }}&picture={{ content.featured_image }}&description={{ content.meta_description }}" title="Share on Facebook" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=600,height=500')">
+                          <i class="fab fa-facebook-square"></i>  </a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/intent/tweet?source={{ content.absolute_url }}&text={{ content.title }}" target="_blank" title="Tweet" onclick="return !window.open(this.href, 'Twitter', 'width=600,height=500')">
+                         <i class="fab fa-twitter-square"></i>  </a>
+                      </li>
+                     
+                      <li>
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ content.absolute_url }}&title={{ content.title }}&summary={{ content.meta_description }}" target="_blank" title="Share on LinkedIn" onclick="return !window.open(this.href, 'Facebook', 'width=600,height=500')"> <i class="fab fa-linkedin"></i>
+ </a>
+                      </li>
+                      <li>
+                        <a href="mailto:?subject={{ content.title }}&body={{ content.title }} {{ content.absolute_url }}"  title="Email"> <i class="fa fa-envelope" aria-hidden="true"></i>  </a>
+                      </li>
+                    </ul>
+                  </div>
+              
+        
+         
+              
+          </div>   
+            
+        </div>
+    </div>
+</div>
+
+      
+      
+      </div>
+      
+      
+    </div>
+    
+   
+    
+    
+      <div class="row-fluid related-post">
+         <div class="container">
+            
+            {% module "Related_Articles" label="Related Articles", path="../../modules/Related_Articles - Blog" %}
+        </div>
+    </div>
+    
+    
+    
+    
+
+  </div>
+</main>
+{% endblock body %}

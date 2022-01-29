@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "book",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 64387832367,
+  "label" : "Numbered Text Block",
+  "is_available_for_new_content" : true
+}

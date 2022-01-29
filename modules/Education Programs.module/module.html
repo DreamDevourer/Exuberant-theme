@@ -1,0 +1,57 @@
+<section class="education_programs__main">
+      <div class="container">
+          <div class="education_programs__row">    
+              <div class="education_programs__left">
+                
+                <div class="left_imageicon">
+                  {% if module.left_group.left_image.src %}
+                  {% set sizeAttrs = 'width="{{ module.left_group.left_image.width }}" height="{{ module.left_group.left_image.height }}"' %}
+                  {% if module.left_group.left_image.size_type == 'auto' %}
+                  {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                  {% elif module.left_group.left_image.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ module.left_group.left_image.max_width }}" height="{{ module.left_group.left_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                  {% endif %}
+                  {% set loadingAttr = module.left_group.left_image.loading != 'disabled' ? 'loading="{{ module.left_group.left_image.loading }}"' : '' %}
+                  <img src="{{ module.left_group.left_image.src }}" alt="{{ module.left_group.left_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                  {% endif %}
+                </div>
+                <div class="education_programs__details">
+                  <div class="education_programs__header">
+                    <h2>
+                      {{ module.left_group.title }}
+                    </h2>
+                  </div>
+                  <div class="education_programs__text">
+                    {{ module.left_group.richtext_field }}
+                  </div>
+                  <div class="ep__borderbtn__main button_design ">
+                    {% set href = module.left_group.button_link.url.href %}
+                    {% if module.left_group.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+                    {% set href = "mailto:" + href %}
+                    {% endif %}
+                    <a href="{{ href }}"
+                       {% if module.left_group.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                       {% if module.left_group.button_link.rel %}rel="{{ module.left_group.button_link.rel }}"{% endif %}
+                       >
+                      {{ module.left_group.button_text }}
+                    </a>
+                  </div>
+                </div>
+                
+                
+             </div>
+              <div class="education_programs__right">
+                {% if module.image_field.src %}
+                {% set sizeAttrs = 'width="{{ module.image_field.width }}" height="{{ module.image_field.height }}"' %}
+                {% if module.image_field.size_type == 'auto' %}
+                {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+                {% elif module.image_field.size_type == 'auto_custom_max' %}
+                {% set sizeAttrs = 'width="{{ module.image_field.max_width }}" height="{{ module.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading }}"' : '' %}
+                <img src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                {% endif %}
+             </div>
+        </div>
+     </div>
+</section>

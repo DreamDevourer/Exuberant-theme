@@ -1,0 +1,106 @@
+<!--
+   templateType: blog_listing
+   isAvailableForNewContent: true
+   label: Blog Summary
+   screenshotPath: ../images/thumbnails/blog_listings.jpg
+-->
+
+{% extends '../layouts/base.html' %}
+{% block body %}
+<main class="body-container-wrapper topheader-padding">
+   <div class="body-container body-container--blog-index">
+      {% dnd_area 'dnd_area'
+										label='Main section',
+										class='body-container body-container--blog-index'
+      %}
+					
+									   {# HERO SECTION START #}
+    {% dnd_section 
+     margin={
+        'top': -150,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+      },
+						padding={
+        'top': 0,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+      },
+						full_width='true'
+      
+       %}
+      
+          {% dnd_module
+            path='../../modules/Exuberant Hero',
+            flexbox_positioning="TOP_CENTER",
+         
+          %}
+  
+  
+  
+     {% end_dnd_module %}
+		{% end_dnd_section %}
+   {# HERO SECTION END #}
+					
+										{% dnd_section
+																padding={
+																'top': 172,
+																'bottom': 0,
+																'left' : 0,
+																'right' : 0
+																}
+										%}
+														{% dnd_module
+																		path='../../modules/Module Group/Side Module with Images or Video',  label="Side Module with Images or Video"
+														%}
+														{% end_dnd_module %}
+										{% end_dnd_section %}
+									
+     
+                {% dnd_section
+														padding={
+														'top': 0,
+														'bottom': 0,
+														'left' : 0,
+														'right' : 0
+														}
+										%}
+														{% dnd_module
+																		path='../../modules/ALL CATEGORIES - For Blog',  label="Side Module with Images or Video"
+														%}
+														{% end_dnd_module %}
+										{% end_dnd_section %}
+     
+     
+     
+     
+     								{% dnd_section
+														padding={
+														'top': 0,
+														'bottom': 0,
+														'left' : 0,
+														'right' : 0
+														}
+										%}
+														{% dnd_module
+																		path='../../modules/Blog Listing Index.module',  label="Blog Listing Index.module"
+														%}
+														{% end_dnd_module %}
+										{% end_dnd_section %}
+     
+     
+     
+     
+     
+      {% end_dnd_area %}
+     
+     
+     
+   
+     
+     
+   </div>
+</main>
+{% endblock body %}

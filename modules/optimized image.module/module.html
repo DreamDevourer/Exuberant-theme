@@ -1,0 +1,29 @@
+{% if module.target == true %}
+    {% set target = "_blank" %}
+{% else %}
+    {% set target = "_parent" %}
+{% endif %}
+
+{% set loadingAttr = module.img.loading != 'lazy' ? '{{ module.img.loading }}' : '' %}
+
+{% unless (module.link is string_containing "//") or (module.link is string_startingwith "/") or (module.link is string_startingwith "mailto") or (module.link is string_startingwith "#") or !module.link %}
+  {% set link = "//" ~ module.link %}
+{% else %}
+  {% set link = module.link || "" %}
+{% endunless %}
+
+
+{% linked_image
+    label="Linked Image",
+    src='{{ module.img.src }}',
+    alt='{{ module.img.alt }}',
+    width='{{ module.img.width }}',
+    height='{{ module.img.height }}',
+    link='{{ link }}',
+    target='{{ target }}',
+    open_in_new_tab='{{ target }}',
+    size_type='{{ module.img.size_type }}',
+    max_width='{{ module.img.max_width }}',
+    max_height='{{ module.img.max_height }}',
+    loading='{{ loadingAttr }}'
+%}

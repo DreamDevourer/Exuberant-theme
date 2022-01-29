@@ -1,0 +1,70 @@
+{% if module.choice_style == "style3" %}
+
+<div class="pricing-package">
+     <div class="container">
+     {% if module.section_header_ %}
+      <div class="pricing-header">
+        {{ module.header }}
+      </div>
+      {% endif %}
+      
+     <div class="pricing-package-row">
+       {% for item in module.pricing_package %}  
+         <div class="pricing-package-column" style="border-radius:{{ module.radius }}px">
+           
+           <div class="pricing-package-left">
+               <div class="pricing-package-title">
+                 <h3>
+                 {{ item.title }}
+                </h3>
+               {% if item.add_flag_notification_ %}  <span class="flag-notification" style="background:rgba({{ item.flag_notification_color.color|convert_rgb }},{{ item.flag_notification_color.opacity / 100 }});"> {{ item.flag_notification_text }} </span> {% endif %}
+             </div>
+             <span class="pricing-package-details"> {{ item.details }} </span>
+           </div>
+           
+           <div class="pricing-package-right">
+              <h3>
+                ${{ item.price }}
+             </h3>
+              <div class="cta-design">
+                {% set href = item.button_link.url.href %}
+                {% if item.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                {% set rel = [] %}
+                {% if module.link_field.no_follow %}
+                {% do rel.append("nofollow") %}
+                {% endif %}
+                {% if module.link_field.open_in_new_tab %}
+                {% do rel.append("noopener") %}
+                {% endif %}
+                <a href="{{ href }}"
+                   {% if item.button_link.open_in_new_tab %}target="_blank"{% endif %}
+                   {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}
+                   >
+                    {{ item.button_text }}
+                </a>
+              </div>
+           </div>
+           
+         </div>
+       {% endfor %}  
+       
+       </div>
+     
+       
+    </div>
+</div>
+
+
+{% require_css %}
+    <style>
+
+     #hs_cos_wrapper_{{name}} .pricing-package-right .cta-design a {     border-color: transparent; background-color:rgba({{ module.button_color.color|convert_rgb }},{{ module.button_color.opacity / 100 }}); min-width: 227px; font-weight: normal; font-size: 22px; line-height: 46px; padding: 5px 0; margin-top:8px; }  
+    </style>
+{% end_require_css %}
+
+{% endif %}
+
+
+

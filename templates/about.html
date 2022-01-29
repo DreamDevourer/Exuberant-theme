@@ -1,0 +1,200 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: About Us
+  screenshotPath: ../images/thumbnails/CoverM.png
+--> 
+
+{% extends './layouts/base.html' %}
+
+{% block body %}
+<main class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about', flexbox_positioning="TOP_CENTER", label='Main section' %}
+		
+				   {# HERO SECTION START #}
+    {% dnd_section 
+     margin={
+        'top': -100,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+      },
+						padding={
+        'top': 0,
+        'bottom': 0,
+        'left': 0,
+        'right': 0
+      },
+						full_width='true'
+       %}
+      
+          {% dnd_module
+            path='../modules/Exuberant Hero',
+            flexbox_positioning="TOP_CENTER",
+          %}
+  
+  
+  
+     {% end_dnd_module %}
+		{% end_dnd_section %}
+   {# HERO SECTION END #}
+  
+  
+     {# about us First section #}
+    {% dnd_section 
+     padding={
+        'top': 0,
+        'bottom': 172,
+        'left': 0,
+        'right': 0
+      },
+      
+       %}
+      
+          {% dnd_module
+            path='../modules/Module Group/Header and Subheader with CTA',
+            flexbox_positioning="TOP_CENTER",
+            richtext_field = "<h1 style='text-align:center;'>About Us</h1>
+            <p  style='text-align:left;'>Give an overview of your company. Don't be afraid to let your personality come through. </p>
+            <p style='text-align:left;'>In all our experience with tracking customer behavior, we find that most visitors navigate to the About Us page after the homepage.<p/> 
+            <p style='text-align:left;'>That's because people like to know who they're working with. <br>So be real! Be you! Give a snapshot of what the team is like, and what you collectively care about. 
+
+           </p>
+           <p style='text-align:left;'>Your story matters. </p>
+           <p style='text-align:left;'>Visitors wouldn't be peeking at this page otherwise. </p>
+
+            ",
+            divider_ = false,
+            accordion_row_width = "700"
+            
+            
+            
+          %}
+  
+          {% end_dnd_module %}
+   
+      
+   
+         
+  
+    {% end_dnd_section %}
+   {# end about us First section #}
+  
+    {# Info Cards #}
+    {% dnd_section 
+     padding={
+        'top': 0,
+        'bottom': 172,
+        'left': 0,
+        'right': 0
+      },
+       %}
+  
+      {% dnd_module path="../modules/informational-cards", label="informational-cards" %}
+      {% end_dnd_module %}
+  
+   {% end_dnd_section %}
+   {# end Informational Cards section #}
+  
+
+  
+      {% dnd_section 
+     padding={
+        'top': 0,
+        'bottom': 172,
+        'left': 0,
+        'right': 0
+      },
+      full_width = true
+       %}
+      
+          {% dnd_module
+            path='../modules/About Image Module.module',
+            flexbox_positioning="TOP_CENTER",
+            richtext_field = "<h2>Values</h2>",
+            text_position = "center_position"
+            
+          
+             
+                
+            
+          %}
+
+  
+          {% end_dnd_module %}
+   
+
+  
+    {% end_dnd_section %}
+  
+   {# third   section #}
+  
+
+    {% dnd_section 
+     padding={
+        'top': 0,
+        'bottom': 30,
+        'left': 0,
+        'right': 0
+      },
+      
+       %}
+      
+          {% dnd_module
+            path='../modules/Module Group/Header and Subheader with CTA',
+            flexbox_positioning="TOP_CENTER",
+            richtext_field = "<h2>Values</h2>",
+            text_position = "center_position"
+            
+          
+             
+                
+            
+          %}
+
+  
+          {% end_dnd_module %}
+   
+
+  
+    {% end_dnd_section %}
+
+  
+  
+  
+    {% dnd_section 
+     padding={
+        'top': 0,
+        'bottom': 172,
+        'left': 0,
+        'right': 0
+      },
+      
+       %}
+      
+          {% dnd_module
+            path='../modules/Module Group/Features and Benefits',
+            flexbox_positioning="TOP_CENTER",
+          
+             
+                
+            
+          %}
+           
+  
+  
+  
+          {% end_dnd_module %}
+   
+      
+   
+         
+  
+    {% end_dnd_section %}
+   {# end third section #}
+  
+  
+  
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

@@ -1,0 +1,35 @@
+<!--
+  templateType: error_page
+  isAvailableForNewContent: true
+  label: 500 error
+-->
+{% extends '../layouts/base.html' %}
+
+{% block body %}
+<main class="body-container-wrapper">
+   
+  <section class="content-wrapper">
+    <div class="error-page" data-error="500">
+      <div class="systems-body">
+        <div class="container">
+          <div class="systems-inner">
+            <div class="custom_error_message">
+              <h1>Error 500</h1>
+              <br>
+              <h2>Internal Server Error</h2>
+              <p>Something went wrong. Please refresh the page or try again later.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="cta-design">
+          <a class="button" href="/">Go Home</a>
+        </div>
+      </div>
+      
+      
+    </div>
+  </section>
+</main>
+{% endblock body %}

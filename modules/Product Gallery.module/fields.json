@@ -1,0 +1,269 @@
+[ {
+  "id" : "f5812dac-4174-647b-3247-335e41dba923",
+  "name" : "image_gallery",
+  "display_width" : null,
+  "label" : "Image Gallery",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "children" : [ {
+    "id" : "884c0aba-129b-07d8-531c-dd4af72d3955",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : true,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Rectangle%20389.png",
+      "alt" : "Rectangle 389",
+      "loading" : "lazy",
+      "width" : 2110,
+      "height" : 1364,
+      "max_width" : 2110,
+      "max_height" : 1364
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Rectangle%20389.png",
+      "alt" : "Rectangle 389",
+      "loading" : "lazy",
+      "width" : 2110,
+      "height" : 1364,
+      "max_width" : 2110,
+      "max_height" : 1364
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Rectangle%20389.png",
+      "alt" : "Rectangle 389",
+      "loading" : "lazy",
+      "width" : 2110,
+      "height" : 1364,
+      "max_width" : 2110,
+      "max_height" : 1364
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Rectangle%20389.png",
+      "alt" : "Rectangle 389",
+      "loading" : "lazy",
+      "width" : 2110,
+      "height" : 1364,
+      "max_width" : 2110,
+      "max_height" : 1364
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Rectangle%20389.png",
+      "alt" : "Rectangle 389",
+      "loading" : "lazy",
+      "width" : 2110,
+      "height" : 1364,
+      "max_width" : 2110,
+      "max_height" : 1364
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Rectangle%20389.png",
+      "alt" : "Rectangle 389",
+      "loading" : "lazy",
+      "width" : 2110,
+      "height" : 1364,
+      "max_width" : 2110,
+      "max_height" : 1364
+    }
+  } ]
+}, {
+  "id" : "79e2cb63-6717-0a69-e946-870d5a09a548",
+  "name" : "right_group",
+  "display_width" : null,
+  "label" : "Right Part",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "09a22d61-9ec5-5b3c-06e6-d50513daa22e",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "PRODUCT NAME"
+  }, {
+    "id" : "b89d5c3f-8e6e-a777-ac77-d75c37356913",
+    "name" : "price",
+    "display_width" : null,
+    "label" : "Price",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "$59.99"
+  }, {
+    "id" : "0cb40915-8eaf-77c2-61c8-b61304cb0be8",
+    "name" : "price_text",
+    "display_width" : null,
+    "label" : "Price Text",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Our clothes are exclusive, stylish and with a lot of production quality and final quality. Don't miss our new Clean Minimalist collection.</p>"
+  }, {
+    "id" : "9a903b5b-ddf0-5325-6ed6-8675f5455195",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : " BUY THIS PRODUCT"
+  }, {
+    "id" : "5ff82b82-f579-5d59-c844-bea95dd04f82",
+    "name" : "button_link",
+    "display_width" : null,
+    "label" : "Button Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "0aa62686-9e70-4950-63f6-dd36d4be41f4",
+    "name" : "product_review",
+    "display_width" : null,
+    "label" : "Product Review",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 3
+    },
+    "children" : [ {
+      "id" : "fd6870e0-a3fc-b8d6-48c4-d4aec15efd52",
+      "name" : "title",
+      "display_width" : null,
+      "label" : "Title",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Type"
+    }, {
+      "id" : "5208ab95-7ea7-f9cc-a8d3-71cbd93387da",
+      "name" : "text_field",
+      "display_width" : null,
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Black T-shirt"
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "title" : "Type",
+      "text_field" : "Black T-shirt"
+    }, {
+      "title" : "Type",
+      "text_field" : "Black T-shirt"
+    }, {
+      "title" : "Type",
+      "text_field" : "Black T-shirt"
+    } ]
+  }, {
+    "id" : "494aefa8-f23b-dced-a0a9-883c68f8d98e",
+    "name" : "text_field_1",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Details"
+  }, {
+    "id" : "5b220e3c-642b-eb5f-9da9-0b19c9f8a96b",
+    "name" : "details",
+    "display_width" : null,
+    "label" : "Details",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor mollis dictum lectus nec. Nam scelerisque scelerisque fringilla enim. Egestas in sed donec nunc sodales sed ac duis. Felis, in mus et eu. Eget ullamcorper.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "title" : "PRODUCT NAME",
+    "price" : "$59.99",
+    "price_text" : "<p>Our clothes are exclusive, stylish and with a lot of production quality and final quality. Don't miss our new Clean Minimalist collection.</p>",
+    "button_text" : " BUY THIS PRODUCT",
+    "button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "product_review" : [ {
+      "title" : "Type",
+      "text_field" : "Black T-shirt"
+    }, {
+      "title" : "Type",
+      "text_field" : "Black T-shirt"
+    }, {
+      "title" : "Type",
+      "text_field" : "Black T-shirt"
+    } ],
+    "text_field_1" : "Details",
+    "details" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempor mollis dictum lectus nec. Nam scelerisque scelerisque fringilla enim. Egestas in sed donec nunc sodales sed ac duis. Felis, in mus et eu. Eget ullamcorper.</p>"
+  }
+} ]

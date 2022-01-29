@@ -1,0 +1,239 @@
+   <div class="row-fluid">
+         <div class="span12 widget-span widget-type-cell blog-main">
+            <div class="container">
+               <div class="blog-section ">
+                  <div class="blog-listing-wrapper cell-wrapper">
+                     <div class="blog-section">
+                        <div class="blog-listing-wrapper cell-wrapper">
+                           {# simple_list_page indicates the "blog/all" page, which is a list of links to every blog post #}
+                           {% if blog_author %}
+                           <div class="hs-author-profile">
+                              {% if blog_author.avatar %} 
+                              <div class="hs-author-avatar"> <img src="{{ blog_author.avatar }}" alt="{{ blog_author.display_name }}"> </div>
+                              {% endif %}
+                              <div class="hs_author-content">
+                                 <h2 class="hs-author-name">{{ blog_author.display_name }}</h2>
+                                 <div class="hs-author-bio">{{ blog_author.bio }}</div>
+                                 {% if blog_author.has_social_profiles %}
+                                 <div class="hs-author-social-section">
+                                    <span class="hs-author-social-label">Find me on:</span>
+                                    <div class="hs-author-social-links">
+                                       {% if blog_author.facebook %}
+                                       <a href="{{ blog_author.facebook }}" target="_blank" class="hs-author-social-link hs-social-facebook">&nbsp;</a>
+                                       {% endif %}
+                                       {% if blog_author.linkedin %}
+                                       <a href="{{ blog_author.linkedin }}" target="_blank" class="hs-author-social-link hs-social-linkedin">&nbsp;</a>
+                                       {% endif %}
+                                       {% if blog_author.twitter %}
+                                       <a href="{{ blog_author.twitter }}" target="_blank" class="hs-author-social-link hs-social-twitter">&nbsp;</a>
+                                       {% endif %}
+                                       {% if blog_author.google_plus %}
+                                       <a href="{{ blog_author.google_plus }}?rel=author" target="_blank" class="hs-author-social-link hs-social-google-plus">&nbsp;</a>
+                                       {% endif %}
+                                    </div>
+                                 </div>
+                                 {% endif %}
+                              </div>
+                           </div>
+                           <h2 class="hs-author-listing-header">Recent Posts</h2>
+                           {% endif %}
+                           <div class="post-listing listing-row1 {% if simple_list_page %}-simple{% endif %}" style="display:none;">
+                              {% for content in contents %}
+                              {% if loop.index == 1  %}  
+                              <div class="post-item-full">
+                                 {% if not simple_list_page %}
+                                 <div class="post-item-fullright">
+                                    <div class="post-body clearfix">
+                                       <!--post summary-->
+                                       <div class="post-category">
+                                          {% if content.topic_list %}
+                                          <div id="hubspot-topic_data"> 
+                                             {% for topic in content.topic_list %}
+                                             {% if loop.index > 3 %} <a class="topic-link"  href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}{% endif %}
+                                             {% endfor %}
+                                          </div>
+                                          {% endif %}
+                                       </div>
+                                       <div class="post-item-title">
+                                          <h3><a href="{{content.absolute_url}}">{{ content.name }}</a></h3>
+                                       </div>
+                                       <div class="post-item-details">
+                                          {{ content.post_list_content|safe|striptags|truncate(200) }}
+                                       </div>
+                                       {% if content_group.show_summary_in_listing %} 
+                                       <a class="more-link" href="{{ content.absolute_url }}">Read full article</a>
+                                       {% endif %}
+                                    </div>
+                                 </div>
+                                 {% if content.post_list_summary_featured_image %}
+                                 <div class="post-item-featured-left">
+                                    <a href="{{content.absolute_url}}" title="" class="hs-featured-image-link" style="background-image:url('{{ content.post_list_summary_featured_image }}')">
+                                    </a>
+                                 </div>
+                                 {% endif %}
+                                 {% else %}
+                                 {% endif %}
+                              </div>
+                              {% endif %}
+                              {% endfor %}
+                           </div>
+                          
+                           <div class="post-listing listing-row2 {% if simple_list_page %}-simple{% endif %}">
+                              {% for content in contents %}   
+                              <div class="post-item">
+                                 {% if not simple_list_page %}
+                                 {% if content.post_list_summary_featured_image %}
+                                 <div class="post-item-featured">
+                                    <a href="{{content.absolute_url}}" title="" class="hs-featured-image-link" style="background-image:url('{{ content.post_list_summary_featured_image }}')">
+                                    </a>
+                                    {% if content_group.show_summary_in_listing %} 
+                                    <a class="more-link" href="{{ content.absolute_url }}">
+                                       <svg class="svg svg--readmore" width="23px" height="14px" viewBox="0 0 23 14" version="1.1" role="img" aria-label="Read More">
+                                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                             <g transform="translate(-651.000000, -4575.000000)" fill="#FFFFFF">
+                                                <g transform="translate(536.000000, 4479.000000)">
+                                                   <g transform="translate(115.000000, 90.000000)">
+                                                      <path d="M12.9849919,11.4574074 C13.1724909,11.6492593 13.2774903,11.9162963 13.2774903,12.1911111 C13.2774903,12.4633333 13.1724909,12.7303704 12.9849919,12.9248148 C12.7999929,13.1166667 12.5424943,13.2281481 12.2799958,13.2281481 C12.0149972,13.2281481 11.7574986,13.1166667 11.5724996,12.9248148 C11.3850006,12.7303704 11.2800012,12.4633333 11.2800012,12.1911111 C11.2800012,11.9162963 11.3850006,11.6492593 11.5724996,11.4574074 C11.7574986,11.262963 12.0149972,11.1540741 12.2799958,11.1540741 C12.5424943,11.1540741 12.7999929,11.262963 12.9849919,11.4574074 M13.0832414,15.199037 C12.5214944,15.639 11.8284982,15.8248889 11.133002,15.7232593 C10.4352558,15.6208519 9.81775914,15.2412963 9.39376145,14.6543333 C8.51826621,13.4412593 8.75276493,11.7127778 9.91650861,10.8007037 C10.4787556,10.3607407 11.1722518,10.1743333 11.867998,10.2767407 C12.5654942,10.3794074 13.1829909,10.7587037 13.6062386,11.3451481 C14.4817338,12.5587407 14.2472351,14.2874815 13.0832414,15.199037 M12.0784969,8.73674074 C10.9837528,8.57574074 9.89550872,8.86818519 9.01226352,9.55937037 C9.01226352,9.55937037 9.01226352,9.55962963 9.01201352,9.55962963 C7.19152342,10.9865926 6.82402541,13.6898889 8.19301797,15.5866296 C8.85776436,16.5072593 9.82725909,17.1027778 10.9230031,17.2635185 C11.1187521,17.292037 11.314501,17.3062963 11.50875,17.3062963 C12.3997451,17.3062963 13.2629904,17.0076296 13.9872365,16.4401111 C15.8082266,15.0141852 16.1762246,12.3106296 14.806982,10.4131111 C14.1427356,9.493 13.1737409,8.89748148 12.0784969,8.73674074 M11.5,17.9259259 C6.67177624,17.9259259 3.38454411,14.4108889 2.25880022,12.9979259 C3.37929413,11.5841852 6.65027636,8.07407407 11.5,8.07407407 C16.3272238,8.07407407 19.6137059,11.5872963 20.7396998,13 C19.6124559,14.414 16.3259738,17.9259259 11.5,17.9259259 M22.8306884,12.4226296 C22.6611893,12.1602593 18.5974614,6 11.5,6 C4.40253857,6 0.338810659,12.1602593 0.16931158,12.4226296 C-0.0564371933,12.7718519 -0.0564371933,13.2281481 0.16931158,13.5773704 C0.338810659,13.8397407 4.40253857,20 11.5,20 C18.5974614,20 22.6611893,13.8397407 22.8306884,13.5773704 C23.0564372,13.2281481 23.0564372,12.7718519 22.8306884,12.4226296"></path>
+                                                   </g>
+                                                </g>
+                                             </g>
+                                          </g>
+                                       </svg>
+                                       &nbsp; Read Article
+                                    </a>
+                                    {% endif %}
+                                 </div>
+                                 {% endif %}
+                                
+                                 <div class="post-body clearfix">
+                                    <!--post summary-->
+                                    <div class="post-category">
+                                       {% if content.topic_list %}
+                                       <div id="hubspot-topic_data"> 
+                                          {% for topic in content.topic_list %}
+                                          {% if loop.index < 3 %} <a class="topic-link"  href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %} {% endif %} {% endif %}
+                                          {% endfor %}
+                                       </div>
+                                       {% endif %}
+                                    </div>
+                                   
+                                    <div class="post-item-title">
+                                       <h3><a href="{{content.absolute_url}}">{{ content.name }}</a></h3>
+                                    </div>
+                                   
+                                  
+                                      <div class="post-item-details">
+                                          {{ content.post_list_content|safe|striptags|truncate(200) }}
+                                       </div>
+                                 
+                                   
+                                   
+                                    <div id="hubspot-author_data" class="hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author">
+                                       
+                                   {% if content.blog_post_author %}
+                                          <a class="author-link" href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}">
+                                            <img src="{{ content.blog_post_author.avatar }}" alt="Picture of {{ content.blog_post_author.display_name }}">
+                                            <span>{{ content.blog_post_author.display_name }}</span>
+                                          </a> 
+                                   {% endif %}
+                                      
+                                   {% if module.read_time_ %}
+                                        <span>
+                                        {% set initialPostWords = content.post_body|wordcount %}
+                                        {% set calculatedPostWords = (initialPostWords/100) * 100 %}
+                                        {% set finishedPostWords = calculatedPostWords|divide(130)|round(2) %}
+                                        {% set number = finishedPostWords|round %}
+                                        {% if number < 1 %}
+                                        {% else %}
+                                         {{ finishedPostWords|round }} Min Read
+                                       {% endif %}
+                                       </span>
+                                    {% endif %}
+                          
+                                      
+                                      
+                                    </div>
+                                   
+                                 </div>
+                                 {% else %}
+                                 <div class="post-listing-simple"><a href="{{content.absolute_url}}">{{ content.name }}</a></div>
+                                 {% endif %}
+                              </div>
+                              {% endfor %}
+                           </div>
+                          
+                          {% if module.all_posts_link_ %}
+                            	 <a class="all-posts-link" href="{{ blog_all_posts_url(group.id) }}">Check all our articles</a>
+                          
+                          {% endif %}
+                          
+                          
+                          
+                         {% if module.pagination_ %} 
+                          <div class="blog-pagination span12">
+                          
+                             {% set total_pages = contents.total_page_count %} <!-- sets variable for total pages -->
+                              {% set more_pages = total_pages - current_page_num %} <!-- sets variable for how many more pages are past the current pages -->
+                              {% if total_pages > 1 %}
+                              <ul class="pagination">
+                                 <li class="{% if current_page_num == 1 %}disabled{% endif %}"><a href="{% if last_page_num=="1" %}{{ group.absolute_url }}{% else %}{{blog_page_link(last_page_num)}}{% endif %}"><i class="fa fa-angle-double-left"></i></a></li>
+                                 {% if more_pages == 0 %}
+                                 {% if current_page_num - 4 == 1 %}
+                                 <li><a href="{{ blog_page_link(current_page_num - 4)|replace('/page/1', '') }}">{{ current_page_num - 4 }}</a></li>
+                                 {% endif %}
+                                 {% if current_page_num - 4 > 1 %}
+                                 <li><a href="{{ blog_page_link(current_page_num - 4) }}">{{ current_page_num - 4 }}</a></li>
+                                 {% endif %}
+                                 {% endif %}
+                                 {% if more_pages <= 1 %}
+                                 {% if current_page_num - 3 == 1 %}
+                                 <li><a href="{{ blog_page_link(current_page_num - 3)|replace('/page/1', '') }}">{{ current_page_num - 3 }}</a></li>
+                                 {% endif %}
+                                 {% if current_page_num - 3 > 1 %}
+                                 <li><a href="{{ blog_page_link(current_page_num - 3) }}">{{ current_page_num - 3 }}</a></li>
+                                 {% endif %}
+                                 {% endif %}
+                                 {% if current_page_num - 2 == 1 %}
+                                 <li><a href="{{ blog_page_link(current_page_num - 2)|replace('/page/1', '') }}">{{ current_page_num - 2 }}</a></li>
+                                 {% endif %}
+                                 {% if current_page_num - 2 > 1 %}
+                                 <li><a href="{{ blog_page_link(current_page_num - 2) }}">{{ current_page_num - 2 }}</a></li>
+                                 {% endif %}
+                                 {% if current_page_num - 1 == 1 %}
+                                 <li><a href="{{ blog_page_link(current_page_num - 1)|replace('/page/1', '') }}">{{ current_page_num - 1 }}</a></li>
+                                 {% endif %}
+                                 {% if current_page_num - 1 > 1 %}
+                                 <li><a href="{{ blog_page_link(current_page_num - 1) }}">{{ current_page_num - 1 }}</a></li>
+                                 {% endif %}
+                                 <li class="active"><a href="{% if current_page_num==1 %}{{ group.absolute_url }}{% else %}{{ blog_page_link(current_page_num) }}{% endif %}">{{ current_page_num }}</a></li>
+                                 {% if current_page_num + 1 <= total_pages %}
+                                 <li><a href="{{ blog_page_link(current_page_num + 1) }}">{{ current_page_num + 1 }}</a></li>
+                                 {% endif %}
+                                 {% if current_page_num + 2 <= total_pages %}
+                                 <li><a href="{{ blog_page_link(current_page_num + 2) }}">{{ current_page_num + 2 }}</a></li>
+                                 {% endif %}
+                                 {% if current_page_num <= 2 %}
+                                 {% if current_page_num + 3 <= total_pages %}
+                                 <li><a href="{{ blog_page_link(current_page_num + 3) }}">{{ current_page_num + 3 }}</a></li>
+                                 {% endif %}
+                                 {% endif %}
+                                 {% if current_page_num == 1 %}
+                                 {% if current_page_num + 4 <= total_pages %}
+                                 <li><a href="{{ blog_page_link(current_page_num + 4) }}">{{ current_page_num + 4 }}</a></li>
+                                 {% endif %}
+                                 {% endif %}
+                                 <li class="{% if current_page_num == total_pages %}disabled{% endif %}"><a href="{{blog_page_link(next_page_num)}}"><i class="fa fa-angle-double-right"></i></a></li>
+                              </ul>
+                              {% endif %}
+                           </div>
+                        {% endif %}  
+                          
+                          
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+</div>
+     

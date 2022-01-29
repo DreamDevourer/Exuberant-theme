@@ -1,0 +1,37 @@
+{
+  "img.default.alt" : {
+    "message" : "placeholder_200x200",
+    "description" : null,
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "圖片",
+    "description" : null,
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "訪客點擊圖片後會前往你指定的頁面。請在 URL 中加入通訊協定 (即「http://」)。",
+    "description" : null,
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "連結 (可選)",
+    "description" : null,
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : null,
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "圖片",
+    "description" : null,
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "在新分頁開啟連結",
+    "description" : null,
+    "placeholders" : null
+  }
+}

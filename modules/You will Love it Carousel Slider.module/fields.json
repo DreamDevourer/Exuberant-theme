@@ -1,0 +1,259 @@
+[ {
+  "id" : "966e2501-644b-10b5-4354-ea96f876a13c",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "Coming Initiatives",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Coming Initiatives"
+}, {
+  "id" : "606d503a-d2aa-3941-1824-b8f12c73d5c8",
+  "name" : "richtext_field",
+  "display_width" : null,
+  "label" : "Rich text",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio rhoncus, congue feugiat non aliquet cursus rutrum massa sapien. Orci, ac turpis nisl purus nisl ultrices. Nunc purus donec.</span></p>\n<p>&nbsp;</p>"
+}, {
+  "id" : "929882c8-4284-6a48-f987-07a7ed4644a5",
+  "name" : "button_text",
+  "display_width" : null,
+  "label" : "Button Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "See more",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "See more"
+}, {
+  "id" : "14b96bda-3fd9-e2ce-c7ae-831ac5fe1e38",
+  "name" : "button_link",
+  "display_width" : null,
+  "label" : "Button link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "ab592ab1-dfdd-cfa6-eecb-7720f761a0fe",
+  "name" : "slider_group",
+  "display_width" : null,
+  "label" : "Slider Group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "e0ca2549-4e11-1129-05b1-3ebd79cefed2",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : true,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/unsplash_fIoQ-aRycys.jpeg",
+      "alt" : "unsplash_fIoQ-aRycys",
+      "loading" : "lazy",
+      "width" : 567,
+      "height" : 624,
+      "max_width" : 567,
+      "max_height" : 624
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/unsplash_fIoQ-aRycys.jpeg",
+      "alt" : "unsplash_fIoQ-aRycys",
+      "loading" : "lazy",
+      "width" : 567,
+      "height" : 624,
+      "max_width" : 567,
+      "max_height" : 624
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/unsplash_fIoQ-aRycys.jpeg",
+      "alt" : "unsplash_fIoQ-aRycys",
+      "loading" : "lazy",
+      "width" : 567,
+      "height" : 624,
+      "max_width" : 567,
+      "max_height" : 624
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/unsplash_fIoQ-aRycys.jpeg",
+      "alt" : "unsplash_fIoQ-aRycys",
+      "loading" : "lazy",
+      "width" : 567,
+      "height" : 624,
+      "max_width" : 567,
+      "max_height" : 624
+    }
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/unsplash_fIoQ-aRycys.jpeg",
+      "alt" : "unsplash_fIoQ-aRycys",
+      "loading" : "lazy",
+      "width" : 567,
+      "height" : 624,
+      "max_width" : 567,
+      "max_height" : 624
+    }
+  } ]
+}, {
+  "id" : "styles",
+  "name" : "styles",
+  "display_width" : null,
+  "label" : "Styles",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "styles.corner",
+    "name" : "corner",
+    "display_width" : null,
+    "label" : "Boxes Radius",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "styles.corner.radius",
+      "name" : "radius",
+      "display_width" : null,
+      "label" : "Radius",
+      "required" : false,
+      "locked" : false,
+      "display" : "slider",
+      "max" : 100,
+      "step" : 1,
+      "suffix" : "px",
+      "type" : "number"
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : { }
+  }, {
+    "id" : "styles.boxes_bg",
+    "name" : "boxes_bg",
+    "display_width" : null,
+    "label" : "Boxes Background",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "styles.boxes_bg.bg_color",
+      "name" : "bg_color",
+      "display_width" : null,
+      "label" : "Background color",
+      "required" : false,
+      "locked" : false,
+      "type" : "color",
+      "default" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      }
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "bg_color" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      }
+    }
+  }, {
+    "id" : "styles.boxes_padding",
+    "name" : "boxes_padding",
+    "display_width" : null,
+    "label" : "Boxes spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 30,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 30,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 30,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 30,
+          "units" : "px"
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "corner" : { },
+    "boxes_bg" : {
+      "bg_color" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      }
+    },
+    "boxes_padding" : {
+      "padding" : {
+        "top" : {
+          "value" : 30,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 30,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : 30,
+          "units" : "px"
+        },
+        "right" : {
+          "value" : 30,
+          "units" : "px"
+        }
+      }
+    }
+  }
+} ]

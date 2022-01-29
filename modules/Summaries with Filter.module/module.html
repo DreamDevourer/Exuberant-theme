@@ -1,0 +1,100 @@
+<div class="container">
+  <div class="filters filter-button-group">
+   <ul>
+      <li class="active" data-filter="*">All</li>
+     
+<!--      <li data-filter=".hubspot_set_up">Marketing Ops</li>
+     <li data-filter=".hubspot_marketing"> Sales Ops</li>
+     <li data-filter=".hubspot_lead_nurturing">   Service Ops</li>
+     <li data-filter=".hubspot_websites">HubSpot CMS</li>
+     <li data-filter=".workshops">   WorkShops</li> -->
+   
+     {% for item in module.top_filter_navigation %}
+          <li data-filter=".{{ item.text_field|lower|replace(' ', '_')  }}">{{ item.text_field }}</li>
+     {% endfor %}
+
+
+ 
+
+
+     
+     
+    </ul>
+</div>
+  
+  
+
+<div class="case-studiesrow grid">
+  {% for item in module.main_group %}
+      <div class="case-studiescolumn  grid-item  {% for item2 in item.add_category_name %} {{ item2.add_category_name|lower|replace(' ', '_') }} {% endfor %} ">
+       <div class="sameheight2">
+         
+        
+        <div class="case-logos">
+           {% if item.logo.src %}
+           {% set loadingAttr = item.logo.loading != 'lazy' ? 'loading="{{ item.logo.loading }}"' : '' %}
+           <img class="lazy" src="{{ item.logo.src }}" alt="{{ item.logo.alt }}" width="{{ item.logo.width }}" height="{{ item.logo.height }}" {{ loadingAttr }}>
+           {% endif %}
+        </div>
+        <div class="case-details">
+           <div class="case-title">
+             <h3>
+                {{ item.title }}
+             </h3>
+          </div>
+          <div class="case-text">
+              {{ item.details }}
+          </div>
+           {% if item.button_link %}
+          <div class="case-button">
+               <a href="{{ item.button_link }}">Read More</a>
+          </div>   {% endif %}
+        </div>
+         </div>
+     </div>
+  {% endfor %}
+</div>
+
+</div>
+
+{% require_css %}
+    <style>
+     .sameheight{ float:left; width:100%; }
+     .case-studiesrow.grid{     display: flex;   flex-flow: wrap; }
+ 
+    </style>
+
+   
+{% end_require_css %}
+
+ 
+{{ require_js("https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js", "header") }}
+
+{% require_js %}
+  <script>
+
+$(window).load(function(){ 
+
+  $('.grid').isotope({
+    itemSelector: '.grid-item',
+  });
+
+// filter items on button click
+  $('.filter-button-group').on( 'click', 'li', function() {
+    var filterValue = $(this).attr('data-filter');
+    $('.grid').isotope({ filter: filterValue });
+    $('.filter-button-group li').removeClass('active');
+    $(this).addClass('active');
+    heightsheight();
+  });
+   
+});
+   </script>
+
+{% end_require_js %}
+
+
+
+
+
+

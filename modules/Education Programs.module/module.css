@@ -1,0 +1,31 @@
+.education_programs__row { display: flex; flex-flow: wrap; }
+.education_programs__left { width: 60%; padding-right: 55px; display: flex; flex-flow: wrap; }
+.education_programs__right { width: 40%; }
+.left_imageicon { width: 65px; }
+.education_programs__details { width: calc(100% - 65px); padding-left: 25px; }
+.button_design a { font-size: 20px; line-height: 18px; }
+.ep__borderbtn__main { margin-top: 35px; }
+.education_programs__header h2 { padding-bottom: 30px; width: 100%; }
+.education_programs__header { margin-bottom: 10px; }
+.education_programs__main { }
+.education_programs__main .container { max-width: 1080px; }
+
+
+
+@media (max-width: 767px){
+  
+  .education_programs__left{ width: 100%;   padding-right: 0px; }
+  .education_programs__right {  width: 100%; }
+  .left_imageicon{  display:none; }
+  .education_programs__details{     width: calc(100% - 0px); padding-left: 0;  }
+  
+  .education_programs__right{     margin-top: 40px;  }
+  
+
+  
+  
+  
+}
+
+
+

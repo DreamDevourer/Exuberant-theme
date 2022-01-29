@@ -1,0 +1,37 @@
+{
+  "img.default.alt" : {
+    "message" : "placeholder_200x200",
+    "description" : null,
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "Εικόνα",
+    "description" : null,
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "Εδώ θέλετε να στέλνετε τους επισκέπτες σας όταν κάνουν κλικ στην εικόνα. Συμπεριλάβετε ένα πρωτόκολλο (π.χ. \"http://\") στο URL.",
+    "description" : null,
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "Σύνδεσμος (προαιρετικό)",
+    "description" : null,
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : null,
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Εικόνα",
+    "description" : null,
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "Άνοιγμα συνδέσμου σε νέα καρτέλα",
+    "description" : null,
+    "placeholders" : null
+  }
+}

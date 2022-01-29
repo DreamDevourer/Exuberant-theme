@@ -1,0 +1,37 @@
+{
+  "img.default.alt" : {
+    "message" : "placeholder_200x200",
+    "description" : "",
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "תמונה",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "זה המקום שאליו כדאי לשלוח את המבקרים כשהם לוחצים על התמונה. כלול פרוטוקול (כלומר, \"http://‎\") בכתובת ה-URL.",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "קישור (אופציונלי)",
+    "description" : "",
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : "",
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "תמונה",
+    "description" : "",
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "פתח קישור בכרטיסייה חדשה",
+    "description" : "",
+    "placeholders" : null
+  }
+}

@@ -1,0 +1,68 @@
+[ {
+  "id" : "a4a39ec4-99e3-0c78-6c67-84ee825b8e45",
+  "name" : "bg_color",
+  "display_width" : null,
+  "label" : "Background Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#19110B",
+    "opacity" : 100
+  }
+}, {
+  "id" : "ba6d1ff5-5db0-6b69-3e87-82cf120f3d28",
+  "name" : "header_alignment",
+  "display_width" : null,
+  "label" : "Header Alignment",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "left", "Left" ], [ "center", "Center" ], [ "right", "Right" ] ],
+  "type" : "choice",
+  "default" : "center"
+}, {
+  "id" : "d188881c-70dc-44ed-9607-a413b1de69df",
+  "name" : "choice_column",
+  "display_width" : null,
+  "label" : "Number of Columns",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "one", "1" ], [ "two", "2" ], [ "there", "3" ] ],
+  "type" : "choice",
+  "default" : "there"
+}, {
+  "id" : "a929d615-930b-496b-49f4-b96148861e78",
+  "name" : "text_color",
+  "display_width" : null,
+  "label" : "Text Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#FFFFFF",
+    "opacity" : 100
+  }
+}, {
+  "id" : "c6317d2a-7556-46ea-2841-21f95b61c16b",
+  "name" : "title_main",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Bullet Point List"
+}, {
+  "id" : "641ee809-9ec7-4567-175e-60a9da5e8481",
+  "name" : "details_bottom",
+  "display_width" : null,
+  "label" : "Detail",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<ul>\n<li>A line of text in the bullet point list.</li>\n<li>A line of text in the bullet point list.</li>\n<li>A line of text in the bullet point list.</li>\n<li>A line of text in the bullet point list.</li>\n<li>A line of text in the bullet point list.</li>\n<li>A line of text in the bullet point list.</li>\n<li>A line of text in the bullet point list.</li>\n<li>A line of text in the bullet point list.</li>\n<li>A line of text in the bullet point list.</li>\n</ul>"
+} ]

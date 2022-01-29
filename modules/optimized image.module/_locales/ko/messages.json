@@ -1,0 +1,37 @@
+{
+  "img.default.alt" : {
+    "message" : "placeholder_200x200",
+    "description" : null,
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "이미지",
+    "description" : null,
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "방문자가 이미지를 클릭하면 여기서 방문자에게 보낼 수 있습니다. URL에 프로토콜(예: \"http://\")을 포함하십시오.",
+    "description" : null,
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "링크(옵션)",
+    "description" : null,
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : null,
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "이미지",
+    "description" : null,
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "새 탭에서 링크 열기",
+    "description" : null,
+    "placeholders" : null
+  }
+}

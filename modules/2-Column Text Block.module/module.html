@@ -1,0 +1,32 @@
+<div class="row-fluid">
+  <div class="span12 widget-span widget-type-cell h-section2" id="down">
+    <div class="container" style="paddin:0 15px;"> 
+      <div class="h-section2-row">
+        <div class="row-fluid">
+          <div class="row-fluid">
+            <div class="span2 widget-span widget-type-custom_widget theam-left-d animated fadeInUpShort">
+              {% if  module.left_text %}  {{ module.left_text }} {% endif %}
+            </div>
+            <div class="span10 widget-span widget-type-cell mx600">
+              <div class="row-fluid-wrapper row-depth-2 row-number-1 ">
+                <div class="span12 widget-span widget-type-custom_widget animated fadeInUpShort delay-250">
+                  {% if module.title %}
+                  <h2>
+                    {{ module.title }}
+                  </h2>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="row-fluid-wrapper row-depth-2 row-number-2 ">
+                <div class="span12 widget-span widget-type-custom_widget font-size18 pt20 animated fadeInUpShort delay-500">
+                  {% if module.richtext_field %} {{ module.richtext_field }} {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,33 @@
+
+  <div class="most-popular-time">
+   <div class="most-title">
+       <h3>
+         {{ module.title }}
+     </h3>   
+  </div>
+  
+  <div class="most-popular-row">
+    {% set pop_posts = blog_popular_posts(module.blog_field, module.show_number_of_post) %}
+    {% for pop_post in pop_posts %}
+       <div class="most-popular-column">
+         <div class="most-popular-title"> <a href="{{ pop_post.absolute_url }}"> {{ pop_post.name }} </a>
+        </div>
+         <div class="most-popular-topic">
+           {% for topic in pop_post.topic_list %}
+             <a class="topic-link" href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a> {% if not loop.last %}, {% endif %} 
+           {% endfor %}
+        </div>
+       </div>
+     {% endfor %}
+   </div>
+
+</div>
+
+
+
+
+
+
+
+
+

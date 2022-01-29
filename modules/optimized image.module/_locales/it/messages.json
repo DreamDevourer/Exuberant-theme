@@ -1,0 +1,37 @@
+{
+  "img.default.alt" : {
+    "message" : "placeholder_200x200",
+    "description" : null,
+    "placeholders" : null
+  },
+  "img.label" : {
+    "message" : "Immagine",
+    "description" : null,
+    "placeholders" : null
+  },
+  "link.help_text" : {
+    "message" : "Qui è dove vorresti che i tuoi visitatori venissero rimandati quando cliccano sull'immagine. Includi un protocollo (ad es. \"http://\") nell'URL.",
+    "description" : null,
+    "placeholders" : null
+  },
+  "link.label" : {
+    "message" : "Link (facoltativo)",
+    "description" : null,
+    "placeholders" : null
+  },
+  "link.placeholder" : {
+    "message" : "http://...",
+    "description" : null,
+    "placeholders" : null
+  },
+  "name" : {
+    "message" : "Immagine",
+    "description" : null,
+    "placeholders" : null
+  },
+  "target.label" : {
+    "message" : "Apri il link in una nuova scheda",
+    "description" : null,
+    "placeholders" : null
+  }
+}

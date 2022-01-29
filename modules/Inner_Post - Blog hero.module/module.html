@@ -1,0 +1,80 @@
+
+<div class="inner-post-hero">
+   <div class="inner-post-heroleft">
+      <div class="inner-post-timeread">
+         {% if content.topic_list %}
+         <p id="hubspot-topic_data" >
+            {% for topic in content.topic_list %}
+             <a class="topic-link"  href="{{ blog_tag_url(group.id, topic.slug) }}">{{ topic.name }}</a>{% if not loop.last %},{% endif %}
+            {% endfor %}
+         </p>
+         {% endif %}
+         &nbsp; | &nbsp;
+         <div class="hubspot-min-team">
+            {% set initialPostWords = content.post_body|wordcount %}
+            {% set calculatedPostWords = (initialPostWords/100) * 100 %}
+            {% set finishedPostWords = calculatedPostWords|divide(130)|round(2) %}
+            {% set number = finishedPostWords|round %}
+            {% if number < 1 %}
+            {% else %}
+            {{ finishedPostWords|round }} Min Read
+            {% endif %}
+         </div>
+      </div>
+      <div class="inner-posthero-title">
+          <h1>{{ content.name }}</h1>
+      </div>
+     <div class="inner-post-date">
+         <div id="hubspot-author_data" class="hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author">
+            {% if content.blog_post_author %}
+            <div class="author-image-inner">
+               {% set loadingAttr = content.blog_post_author.avatar.loading != 'lazy' ? 'loading="{{ content.blog_post_author.avatar.loading }}"' : '' %}
+               <img loading="lazy" src="{{ content.blog_post_author.avatar }}" alt="Picture of {{ content.blog_post_author.display_name }}" {{ loadingAttr }}>
+            </div>
+            
+
+            <div class="blog_post_author_row">
+               <a class="author-link" href="{{ blog_author_url(group.id, content.blog_post_author.slug) }}">
+               Written by  {{ content.blog_post_author.display_name }}
+               </a> 
+               {% if content.blog_post_author.has_social_profiles %}
+               <div class="hs-author-social-section">
+                  <span class="hs-author-social-label"></span>
+                  <div class="hs-author-social-links">
+                     {# {% if content.blog_post_author.facebook %}
+                     <a href="{{ content.blog_post_author.facebook }}" target="_blank" class="hs-author-social-link hs-social-facebook">Facebook </a>
+                     {% endif %}
+                     {% if content.blog_post_author.linkedin %}
+                     <a href="{{ content.blog_post_author.linkedin }}" target="_blank" class="hs-author-social-link hs-social-linkedin">LinkedIn</a>
+                     {% endif %} #}
+                     {% if content.blog_post_author.twitter %}
+                     <a href="{{ content.blog_post_author.twitter }}" target="_blank" class="hs-author-social-link hs-social-twitter">Twitter </a>
+                     {% endif %}
+                     {# {% if content.blog_post_author.google_plus %}
+                     <a href="{{ content.blog_post_author.google_plus }}?rel=author" target="_blank" class="hs-author-social-link hs-social-google-plus">Google+</a>
+                     {% endif %} #}
+                  </div>
+               </div>
+                {% endif %}
+            </div>
+        {% endif %}
+            
+
+           
+         </div>
+         {% if module.hide_and_show_button %}
+         <div class="inner-template-option">
+            <p>
+               {{ module.details }}
+            </p>
+            <a class="inner-template-button" href="{{ module.button_link }}">{{ module.button_text }}</a>
+         </div>
+         {% endif %}
+      </div>
+   </div>
+   <div class="post-iteminner-featured">
+       <div  class="hs-featured-image-link" style="background-image:url('{{ content.post_list_summary_featured_image }}')">
+      </div>
+   </div>
+</div>
+

@@ -1,0 +1,87 @@
+.event_titlemain { text-align: left; margin: 0 auto; max-width: 900px; padding: 0 50px; }
+.event_titlemain .titleEve { max-width: 450px; width: 100%; padding-bottom: 30px; }
+
+
+.event_button span {     cursor: pointer; color: #19110b; font-weight: bold; display: inline-block; border: 3px solid #19110b; padding: 12px 20px; font-size: 20px; line-height: 18px; transition: all 0.4s ease; }
+.event_button { text-align: center;      margin-top: 30px; }
+.event_button span:hover {  background-color: #19110b;  color: #fff;  opacity: 1; }
+
+
+
+.eventsModule {
+		  display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin:15px auto;
+    width: 100%;
+		 gap: 40px;
+		border-bottom: solid 3px #000;
+		max-width: 900px;
+  padding-bottom: 10px;
+  
+}
+
+
+
+.dateTime {
+		   text-align: center;
+		   display: flex;
+		   align-content: center;
+    align-items: center;
+		gap: 14px;
+}
+
+.mainNum {
+		font-size: 36px;
+}
+
+.dayMonth {
+		    display: flex;
+    flex-direction: column;
+		gap: 16px;
+}
+
+.dayArea, .monthArea {
+		font-size: 30px;
+}
+
+.monthArea {
+		font-weight: 600;
+}
+
+.bttEveArea {
+		    margin-left: 250px;
+}
+
+.titleContainerEve {
+		    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+@media (max-width: 991px){
+  .eventsModule{ flex-direction: column;  } 
+  .bttEveArea {  margin-left: 0;   padding-bottom: 20px; }
+  .event_titlemain{     text-align: center;  }
+  
+}
+  
+  
+@media (max-width: 767px){
+		.eventsModule {
+				    flex-direction: column;
+				    text-align: center;
+		}
+		
+		.bttEveArea {
+				margin:auto;
+		}
+
+
+  
+  
+  
+  
+}
