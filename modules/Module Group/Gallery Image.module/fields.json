@@ -1134,6 +1134,35 @@
     }
   }
 }, {
+  "id" : "e733248b-c8ab-366a-f3bf-6e42ba0fe1c2",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "8ffd84de-c517-4a5b-e1fb-417e9cd6755f",
+    "name" : "text_color",
+    "display_width" : null,
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "text_color" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  }
+}, {
   "id" : "17128e98-b9c7-2046-3cc8-a9883b780e2d",
   "name" : "masonry_style",
   "display_width" : null,

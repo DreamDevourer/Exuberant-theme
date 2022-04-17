@@ -1,0 +1,50 @@
+{# Module styles #}
+
+<style>
+  {% scope_css %}
+
+    {# wrapper #}
+
+    {% if module.styles.alignment.alignment %}
+      .projectcount_area {
+        text-align: {{ module.style.alignment_field.horizontal_align }};
+      }
+    {% endif %}
+		
+		{% end_scope_css %}
+</style>
+
+<div class="projectcount_area" id="{{module.content_id}}">
+  <div class="container">
+
+    <div class="projectcount_cover">
+      {% for item in module.box %}
+      <div class="projectcount_box">
+        <h3><span>{{ item.count_number }}</span>{{ item.number_after_sign }}</h3>
+        <span class="projectcount_boxtext">{{ item.counter_title }}</span>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="title_style">
+      {% if module.title %}<h2>{{ module.title }}</h2>{% endif %}
+      {% if module.content %}<div class="toptext">{{ module.content }}</div>{% endif %}
+      {% if module.button_text %}
+      <div class="solid_btn ">
+        {% set href = module.button_link.url.href %}
+        {% if module.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <a class="button" href="{{ href }}"
+           {% if module.button_link.open_in_new_tab %}target="_blank"{% endif %}
+           {% if module.button_link.rel %}rel="{{ module.button_link.rel }}"{% endif %}
+           >
+          {{ module.button_text }}
+        </a>
+      </div>
+      {% endif %}
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,91 @@
+[ {
+  "id" : "115bf07a-5eda-565a-2526-9e84b8efe0db",
+  "name" : "white_logo",
+  "display_width" : null,
+  "label" : "White Logo",
+  "required" : false,
+  "locked" : false,
+  "show_loading" : false,
+  "type" : "logo",
+  "default" : {
+    "override_inherited_src" : true,
+    "src" : "https://www.remotish.agency/hubfs/Imported%20images/Logo-1.svg",
+    "alt" : "Logo-1",
+    "suppress_company_name" : true,
+    "width" : 55,
+    "height" : 55
+  }
+}, {
+  "id" : "d795dc5c-5894-dd38-09b1-4028873ed998",
+  "name" : "black_logo",
+  "display_width" : null,
+  "label" : "Black Logo",
+  "required" : false,
+  "locked" : false,
+  "show_loading" : false,
+  "type" : "logo",
+  "default" : {
+    "override_inherited_src" : true,
+    "src" : "https://www.remotish.agency/hubfs/Imported%20images/Logo%20(6).svg",
+    "alt" : "Logo (6)",
+    "suppress_company_name" : true,
+    "width" : 55,
+    "height" : 55
+  }
+}, {
+  "id" : "1edbed8a-7ad6-abe8-dff9-384e39285fb1",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "e76b9bc2-57b9-0b11-7507-5fba4485aec7",
+    "name" : "custom_text_color",
+    "display_width" : null,
+    "label" : "Custom Text Color",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "92934aaf-6aaf-a239-7894-c38330018aa9",
+    "name" : "text_color",
+    "display_width" : null,
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "e76b9bc2-57b9-0b11-7507-5fba4485aec7",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "custom_text_color" : false,
+    "text_color" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "0d31b63f-c38e-c797-da83-f6c622caf9eb",
+  "name" : "menu_field",
+  "display_width" : null,
+  "label" : "Menu",
+  "required" : false,
+  "locked" : false,
+  "type" : "menu",
+  "default" : ""
+} ]

@@ -2,18 +2,9 @@
 
 <style>
   {% scope_css %}
-		.rightArea {
-				color: {{module.style.right_text_color.color}};
-    background-color: {{module.style.right_background_color.color}};
+		.leftArea {
+				color: {{module.style.left_text_color.color}} !important;
 		}
-		
-		.rightArea h2, .rightArea h3, .leftArea h2, .leftArea h3{
-		color: {{module.style.heading_colors.color}} !important;
-}
-		
-		.rightArea h2, .leftArea h2 {
-		    border-bottom: solid 3px {{module.style.heading_colors.color}};
-}
 
   {% end_scope_css %}
 </style>

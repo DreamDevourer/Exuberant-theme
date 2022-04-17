@@ -1,4 +1,33 @@
 [ {
+  "id" : "1cdac5ed-ff7c-71ce-bef8-814955eaaaed",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "903c697e-c144-5760-5b89-4e5b9dfba308",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }
+}, {
   "id" : "79b586a1-005f-ce98-f67e-b44d5d01ab2c",
   "name" : "side_module_with_images_or_video",
   "display_width" : null,
@@ -275,7 +304,7 @@
     "display_width" : null,
     "label" : "ON/Off Divider",
     "required" : false,
-    "locked" : false,
+    "locked" : true,
     "display" : "checkbox",
     "type" : "boolean",
     "default" : false
@@ -285,10 +314,10 @@
     "display_width" : null,
     "label" : "Divider Color",
     "required" : false,
-    "locked" : false,
+    "locked" : true,
     "type" : "color",
     "default" : {
-      "color" : "#4CBA79",
+      "color" : "#FFFFFF",
       "opacity" : 100
     }
   }, {
@@ -349,7 +378,7 @@
     } ],
     "on_off_divider" : false,
     "divider_color" : {
-      "color" : "#4CBA79",
+      "color" : "#FFFFFF",
       "opacity" : 100
     },
     "image_rdaius" : 0

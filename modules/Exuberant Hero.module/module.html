@@ -1,3 +1,38 @@
+<style>
+				{% scope_css %}
+#defaultExHero { 
+    background-image: url({{module.section_background.src}});
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 15px;
+		  color: {{module.style.text_color.color}};
+}
+		
+		.mainTexts h1 {
+				color: {{module.style.text_color.color}} !important;
+		}
+		
+		.mainTexts p {
+				    margin-bottom: 25px;
+		}
+				
+				{% if module.style.enable_custom_cta %}
+				.customCTA a {
+				background-color: {{module.style.background_color.color}} !important;
+    color: {{module.style.text_section_color.color}} !important;
+				border: 0px solid #19110b;
+    border-radius: 0px;
+    padding: 15px 53px;
+    text-align: center;
+    min-width: 130px;
+    display: inline-block;
+    padding: 13px 5px;
+    font-size: 16px;
+				}
+				{% endif %}
+				{% end_scope_css %}
+</style>
+
 <section id="defaultExHero">
 		<div class="containerExHero">
         <!-- SIDE AREA -->
@@ -24,7 +59,7 @@
 
             <!-- CTA  -->
 										{% if module.button_text %}
-            <div class="cta-design">
+            <div class="cta-design customCTA">
 													{% set href = module.cta_link.url.href %}
              {% if module.cta_link.url.type is equalto "EMAIL_ADDRESS" %}
              {% set href = "mailto:" + href %}
@@ -45,24 +80,3 @@
         </div>
 				</div>
     </section>
-
-{% require_css %}
-<style>
-#defaultExHero { 
-    background-image: url({{module.section_background.src}});
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 15px;
-/* 		  min-height: 790px; */
-		  color: {{module.text_color.color}};
-}
-		
-		.mainTexts h1 {
-				color: {{module.text_color.color}} !important;
-		}
-		
-		.mainTexts p {
-				    margin-bottom: 25px;
-		}
-</style>
-{% end_require_css %}

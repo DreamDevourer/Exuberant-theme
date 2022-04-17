@@ -62,17 +62,14 @@
     "type" : "choice",
     "default" : "h3"
   }, {
-    "id" : "card.text",
+    "id" : "13d4bb0f-bc2a-0920-2efd-0348f84d8e98",
     "name" : "text",
     "display_width" : null,
     "label" : "Content",
     "required" : false,
     "locked" : false,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more."
+    "type" : "richtext",
+    "default" : "<p>Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more.</p>"
   } ],
   "tab" : "CONTENT",
   "expanded" : false,
@@ -89,7 +86,7 @@
     },
     "title" : "This is a title",
     "title_heading_type" : "h3",
-    "text" : "Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more."
+    "content" : "<p>Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more.</p>"
   }, {
     "image" : {
       "loading" : "lazy",
@@ -102,7 +99,7 @@
     },
     "title" : "This is a title",
     "title_heading_type" : "h3",
-    "text" : "Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more."
+    "content" : "<p>Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more.</p>"
   }, {
     "image" : {
       "loading" : "lazy",
@@ -115,7 +112,7 @@
     },
     "title" : "This is a title",
     "title_heading_type" : "h3",
-    "text" : "Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more."
+    "content" : "<p>Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more.</p>"
   }, {
     "image" : {
       "loading" : "lazy",
@@ -128,7 +125,7 @@
     },
     "title" : "This is a title",
     "title_heading_type" : "h3",
-    "text" : "Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more."
+    "content" : "<p>Contextual advertising can be profitable. It can either pay for your hosting and maintenance costs for you website or it can pay for a lot more.</p>"
   } ]
 }, {
   "id" : "styles",

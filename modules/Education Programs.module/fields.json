@@ -107,6 +107,33 @@
     }
   }
 }, {
+  "id" : "a349f52c-224e-66e7-793f-42ab6182da12",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "b74a4770-c0a0-024a-4d28-211ad94d8118",
+    "name" : "border_radius",
+    "display_width" : null,
+    "label" : "Border Radius",
+    "required" : false,
+    "locked" : false,
+    "display" : "slider",
+    "min" : 0,
+    "max" : 100,
+    "step" : 1,
+    "type" : "number",
+    "default" : 0
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "border_radius" : 0
+  }
+}, {
   "id" : "d65a6220-72ee-e432-6e19-5bd99250e21e",
   "name" : "image_field",
   "display_width" : null,

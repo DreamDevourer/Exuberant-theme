@@ -1,8 +1,0 @@
-{
-  "global" : false,
-  "icon" : "book",
-  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
-  "module_id" : 64387883577,
-  "label" : "Summaries with Filter",
-  "is_available_for_new_content" : true
-}

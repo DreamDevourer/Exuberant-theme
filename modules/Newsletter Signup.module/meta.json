@@ -1,0 +1,9 @@
+{
+  "global" : true,
+  "smart_type" : "NOT_SMART",
+  "icon" : "fontawesome-5.14.0:Clipboard%20with%20Check:SOLID",
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 68246384949,
+  "label" : "Newsletter Signup",
+  "is_available_for_new_content" : false
+}

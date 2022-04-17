@@ -1,3 +1,9 @@
+<style>
+{% scope_css %}
+			.pricing-package-right .cta-design a { border-color: transparent; background-color: {{ module.style.button_color.color}} !important; min-width: 227px; font-weight: normal; font-size: 22px; line-height: 46px; padding: 5px 0; margin-top:8px; }  
+{% end_scope_css %}
+</style>
+
 {% if module.choice_style == "style3" %}
 
 <div class="pricing-package">
@@ -55,14 +61,6 @@
        
     </div>
 </div>
-
-
-{% require_css %}
-    <style>
-
-     #hs_cos_wrapper_{{name}} .pricing-package-right .cta-design a {     border-color: transparent; background-color:rgba({{ module.button_color.color|convert_rgb }},{{ module.button_color.opacity / 100 }}); min-width: 227px; font-weight: normal; font-size: 22px; line-height: 46px; padding: 5px 0; margin-top:8px; }  
-    </style>
-{% end_require_css %}
 
 {% endif %}
 

@@ -106,19 +106,28 @@
 
 <script>
   $(document).ready(function(){
-  
-    $('.carousel__slider_row').slick({
+    
+
+  $('.carousel__slider_row').each(function(){
+      $(this).slick({
       dots: false,
       infinite: false,
       speed: 300,
       slidesToShow: 1,
       adaptiveHeight: false,
-      prevArrow: $('.sliderarrow_left'),
-      nextArrow: $('.sliderarrow_right')
-      
+    
+      prevArrow: $(this).parent().find('.sliderarrow_left'),
+      nextArrow: $(this).parent().find('.sliderarrow_right')     
+    });
+ 
+  
+  
    });
+    
+    
   
 });
+
    
 </script>
 

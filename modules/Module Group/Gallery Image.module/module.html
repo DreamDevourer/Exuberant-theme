@@ -1,3 +1,9 @@
+<style>
+				{% scope_css %}
+      .square-imagestyle p, .square-imagestyle h2 { color:{{ module.style.text_color.color }} !important }
+				{% end_scope_css%}
+</style>
+
 {% if module.select_image_gallery_style  == "style1"  %}
 
 <div class="image-gallary-module">

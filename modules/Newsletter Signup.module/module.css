@@ -1,0 +1,57 @@
+
+.blog_hero_row { display: flex;  align-items: center; justify-content: space-between; }
+.blog_hero_row h3.form-title:empty { display: none; }
+.blog_hero_row form.hs-form { background: transparent; border: none; padding: 0; }
+.blog_hero_row form.hs-form .input input { border: 1px solid #C3CBCD; background-image: url("https://www.remotish.agency/hubfs/MAIL-1.png"); background-repeat: no-repeat; background-size: 27px; background-repeat: no-repeat; width: 330px; height: 46px; background-position: 96% 49%; padding-right: 47px; }
+
+.blog_hero_row form.hs-form .hs-button { vertical-align: middle; text-decoration: none; -webkit-transform: perspective(1px) translateZ(0); box-shadow: 0 0 1px rgba(0, 0, 0, 0); position: relative; -webkit-transition-property: color; transition-property: color; -webkit-transition-duration: .5s; transition-duration: .4s; border: 2px solid {{theme_color}}; box-sizing: border-box; display: inline-block; padding: 13px 5px; font-weight: bold; font-size: 16px; line-height: 18px; letter-spacing: .3px; background: transparent; border-radius: 0; }
+
+.blog_hero_row form.hs-form .hs-button:hover, .blog_hero_row form.hs-form .hs-button:focus { background: {{theme_color}}; color: #fff; border: 2px solid {{theme_color}}; transition: 0.2s;    outline: none; }
+.blog_hero_row .hs_error_rollup { display: none; }
+.blog_hero_row .hs-error-msgs li, .blog_hero_row .hs-error-msgs li label {   color: {{theme_color}} !important; }
+
+.blog_hero_row .hs-fieldtype-checkbox {   position: relative;    left: 0;    bottom: 0;}
+
+.blog_hero_row  fieldset input[type="checkbox"], .blog_hero_row fieldset input[type="radio"] { width:auto !important; }
+ .blog_hero_row  .inputs-list li.hs-form-radio { display:block; padding:0 0 8px 25px; position:relative; }
+ .blog_hero_row .inputs-list input[type="radio"] { position:absolute; left:0; margin:0; top:0; opacity: 0; width: 20px; height: 20px; }
+
+.blog_hero_row  .inputs-list input[type="radio"] + span:before { position:absolute; left:-2px; top:2px;  content:''; width:20px; height:20px; border:1px solid #dadada;  background:#fafafa; border-radius:100%; }
+
+
+.blog_hero_row  .inputs-list input[type="radio"]:checked + span:after { position:absolute; left:2px; top:6px;  content:''; width:12px; height:12px; border-color:{{theme_color}}; background:{{theme_color}};  border-radius:100%; }
+
+.blog_hero_row form.hs-form{  position: relative;  max-width: 454px; }
+.blog_hero_row .hs_submit{ position: absolute; right: 0; top: 22%; width: 34%; }
+.blog_hero_row .hs-form-field{ margin-bottom: 14px; }
+
+.blog_hero_row .hs-form fieldset input[type="checkbox"], .blog_hero_row fieldset input[type="radio"] { width:auto !important; }
+.blog_hero_row ul.inputs-list { margin:0; padding:5px 0; list-style:none; }
+
+.blog_hero_row .inputs-list .hs-form-checkbox-display , .blog_hero_row .inputs-list .hs-form-booleancheckbox , .blog_hero_row .inputs-list li.hs-form-radio { display:block; padding:0 0 8px 25px; position:relative; }
+.blog_hero_row .inputs-list input[type="checkbox"] , .blog_hero_row .inputs-list input[type="radio"] { position:absolute; left:0; margin:0; top:0; opacity: 0; width: 20px; height: 20px; }
+.blog_hero_row .inputs-list input[type="radio"] { top:3px; }
+.blog_hero_row .inputs-list input[type="checkbox"] + span { line-height: 22px; position:relative; display: block;      line-height: 21px;   font-weight: normal;
+    font-size: 18px;    line-height: 22px;    color: #a6a6a6;    font-family: 'Quicksand',sans-serif;     padding-left: 10px; }
+.blog_hero_row .inputs-list input[type="checkbox"] + span:before  { position:absolute; left:-25px; top:0;  content:''; width:20px; height:20px;    border: 2px solid #fff;  box-shadow: 0 0 0px 2px {{theme_color}}; }
+.blog_hero_row .inputs-list input[type="checkbox"]:checked + span:before { border-color:{{theme_color}}; background:{{theme_color}};  color:#fff;    border: 2px solid #fff; }
+.blog_hero_row .inputs-list input[type="checkbox"]:checked + span:after { text-align:center; color:#fff; position:absolute; left:-25px; top:4px; font-family:'FontAwesome'; width: 20px; line-height: 20px; }
+
+.blog_hero_row .hs_submit { margin: auto; }
+
+@media (max-width:991px){
+		.blog_hero_row form.hs-form{ flex-direction: column; }
+  .blog_hero_row .hs_submit {   margin-top: -5px;   padding-left: 0; }
+				
+		.blog_hero_row .hs-fieldtype-checkbox{ bottom: -10px; }
+		.blog_hero_row .hs_submit{     position: static;  top: 0;   right: 0;    padding: 0;    max-width: 164px; margin-top: 0;  }
+  .blog_hero_row form.hs-form .input input{     width: 100%; }
+				
+				
+}
+
+@media (max-width:767px){
+				.blog_hero_row{     flex-direction: column; }
+				.blog_hero_row ul.inputs-list{margin-left:5px}
+				.blog_hero_row ul.inputs-list{margin-left:5px}
+}

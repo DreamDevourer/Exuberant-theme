@@ -92,15 +92,32 @@
   "type" : "boolean",
   "default" : false
 }, {
-  "id" : "44ae0d11-e788-4c36-bc0a-98ad43a581bf",
-  "name" : "back_shape_color",
+  "id" : "4df69d09-b976-1f3b-23fe-8df2404288cd",
+  "name" : "style",
   "display_width" : null,
-  "label" : "Color",
+  "label" : "Style",
   "required" : false,
   "locked" : false,
-  "type" : "color",
+  "children" : [ {
+    "id" : "9fc14a47-227d-7fc8-929d-4887774bca47",
+    "name" : "back_shape_color",
+    "display_width" : null,
+    "label" : "Background Shape Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#3c885f",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
   "default" : {
-    "color" : "#4CBA79",
-    "opacity" : 100
+    "back_shape_color" : {
+      "color" : "#3c885f",
+      "opacity" : 100
+    }
   }
 } ]

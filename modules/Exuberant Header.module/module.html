@@ -1,0 +1,56 @@
+<style>
+				{% scope_css %}
+				{% if module.style.custom_text_color %}
+				
+				.exuberant__right .hs-menu-flow-horizontal ul li a {
+								color: {{module.style.text_color.color}} !important;
+				}
+				
+				{% endif %}
+				{% end_scope_css%}
+</style>
+
+<header class="exuberant__header"> 
+     <div class="container">
+         <div class="exuberant__row">
+            <div class="exuberant__left">
+             <div class="exwhitelogo__row">
+															
+            
+                 <div class="exwhite__logo">
+                 {% logo
+	override_inherited_src="{{ module.white_logo.override_inherited_src }}"
+	src="{{ module.white_logo.src }}"
+	alt="{{ module.white_logo.alt }}"
+	width="{{ module.white_logo.width }}"
+	height="{{ module.white_logo.height }}"
+	suppress_company_name="{{ module.white_logo.suppress_company_name }}"
+%}
+                 </div>
+         
+
+															
+         
+                 <div class="exblack__logo" >
+                  {% logo
+	override_inherited_src="{{ module.black_logo.override_inherited_src }}"
+	src="{{ module.black_logo.src }}"
+	alt="{{ module.black_logo.alt }}"
+	width="{{ module.black_logo.width }}"
+	height="{{ module.black_logo.height }}"
+	suppress_company_name="{{ module.black_logo.suppress_company_name }}"
+%}
+                 </div>
+           
+               
+              </div>
+
+            </div>
+            <div class="exuberant__right">
+                <nav class="mainmenu">
+                  {% menu id="{{ module.menu_field }}" %}
+                </nav>
+           </div>
+         </div>
+     </div>
+</header>

@@ -1,3 +1,12 @@
+<style>
+				{% scope_css %}
+				{% if module.style.enable_custom_colors %}
+      .onlyheader-cta .cta-design a { color:{{ module.style.cta_text_color.color }} !important }
+				  .onlyheader-cta .cta-design { background-color:{{ module.style.cta_background_color.color }} !important }
+				{% endif %}
+				{% end_scope_css%}
+</style>
+
 <div class="onlyheader-module hm{{ module.custom_class }}" id="{{ module.id_dev }}">
     <div class="">
         <div class="onlyheader-row {{ module.text_position }}" id="ctaColumnMobile" style="max-width: {% if module.auto_size %} {{ module.accordion_row_width }} {% endif %}px; display: flex;

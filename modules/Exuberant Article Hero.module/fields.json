@@ -1,0 +1,207 @@
+[ {
+  "id" : "3bce20de-33d6-df93-4858-b06de22f2c7d",
+  "name" : "section_background",
+  "display_width" : null,
+  "label" : "Section Background",
+  "required" : false,
+  "locked" : true,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "exact",
+    "src" : "https://www.remotish.agency/hubfs/ImageHero.jpeg",
+    "alt" : "ImageHero",
+    "loading" : "lazy",
+    "width" : 1903,
+    "height" : 790,
+    "max_width" : 1920,
+    "max_height" : 797
+  }
+}, {
+  "id" : "e8ff5d07-de54-c2a6-37f7-f58b25e7fdbb",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "placeholder" : "A more<br>sustainable world",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "A more<br>sustainable world"
+}, {
+  "id" : "8feb3e51-fe11-c253-c8e2-8961a4a83d2d",
+  "name" : "paragraph",
+  "display_width" : null,
+  "label" : "Paragraph",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "placeholder" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nisl ornare sagittis, faucibus tellus vulputate eget. Mollis nibh pulvinar vitae vestibulum, elit orci in. Lorem adipiscing congue est posuere eu, lobortis lectus odio interdum.",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet nisl ornare sagittis, faucibus tellus vulputate eget. Mollis nibh pulvinar vitae vestibulum, elit orci in. Lorem adipiscing congue est posuere eu, lobortis lectus odio interdum."
+}, {
+  "id" : "bc848df7-1b70-3b64-eb32-218d705e7cf0",
+  "name" : "button_text",
+  "display_width" : null,
+  "label" : "Button Text",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "placeholder" : "Get Involved",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Get Involved"
+}, {
+  "id" : "f5e35a1b-3ab3-a3c6-df47-96467edc3b77",
+  "name" : "cta_link",
+  "display_width" : null,
+  "label" : "CTA Link",
+  "required" : false,
+  "locked" : true,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "91de5554-3913-9354-47b1-50b903bdb8e0",
+  "name" : "side_area",
+  "display_width" : null,
+  "label" : "Side Area",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "fdb9c323-4b67-994f-0567-f2d9a173e5ba",
+    "name" : "side_title",
+    "display_width" : null,
+    "label" : "Side title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "EXUBERANT",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "EXUBERANT"
+  }, {
+    "id" : "f6756583-07e4-a6e0-cf46-6b24a78c9d10",
+    "name" : "side_subtext",
+    "display_width" : null,
+    "label" : "Side Subtext",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "FOR A BETTER WORLD",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "FOR A BETTER WORLD"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "side_title" : "EXUBERANT",
+    "side_subtext" : "FOR A BETTER WORLD"
+  }
+}, {
+  "id" : "4c529764-0ed9-1541-2d33-5d8b94810100",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "2ba4b0a1-100b-6ade-8115-8065b00b5217",
+    "name" : "text_color",
+    "display_width" : null,
+    "label" : "Text Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "e9b91e5a-c038-b2a9-1a7a-667895098f1b",
+    "name" : "enable_custom_cta",
+    "display_width" : null,
+    "label" : "Enable Custom CTA",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : true
+  }, {
+    "id" : "f4d38176-2ba9-46d0-7a59-40c8a12769b2",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "e9b91e5a-c038-b2a9-1a7a-667895098f1b",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : "#3c885f",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "4458bb1a-e6c9-85dd-1a47-094ccd93926d",
+    "name" : "text_section_color",
+    "display_width" : null,
+    "label" : "Text Section Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "e9b91e5a-c038-b2a9-1a7a-667895098f1b",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "text_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "enable_custom_cta" : true,
+    "background_color" : {
+      "color" : "#3c885f",
+      "opacity" : 100
+    },
+    "text_section_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }
+} ]

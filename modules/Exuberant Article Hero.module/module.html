@@ -1,0 +1,81 @@
+<style>
+				{% scope_css %}
+#defaultExHero { 
+    background-image: url({{module.section_background.src}});
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 15px;
+		  color: {{module.style.text_color.color}};
+}
+		
+		.mainTexts h1 {
+				color: {{module.style.text_color.color}} !important;
+		}
+		
+		.mainTexts p {
+				    margin-bottom: 25px;
+		}
+				
+				{% if module.style.enable_custom_cta %}
+				.customCTA a {
+				background-color: {{module.style.background_color.color}} !important;
+    color: {{module.style.text_section_color.color}} !important;
+				border-radius: 0px;
+    padding: 15px 53px;
+    text-align: center;
+    min-width: 130px;
+    display: inline-block;
+    padding: 13px 5px;
+    font-size: 16px;
+				}
+				{% endif %}
+				{% end_scope_css %}
+</style>
+
+<section id="defaultExHero" style="top: -68px; position: relative;">
+		<div class="containerExHero">
+        <!-- SIDE AREA -->
+      
+        <div class="sideArea">
+            <span class="mainSideText">{{module.side_area.side_title}}</span>
+            <span class="subSideText">{{module.side_area.side_subtext}}</span>
+        </div> 
+
+        <!-- TEXTS -->
+        <div class="mainTexts">
+										
+										{% if module.title %}
+            <h1>
+														{{module.title|upper}}
+            </h1>
+										{% endif %}
+										
+										{% if module.paragraph %}
+            <p>
+														{{module.paragraph}}
+            </p>
+										{% endif %}
+
+            <!-- CTA  -->
+										{% if module.button_text %}
+            <div class="cta-design customCTA">
+													{% set href = module.cta_link.url.href %}
+             {% if module.cta_link.url.type is equalto "EMAIL_ADDRESS" %}
+             {% set href = "mailto:" + href %}
+             {% endif %}
+             {% set rel = [] %}
+             {% if module.cta_link.no_follow %}
+             {% do rel.append("nofollow") %}
+             {% endif %}
+             {% if module.cta_link.open_in_new_tab %}
+             {% do rel.append("noopener") %}
+             {% endif %}
+                <a href="{{href}}" {% if module.cta_link.open_in_new_tab %}target="_blank"{% endif %}
+                {% if rel %}rel="{{ rel|join(" ") }}"{% endif %}>
+                    {{module.button_text}}
+                </a>
+            </div>
+										{% endif %}
+        </div>
+				</div>
+    </section>

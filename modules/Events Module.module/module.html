@@ -23,6 +23,8 @@
 		
 		{% for event in module.event %}
 <div class="eventsModule">
+				<div class="eventsContainerMain">
+						
 		<div class="mainEventIMG">
 				<img src="{{event.event_image.src}}">
 		</div>
@@ -41,8 +43,10 @@
 				</p>
 		</div>
 		
+				</div>
+		
 		<div class="button_design bttEveArea">
-				                {% set href = event.button_link.url.href %}
+				            {% set href = event.button_link.url.href %}
                 {% if event.button_link.url.type is equalto "EMAIL_ADDRESS" %}
                 {% set href = "mailto:" + href %}
                 {% endif %}

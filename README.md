@@ -1,7 +1,7 @@
-<h1 align="center">EXUBERANT Theme 🍀</h1>
+<h1 align="center">EXUBERANT GROWTH 🍀</h1>
 
 <p align="center">
-  Exuberant is a theme dedicated to for non-profit organizations, nature and human friendly.
+  Exuberant Growth is a theme dedicated to for non-profit organizations, nature and human friendly.
 </p>
 
 <p align="center">
@@ -9,6 +9,8 @@
   <a href="https://marketplace.remotish.agency/exuberant-theme">Demo website</a> |
   <a href="./LICENSE">License</a>
 </p>
+
+<img src="./Cover.png" alt="Promotional cover of Exuberant Growth Theme">
 
 ## Free and Open Source Theme
 It's a free and open-source theme made by me and with help of Remotish Agency, designed in Figma to be modern, clean and developed with optimization in mind.

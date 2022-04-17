@@ -1,3 +1,8 @@
+<style>
+				{% scope_css %}
+				.sideimage-module { background-color:{{ module.style.background_color.color }} !important }
+				{% end_scope_css%}
+</style>
 
 <div class="sideimage-module border " style="background-color:rgba({{ module.side_module_with_images_or_video.bg_color.color|convert_rgb }},{{ module.side_module_with_images_or_video.bg_color.opacity / 100 }})">
     <div class="container">
@@ -99,18 +104,4 @@
       
     </div>
 </div>
-
-{% require_css %}
-<style>
-  
-  {% if module.side_module_with_images_or_video.on_off_divider %}
-   #hs_cos_wrapper_{{name}} .border .imagevideo-text:before{ border-top: 3px solid rgba({{ module.side_module_with_images_or_video.divider_color.color|convert_rgb }},{{  module.side_module_with_images_or_video.divider_color.opacity / 100 }}); }
-  
-  {% else if %}
-   #hs_cos_wrapper_{{name}}  .border .imagevideo-text:before{ display:none; }
-  {% endif %}
-    
-  
-</style>
-{% end_require_css %}
 

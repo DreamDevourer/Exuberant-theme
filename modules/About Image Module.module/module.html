@@ -1,3 +1,10 @@
+<style>
+				{% scope_css %}
+				.sideimagevideo-row { background: linear-gradient(to top,{{ module.style.background_color.color }} 0%,{{ module.style.background_color.color }} 50%,#FFF 50%,#FFF 100%);
+}
+				{% end_scope_css%}
+</style>
+
 <div class="sideimage-module border " style="background-color:rgba({{ module.side_module_with_images_or_video.bg_color.color|convert_rgb }},{{ module.side_module_with_images_or_video.bg_color.opacity / 100 }})">
     <div class="containerFullMode">
       

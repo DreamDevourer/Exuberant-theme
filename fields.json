@@ -15,9 +15,16 @@
         },
         "default": {
           "color": "#19110B"
+        },
+        "inherited_value": {
+          "property_value_paths": {
+            "color": "brand_settings.primaryColor"
+          }
         }
+        
+       
       },
-						{
+			{
         "label": "Main Color",
         "name": "main_color",
         "type": "color",
@@ -31,9 +38,10 @@
         }
       },
       {
-        "label": "Secondary color",
+        "label": "Footer Text color",
         "name": "secondary_color",
         "type": "color",
+        "help_text" : "This Color Use For Footer Text Color",
         "visibility": {
           "hidden_subfields": {
             "opacity": true
@@ -363,7 +371,7 @@
         "display": "slider",
         "max": 100,
         "min": 0,
-        "default": 53
+        "default": 35
       },
       {
         "label": "Vertical padding",
@@ -561,7 +569,7 @@
         "display": "slider",
         "max": 2500,
         "min": 900,
-        "default": 1240
+        "default": 1100
       }
     ]
   },
@@ -593,16 +601,8 @@
             "color": "theme.global_colors.secondary_color.color"
           }
         }
-      },
-      {
-        "label": "Border color",
-        "name": "border_top_color",
-        "type": "color",
-        "default": {
-          "color": "#2B2B2B",
-          "opacity": 100
-        }
       }
+      
     ]
   }
 ]

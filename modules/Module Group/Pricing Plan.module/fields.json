@@ -650,6 +650,35 @@
     "opacity" : 100
   }
 }, {
+  "id" : "4f18f7a1-7f9f-b0e6-f178-56248e75b8c6",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "46c1880d-f6f3-6192-4e6b-d06515f67e29",
+    "name" : "button_color",
+    "display_width" : null,
+    "label" : "Button Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#3c885f",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "button_color" : {
+      "color" : "#3c885f",
+      "opacity" : 100
+    }
+  }
+}, {
   "id" : "bb2763f0-379d-eaae-0c80-2e9eeec3d28e",
   "name" : "radius",
   "display_width" : null,

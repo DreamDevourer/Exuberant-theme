@@ -1,8 +1,0 @@
-{
-  "global" : false,
-  "icon" : "fontawesome-5.14.0:Alternate%20Sort%20Amount%20Down:SOLID",
-  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
-  "module_id" : 64387853322,
-  "label" : " Column Header & Subheader",
-  "is_available_for_new_content" : true
-}

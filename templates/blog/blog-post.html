@@ -2,16 +2,18 @@
   templateType: blog_post
   isAvailableForNewContent: true
   label: Blog Article
-  screenshotPath: ../images/thumbnails/blog_article.jpg
+  screenshotPath: ../../images/thumbnails/Blog.jpg
 -->  
 
 {% extends '../layouts/base.html' %}
 
 {% block body %}
 <main class="body-container-wrapper">
-
-
   <div class="body-container body-container--blog-post">
+						
+			{# HERO START #}
+   {% module "module_16470322805712" path="../../modules/Exuberant Article Hero", label="Exuberant Article Hero" %}
+   {# HERO END #}
 
       <div class="row-fluid">
          <div class="container">
@@ -48,30 +50,6 @@
                 
                 
              </div>
-                <div class="social-sharing">
-                    <ul class="share-buttons">
-                      <li>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ content.absolute_url }}&title={{ content.title }}&picture={{ content.featured_image }}&description={{ content.meta_description }}" title="Share on Facebook" target="_blank" onclick="return !window.open(this.href, 'Facebook', 'width=600,height=500')">
-                          <i class="fab fa-facebook-square"></i>  </a>
-                      </li>
-                      <li>
-                        <a href="https://twitter.com/intent/tweet?source={{ content.absolute_url }}&text={{ content.title }}" target="_blank" title="Tweet" onclick="return !window.open(this.href, 'Twitter', 'width=600,height=500')">
-                         <i class="fab fa-twitter-square"></i>  </a>
-                      </li>
-                     
-                      <li>
-                        <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ content.absolute_url }}&title={{ content.title }}&summary={{ content.meta_description }}" target="_blank" title="Share on LinkedIn" onclick="return !window.open(this.href, 'Facebook', 'width=600,height=500')"> <i class="fab fa-linkedin"></i>
- </a>
-                      </li>
-                      <li>
-                        <a href="mailto:?subject={{ content.title }}&body={{ content.title }} {{ content.absolute_url }}"  title="Email"> <i class="fa fa-envelope" aria-hidden="true"></i>  </a>
-                      </li>
-                    </ul>
-                  </div>
-              
-        
-         
-              
           </div>   
             
         </div>

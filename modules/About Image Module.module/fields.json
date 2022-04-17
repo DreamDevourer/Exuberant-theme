@@ -1,4 +1,33 @@
 [ {
+  "id" : "8d6f3db3-d8ca-1e66-b8ed-b370f21a3843",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "2274a484-4435-786d-4b5a-f4064111f38a",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Dark Background Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#1d1d1d",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_color" : {
+      "color" : "#1d1d1d",
+      "opacity" : 100
+    }
+  }
+}, {
   "id" : "79b586a1-005f-ce98-f67e-b44d5d01ab2c",
   "name" : "side_module_with_images_or_video",
   "display_width" : null,
@@ -22,7 +51,7 @@
     "display_width" : null,
     "label" : "BG Color",
     "required" : false,
-    "locked" : false,
+    "locked" : true,
     "type" : "color",
     "default" : {
       "color" : "#ffffff",
@@ -38,7 +67,7 @@
     "occurrence" : {
       "min" : 1,
       "max" : 1,
-      "sorting_label_field" : null,
+      "sorting_label_field" : "2cf467ce-47d7-d7b1-ec6c-e4f597338c78",
       "default" : 1
     },
     "children" : [ {
@@ -287,6 +316,13 @@
     "required" : false,
     "locked" : false,
     "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "ad0a0ebf-974a-7c0a-6015-9b2bdfece3b4",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
     "allow_new_line" : false,
     "show_emoji_picker" : false,
     "type" : "text",
@@ -298,30 +334,15 @@
     "label" : "Second Text Area",
     "required" : false,
     "locked" : false,
+    "visibility" : {
+      "controlling_field" : "ad0a0ebf-974a-7c0a-6015-9b2bdfece3b4",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
     "type" : "richtext",
     "default" : "<p>Give an overview of your company. Don't be afraid to let your personality come through.</p>\n<p>In all our experience with tracking customer behavior, we find that most visitors navigate to the About Us page after the homepage.</p>"
-  }, {
-    "id" : "eecd88f1-7983-07ec-6dd0-64a0423f707c",
-    "name" : "on_off_divider",
-    "display_width" : null,
-    "label" : "ON/Off Divider",
-    "required" : false,
-    "locked" : false,
-    "display" : "checkbox",
-    "type" : "boolean",
-    "default" : false
-  }, {
-    "id" : "37b3c311-8302-9d67-0d39-f65f2d2a5de6",
-    "name" : "divider_color",
-    "display_width" : null,
-    "label" : "Divider Color",
-    "required" : false,
-    "locked" : false,
-    "type" : "color",
-    "default" : {
-      "color" : "#4CBA79",
-      "opacity" : 100
-    }
   }, {
     "id" : "d2bbd560-8cc2-73c1-6e4e-5c293892b08d",
     "name" : "image_rdaius",
@@ -381,11 +402,6 @@
     "enable_second_text" : true,
     "stitle" : "This Is a Header 2",
     "stext_area" : "<p>Give an overview of your company. Don't be afraid to let your personality come through.</p>\n<p>In all our experience with tracking customer behavior, we find that most visitors navigate to the About Us page after the homepage.</p>",
-    "on_off_divider" : false,
-    "divider_color" : {
-      "color" : "#4CBA79",
-      "opacity" : 100
-    },
     "image_rdaius" : 0
   }
 } ]

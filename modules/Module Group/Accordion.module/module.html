@@ -1,3 +1,18 @@
+<style>
+				{% scope_css %}
+				  .titleborder:before{ display:none; }
+
+      .accordion-column>h4{ border-radius:{{ module.style.border_radius }}px }
+      .accordion-column > h4:hover{  background:{{ module.style.active_and_hover_color.color }} }
+      .accordion-column.active-accordion > h4{ background: {{ module.style.active_and_hover_color.color }} }
+      .accordion-row{  max-width: {{ module.style.accordion_row_width }}px !important; width: {{ module.style.accordion_row_width }}px !important;  }
+						
+						@media (max-width: 767px){
+								.accordion-row {width: 100%;}
+						}
+				{% end_scope_css%}
+</style>
+
 <div class="accordion-module" >
    <div class="container">
       {% if module.richtext_field %}
@@ -21,26 +36,6 @@
      
    </div>
 </div>
-
-{% require_css %}
-    <style>
-      {% if module.divider_ %}
-	       .titleborder:before{ background: rgba({{ module.divider_color.color|convert_rgb }},{{ module.divider_color.opacity / 100 }}); }
-      {% else %}
-         .titleborder:before{ display:none; }
-       {% endif %}
-      .accordion-column>h4{ border-radius:{{ module.border_radius }}px }
-      .accordion-column > h4:hover{  background:rgba({{ module.active_and_hover_color.color|convert_rgb }},{{ module.active_and_hover_color.opacity / 100 }}); }
-      .accordion-column.active-accordion > h4{ background: rgba({{ module.active_and_hover_color.color|convert_rgb }},{{ module.active_and_hover_color.opacity / 100 }}); }
-      .accordion-row{  max-width: {{ module.accordion_row_width }}px; width: {{ module.accordion_row_width }}px;  }
-						
-						@media (max-width: 767px){
-								.accordion-row {width: 100%;}
-						}
-</style>
-
-
-{% end_require_css %}
 
 {% require_js %}
     <script defer>

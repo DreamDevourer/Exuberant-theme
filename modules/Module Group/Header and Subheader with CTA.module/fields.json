@@ -13,7 +13,7 @@
   "display_width" : null,
   "label" : "Divider?",
   "required" : false,
-  "locked" : false,
+  "locked" : true,
   "display" : "checkbox",
   "type" : "boolean",
   "default" : false
@@ -23,7 +23,7 @@
   "display_width" : null,
   "label" : "Divider Color",
   "required" : false,
-  "locked" : false,
+  "locked" : true,
   "visibility" : {
     "controlling_field" : "cac0daf2-e755-a6a3-53bb-98d3e7f0a932",
     "controlling_value_regex" : "true",
@@ -77,9 +77,9 @@
   "required" : false,
   "locked" : false,
   "occurrence" : {
-    "min" : 1,
-    "max" : 4,
-    "sorting_label_field" : null,
+    "min" : 0,
+    "max" : 1,
+    "sorting_label_field" : "ef0c51dd-d8d0-2a56-21e4-5edfc7c68adc",
     "default" : 1
   },
   "visibility" : {
@@ -158,6 +158,76 @@
   "choices" : [ [ "left_position", "Left" ], [ "right_position", "Right" ], [ "center_position", "Center" ] ],
   "type" : "choice",
   "default" : "left_position"
+}, {
+  "id" : "2d553ebd-03ce-e041-0f3d-0522432970c4",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "d827d19c-f8ae-3bae-8d44-11a6062c5a61",
+    "name" : "enable_custom_colors",
+    "display_width" : null,
+    "label" : "Enable custom colors?",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "424bf98f-03c2-5888-f40b-4de23bc9f2b6",
+    "name" : "cta_text_color",
+    "display_width" : null,
+    "label" : "CTA Text Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "d827d19c-f8ae-3bae-8d44-11a6062c5a61",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "90dd5cc9-5c98-7c8d-90eb-4efda3030f4c",
+    "name" : "cta_background_color",
+    "display_width" : null,
+    "label" : "CTA Background Color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "d827d19c-f8ae-3bae-8d44-11a6062c5a61",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : "#3c885f",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "enable_custom_colors" : false,
+    "cta_text_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "cta_background_color" : {
+      "color" : "#3c885f",
+      "opacity" : 100
+    }
+  }
 }, {
   "id" : "06935b4e-a95e-a65f-343c-9dbf7d1ce796",
   "name" : "id_dev",

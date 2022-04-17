@@ -1,0 +1,159 @@
+[ {
+  "id" : "4e2a6fdd-28c0-48a5-99d8-d639bb8f3d0b",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "Join Us!",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Join Us!"
+}, {
+  "id" : "68a74457-04c3-8d9f-9cc7-91e394cb698c",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet,<br>aliquet eu lectus orci. Nec tempus, nulla eu sollicitudin. Rhoncus."
+}, {
+  "id" : "4b9fe824-7384-c713-3c6a-afced98128ba",
+  "name" : "button_text",
+  "display_width" : null,
+  "label" : "Button Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "Become a donator",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Become a donator"
+}, {
+  "id" : "411f827b-d826-5564-b9f4-eb99310cc905",
+  "name" : "button_link",
+  "display_width" : null,
+  "label" : "Button Link",
+  "required" : false,
+  "locked" : false,
+  "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+  "show_advanced_rel_options" : false,
+  "type" : "link",
+  "default" : {
+    "url" : {
+      "content_id" : null,
+      "type" : "EXTERNAL",
+      "href" : ""
+    },
+    "open_in_new_tab" : false,
+    "no_follow" : false
+  }
+}, {
+  "id" : "dca15cbb-a395-c239-18f4-c0b173489be8",
+  "name" : "box",
+  "display_width" : null,
+  "label" : "Box",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : 3,
+    "sorting_label_field" : null,
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "95c44cca-8d84-ae60-37ba-e943aad63c06",
+    "name" : "count_number",
+    "display_width" : null,
+    "label" : "Count Number",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "15K",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "15K"
+  }, {
+    "id" : "6b0782dc-c874-73c2-3712-adabc96373f9",
+    "name" : "number_after_sign",
+    "display_width" : null,
+    "label" : "Number After Sign",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : ""
+  }, {
+    "id" : "e62429fc-7152-e4c6-61f8-2acb6273cbe5",
+    "name" : "counter_title",
+    "display_width" : null,
+    "label" : "Counter Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Donators"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "count_number" : "15K",
+    "number_after_sign" : "",
+    "counter_title" : "Donators"
+  }, {
+    "count_number" : "15K",
+    "number_after_sign" : "",
+    "counter_title" : "Donators"
+  }, {
+    "count_number" : "15K",
+    "number_after_sign" : "",
+    "counter_title" : "Donators"
+  } ]
+}, {
+  "id" : "3833a72f-932a-16f8-b857-5028640ee606",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "e5fd6a88-0e15-0d12-5ffa-7bbc44149bd5",
+    "name" : "alignment_field",
+    "display_width" : null,
+    "label" : "Alignment",
+    "required" : false,
+    "locked" : false,
+    "alignment_direction" : "BOTH",
+    "type" : "alignment",
+    "default" : { }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "alignment_field" : { }
+  }
+}, {
+  "id" : "df64ee21-e6a0-6f16-3da3-57b37256cf6c",
+  "name" : "content_id",
+  "display_width" : null,
+  "label" : "Content ID",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "placeholder" : "Contact",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Contact"
+} ]

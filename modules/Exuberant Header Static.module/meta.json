@@ -1,8 +1,0 @@
-{
-  "global" : false,
-  "icon" : "align-justify",
-  "host_template_types" : [ "PAGE" ],
-  "module_id" : 64499964946,
-  "label" : "Static Header",
-  "is_available_for_new_content" : true
-}

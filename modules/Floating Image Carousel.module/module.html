@@ -1,3 +1,9 @@
+<style>
+				{% scope_css %}
+				.backShape {	background-color:{{ module.style.back_shape_color.color }}; }
+				{% end_scope_css %}
+</style>
+
 <div class="floating-images-section">
     <div class="containerFullMode">
        <div class="floating-row slick-arblblack">
@@ -16,7 +22,7 @@
                    <img loading="lazy" src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}" {{ sizeAttrs }} {{ loadingAttr }}>
                    {% endif %}
                 </div>
-                <div class="floating-inneimage" style="background-color:rgba({{ module.back_shape_color.color|convert_rgb }},{{ module.back_shape_color.opacity / 100 }})">
+                <div class="floating-inneimage backShape">
                 </div>
               </div>
             </div>

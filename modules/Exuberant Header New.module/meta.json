@@ -1,9 +1,0 @@
-{
-  "global" : true,
-  "smart_type" : "NOT_SMART",
-  "icon" : "fontawesome-5.14.0:Equals:SOLID",
-  "host_template_types" : [ "PAGE" ],
-  "module_id" : 64561293352,
-  "label" : "Exuberant Header",
-  "is_available_for_new_content" : true
-}

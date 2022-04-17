@@ -1,3 +1,11 @@
+<style>
+				{% scope_css %}
+				{% if module.style.enable_custom_colors %}
+      .demoform-title { color:{{ module.style.details_color.color }} !important }
+				{% endif %}
+				{% end_scope_css%}
+</style>
+
 <div class="row-fluid">
   <div class="demoform_area">
     <div class="demoform-title">

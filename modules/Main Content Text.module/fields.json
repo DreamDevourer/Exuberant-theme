@@ -64,46 +64,10 @@
   "required" : false,
   "locked" : false,
   "children" : [ {
-    "id" : "cb6eda4f-d03c-0acd-02c6-afa378051012",
-    "name" : "right_background_color",
-    "display_width" : null,
-    "label" : "Right Background Color",
-    "required" : false,
-    "locked" : true,
-    "type" : "color",
-    "default" : {
-      "color" : "#FFFFFF",
-      "opacity" : 100
-    }
-  }, {
-    "id" : "83a336cf-acfe-da2a-8e33-11ab9a4b7097",
-    "name" : "heading_colors",
-    "display_width" : null,
-    "label" : "Heading Colors",
-    "required" : false,
-    "locked" : false,
-    "type" : "color",
-    "default" : {
-      "color" : "#4CBA79",
-      "opacity" : 100
-    }
-  }, {
-    "id" : "ba17ef8d-06c7-eff4-3bfb-a40c479e4609",
-    "name" : "right_text_color",
-    "display_width" : null,
-    "label" : "Right Text Color",
-    "required" : false,
-    "locked" : true,
-    "type" : "color",
-    "default" : {
-      "color" : "#000000",
-      "opacity" : 100
-    }
-  }, {
     "id" : "d80d5d9e-ec19-8a1a-40db-3a783ab6f5a8",
     "name" : "left_text_color",
     "display_width" : null,
-    "label" : "Left Text Color",
+    "label" : "Text Color",
     "required" : false,
     "locked" : false,
     "type" : "color",
@@ -116,18 +80,6 @@
   "expanded" : false,
   "type" : "group",
   "default" : {
-    "right_background_color" : {
-      "color" : "#FFFFFF",
-      "opacity" : 100
-    },
-    "heading_colors" : {
-      "color" : "#4CBA79",
-      "opacity" : 100
-    },
-    "right_text_color" : {
-      "color" : "#000000",
-      "opacity" : 100
-    },
     "left_text_color" : {
       "color" : "#000000",
       "opacity" : 100
