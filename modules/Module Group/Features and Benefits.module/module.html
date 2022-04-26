@@ -1,20 +1,18 @@
 <style>
 				{% scope_css %}
       {% if module.all_text_color_white_ %}
-         #hs_cos_wrapper_{{name}} .features-text * {   color: #fff; }
-         #hs_cos_wrapper_{{name}} .features-tripe h3 {   color: #fff; }
-         #hs_cos_wrapper_{{name}}  .features-tripe a {    background: #fff ;    color: #000; }
+         .features-text * {   color: #fff; }
+         .features-tripe h3 {   color: #fff; }
+         .features-tripe a {    background: #fff ;    color: #000; }
 
       {% endif %}
         {% if module.style.background_image %}
            
-         #hs_cos_wrapper_{{name}} .features-benefits{ background-image:url({{ module.style.select_background_image.src }}); z-index:1; }
-         #hs_cos_wrapper_{{name}} .features-benefits:before{     z-index: -1; content:""; background-color:rgba({{ module.image_overlay.color|convert_rgb }},{{ module.image_overlay.opacity / 100 }}); position:absolute; top:0; left:0; right:0; bottom:0;  }
+         .features-benefits{ background-image:url({{ module.style.select_background_image.src }}); z-index:9; }
+         .features-benefits:before{     z-index: -1; content:""; background-color:rgba({{ module.style.image_overlay.color|convert_rgb }},{{ module.style.image_overlay.opacity / 100 }}); position:absolute; top:0; left:0; right:0; bottom:0;  }
       
       
         {% else %}
-      
-         #hs_cos_wrapper_{{name}} .features-benefits { background-color:rgba({{ module.bg_color.color|convert_rgb }},{{ module.bg_color.opacity / 100 }}) } 
     
       {% endif %}
 				{% end_scope_css%}

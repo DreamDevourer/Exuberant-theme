@@ -120,30 +120,6 @@
     "counter_title" : "Donators"
   } ]
 }, {
-  "id" : "3833a72f-932a-16f8-b857-5028640ee606",
-  "name" : "style",
-  "display_width" : null,
-  "label" : "Style",
-  "required" : false,
-  "locked" : false,
-  "children" : [ {
-    "id" : "e5fd6a88-0e15-0d12-5ffa-7bbc44149bd5",
-    "name" : "alignment_field",
-    "display_width" : null,
-    "label" : "Alignment",
-    "required" : false,
-    "locked" : false,
-    "alignment_direction" : "BOTH",
-    "type" : "alignment",
-    "default" : { }
-  } ],
-  "tab" : "STYLE",
-  "expanded" : false,
-  "type" : "group",
-  "default" : {
-    "alignment_field" : { }
-  }
-}, {
   "id" : "df64ee21-e6a0-6f16-3da3-57b37256cf6c",
   "name" : "content_id",
   "display_width" : null,

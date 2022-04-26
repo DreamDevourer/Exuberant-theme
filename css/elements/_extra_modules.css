@@ -111,10 +111,6 @@ span.sotext {   position: absolute;   left: 55px;    font-size: 19px;     top: 1
 
 /*  =============== Image Carousel module ================= */
 
-.slick-arblblack .slick-arrow.slick-prev::before,.slick-arblblack .slick-arrow.slick-next::before{     background-image: url(https://f.hubspotusercontent40.net/hubfs/3428648/Arrow%202.svg); }
-/* .slick-arblblack .slick-arrow.slick-next{ right:30px; }
-.slick-arblblack .slick-arrow.slick-prev{ left:0; } */
-
 .inner-imagecl-column { display: flex; background-color: #F5F5F5; }
 .image-cl-left { width: calc(50% - 40px); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 565px; }
 .image-cl-right { width: 50%; margin-left: 40px; display: flex; align-items: center; padding-right: 40px; padding-top: 40px; padding-bottom: 40px; }

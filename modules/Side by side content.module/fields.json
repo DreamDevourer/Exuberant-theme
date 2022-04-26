@@ -64,6 +64,16 @@
   "required" : false,
   "locked" : false,
   "children" : [ {
+    "id" : "7a2bc4e6-4a48-f415-8ba4-b4cc19963fc8",
+    "name" : "enable_custom_heading_colors",
+    "display_width" : null,
+    "label" : "Enable Custom Heading 2 Color",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
+  }, {
     "id" : "cb6eda4f-d03c-0acd-02c6-afa378051012",
     "name" : "right_background_color",
     "display_width" : null,
@@ -116,6 +126,7 @@
   "expanded" : false,
   "type" : "group",
   "default" : {
+    "enable_custom_heading_colors" : false,
     "right_background_color" : {
       "color" : "#1E1E1E",
       "opacity" : 100

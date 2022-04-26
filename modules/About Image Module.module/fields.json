@@ -17,6 +17,16 @@
       "color" : "#1d1d1d",
       "opacity" : 100
     }
+  }, {
+    "id" : "ea98208a-f2d2-84f8-f441-1f3b01d63c5d",
+    "name" : "cover_full_background",
+    "display_width" : null,
+    "label" : "Cover Full Background",
+    "required" : false,
+    "locked" : false,
+    "display" : "toggle",
+    "type" : "boolean",
+    "default" : false
   } ],
   "tab" : "STYLE",
   "expanded" : false,
@@ -25,7 +35,8 @@
     "background_color" : {
       "color" : "#1d1d1d",
       "opacity" : 100
-    }
+    },
+    "cover_full_background" : false
   }
 }, {
   "id" : "79b586a1-005f-ce98-f67e-b44d5d01ab2c",

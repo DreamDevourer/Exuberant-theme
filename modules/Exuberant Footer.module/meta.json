@@ -4,5 +4,5 @@
   "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
   "module_id" : 65619030427,
   "label" : "Footer",
-  "is_available_for_new_content" : true
+  "is_available_for_new_content" : false
 }

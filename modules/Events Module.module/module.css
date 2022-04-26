@@ -18,11 +18,7 @@
 .event_titlemain .titleEve { max-width: 450px; width: 100%; padding-bottom: 30px; }
 
 
-.event_button span {     cursor: pointer; color: #19110b; font-weight: bold; display: inline-block; border: 3px solid #19110b; padding: 12px 20px; font-size: 20px; line-height: 18px; transition: all 0.4s ease; }
 .event_button { text-align: center;      margin-top: 30px; }
-.event_button span:hover {  background-color: #19110b;  color: #fff;  opacity: 1; }
-
-
 
 .eventsModule {
 		  display: flex;

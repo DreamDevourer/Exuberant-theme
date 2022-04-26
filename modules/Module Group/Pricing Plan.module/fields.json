@@ -631,25 +631,6 @@
     }
   } ]
 }, {
-  "id" : "3158a2fb-9758-3963-607a-eaea7e97a28e",
-  "name" : "button_color",
-  "display_width" : null,
-  "label" : "Button Color",
-  "required" : false,
-  "locked" : false,
-  "visibility" : {
-    "controlling_field" : "5c8eef30-3920-958e-f426-dfa42ab071c0",
-    "controlling_value_regex" : "style3",
-    "operator" : "EQUAL",
-    "access" : null,
-    "hidden_subfields" : null
-  },
-  "type" : "color",
-  "default" : {
-    "color" : "#4CBA79",
-    "opacity" : 100
-  }
-}, {
   "id" : "4f18f7a1-7f9f-b0e6-f178-56248e75b8c6",
   "name" : "style",
   "display_width" : null,
@@ -668,6 +649,26 @@
       "color" : "#3c885f",
       "opacity" : 100
     }
+  }, {
+    "id" : "bb2763f0-379d-eaae-0c80-2e9eeec3d28e",
+    "name" : "radius",
+    "display_width" : null,
+    "label" : "Radius",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "5c8eef30-3920-958e-f426-dfa42ab071c0",
+      "controlling_value_regex" : "style3",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "display" : "slider",
+    "min" : 0,
+    "max" : 100,
+    "step" : 1,
+    "type" : "number",
+    "default" : 0
   } ],
   "tab" : "STYLE",
   "expanded" : false,
@@ -676,26 +677,7 @@
     "button_color" : {
       "color" : "#3c885f",
       "opacity" : 100
-    }
+    },
+    "radius" : 0
   }
-}, {
-  "id" : "bb2763f0-379d-eaae-0c80-2e9eeec3d28e",
-  "name" : "radius",
-  "display_width" : null,
-  "label" : "Radius",
-  "required" : false,
-  "locked" : false,
-  "visibility" : {
-    "controlling_field" : "5c8eef30-3920-958e-f426-dfa42ab071c0",
-    "controlling_value_regex" : "style3",
-    "operator" : "EQUAL",
-    "access" : null,
-    "hidden_subfields" : null
-  },
-  "display" : "slider",
-  "min" : 0,
-  "max" : 100,
-  "step" : 1,
-  "type" : "number",
-  "default" : 0
 } ]

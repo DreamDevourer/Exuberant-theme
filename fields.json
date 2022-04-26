@@ -25,7 +25,7 @@
        
       },
 			{
-        "label": "Main Color",
+        "label": "Optional Color",
         "name": "main_color",
         "type": "color",
         "visibility": {
@@ -34,7 +34,7 @@
           }
         },
         "default": {
-          "color": "#4CBA79"
+          "color": "#000000"
         }
       },
       {
@@ -48,7 +48,7 @@
           }
         },
         "default": {
-          "color": "#FFFF"
+          "color": "#fff"
         }
       }
     ]
@@ -110,20 +110,24 @@
     "type": "group",
     "children": [
       {
-        "label": "Menu link color",
+        "label": "Menu link color (Static)",
         "name": "menu_link_color",
         "type": "color",
-        "visibility": {
-          "hidden_subfields": {
-            "opacity": true
-          }
-        },
-        "inherited_value": {
-          "property_value_paths": {
-            "color": "theme.global_fonts.primary_font.color"
-          }
+        "default": {
+          "color": "#ffffff"
         }
+        
       },
+       {
+        "label": "Menu link color (Sticky)",
+        "name": "menu_link_color_sticky",
+        "type": "color",
+        "default": {
+          "color": "#000000"
+        }
+        
+      },
+      
       {
         "label": "Child menu border color",
         "name": "child_menu_border_color",
@@ -134,9 +138,26 @@
           }
         },
         "default": {
-          "color": "#4CBA79"
+          "color": "#ffffff"
+        },
+								"inherited_value": {
+          "property_value_paths": {
+            "color": "brand_settings.primaryColor"
+          }
         }
+      },
+      
+      {
+        "label": "Mobile Background Color",
+        "name": "mobile_bg_color",
+        "type": "color",
+        "default": {
+          "color": "#000000"
+        }
+        
       }
+      
+      
     ]
   },
   {
@@ -384,6 +405,107 @@
       }
     ]
   },
+  
+  {
+    "label": "Buttons (Second Button Style)",
+    "name": "buttons_second",
+    "type": "group",
+    "children": [
+      {
+        "label": "Background color",
+        "name": "background_color",
+        "type": "color",
+        
+        "default": {
+          "opacity": 100,
+          "color":""
+        }
+      },
+      {
+        "label": "Text color",
+        "name": "text_color",
+        "type": "color",
+        "visibility": {
+          "hidden_subfields": {
+            "opacity": true
+          }
+        },
+        "default": {
+          "color": "#000000"
+        }
+      },
+      {
+        "label": "Border width",
+        "name": "border_width",
+        "type": "number",
+        "display": "slider",
+        "max": 20,
+        "min": 0,
+        "default": 2
+      },
+      {
+        "label": "Border color",
+        "name": "border_color",
+        "type": "color",
+        "default": {
+          "opacity": 100,
+          "color":"#000000"
+         }
+       },
+      
+      {
+        "label": "Corner radius",
+        "name": "border_radius",
+        "type": "number",
+        "display": "slider",
+        "max": 100,
+        "min": 0,
+        "default": 0
+      },
+      {
+        "label": "Horizontal padding",
+        "name": "horizontal_padding",
+        "type": "number",
+        "display": "slider",
+        "max": 100,
+        "min": 0,
+        "default": 35
+      },
+      {
+        "label": "Vertical padding",
+        "name": "vertical_padding",
+        "type": "number",
+        "display": "slider",
+        "max": 100,
+        "min": 0,
+        "default": 15
+      },
+      
+      {
+        "label": "Hover Background color",
+        "name": "hover_bg_color",
+        "type": "color",
+        
+        "default": {
+          "opacity": 100,
+          "color":"#000000"
+        }
+      },
+      {
+        "label": "Hover Text color",
+        "name": "hover_text_color",
+        "type": "color",
+        
+        "default": {
+          "opacity": 100,
+          "color":"#ffffff"
+        }
+      }
+      
+    ]
+  },
+  
+  
   {
     "label": "Forms",
     "name": "forms",
@@ -582,10 +704,16 @@
         "label": "Background color",
         "name": "background_color",
         "type": "color",
-        "default": {
-          "color": "#19110B",
-          "opacity": 100
+        "visibility": {
+          "hidden_subfields": {
+            "opacity": true
+          }
+        },
+        "inherited_value": {
+          "default_value_path": "theme.global_colors.main_color"
         }
+
+       
       },
       {
         "label": "Text color",

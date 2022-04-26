@@ -46,18 +46,6 @@
     "type" : "choice",
     "default" : "six"
   }, {
-    "id" : "e858b9e7-64fa-7ae7-38e2-6809b231837c",
-    "name" : "bg_color",
-    "display_width" : null,
-    "label" : "BG Color",
-    "required" : false,
-    "locked" : false,
-    "type" : "color",
-    "default" : {
-      "color" : "#ffffff",
-      "opacity" : 100
-    }
-  }, {
     "id" : "bb2ad5c5-2fbe-9105-e5b0-82dc2b746555",
     "name" : "row_loop",
     "display_width" : null,
@@ -339,10 +327,6 @@
   "type" : "group",
   "default" : {
     "column" : "six",
-    "bg_color" : {
-      "color" : "#ffffff",
-      "opacity" : 100
-    },
     "row_loop" : [ {
       "video_" : false,
       "embed_field" : {

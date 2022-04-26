@@ -117,7 +117,7 @@
     "id" : "b74a4770-c0a0-024a-4d28-211ad94d8118",
     "name" : "border_radius",
     "display_width" : null,
-    "label" : "Border Radius",
+    "label" : "Border Radius For Image",
     "required" : false,
     "locked" : false,
     "display" : "slider",

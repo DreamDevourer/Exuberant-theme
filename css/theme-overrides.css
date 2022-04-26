@@ -84,6 +84,9 @@
 {##################   2. Containers / Grid / DnD Areas   ###################}
 {###########################################################################}
 
+
+
+
 .content-wrapper {
   max-width: {{ container_width }};
 }
@@ -231,7 +234,7 @@ body > div.body-wrapper.hs-content-id-49099611227.hs-site-page.page > div:nth-ch
 				width: 100%;
     box-shadow: 0 0 10px rgb(0 0 0 / 25%);
     background: #fff;
-    margin-top: 30px;
+    margin-top: 0px;
 }
 
 .hs-menu-children-wrapper {

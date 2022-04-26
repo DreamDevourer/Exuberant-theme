@@ -170,7 +170,7 @@
     "id" : "3d1e02cc-e70d-8ec7-33a0-08caf28be597",
     "name" : "background_color",
     "display_width" : null,
-    "label" : "Background Color",
+    "label" : "Button Background Color",
     "required" : false,
     "locked" : false,
     "visibility" : {

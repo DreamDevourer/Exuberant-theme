@@ -1,42 +1,4 @@
 [ {
-  "id" : "96d3fcf4-7a2f-5ef3-0b55-97277104aa27",
-  "name" : "image_overlay",
-  "display_width" : null,
-  "label" : "Image Overlay",
-  "required" : false,
-  "locked" : false,
-  "visibility" : {
-    "controlling_field" : "3774604b-5658-0594-531d-575a43809ba1",
-    "controlling_value_regex" : "true",
-    "operator" : "EQUAL",
-    "access" : null,
-    "hidden_subfields" : null
-  },
-  "type" : "color",
-  "default" : {
-    "color" : "#4CBA79",
-    "opacity" : 100
-  }
-}, {
-  "id" : "1b91b935-2d4c-f32b-4453-075458693e09",
-  "name" : "bg_color",
-  "display_width" : null,
-  "label" : "Background Color",
-  "required" : false,
-  "locked" : false,
-  "visibility" : {
-    "controlling_field" : "3774604b-5658-0594-531d-575a43809ba1",
-    "controlling_value_regex" : "true",
-    "operator" : "EQUAL",
-    "access" : null,
-    "hidden_subfields" : null
-  },
-  "type" : "color",
-  "default" : {
-    "color" : "#ffffff",
-    "opacity" : 100
-  }
-}, {
   "id" : "f6d16008-5748-b091-7785-2f080cdbff8b",
   "name" : "all_text_color_white_",
   "display_width" : null,
@@ -63,8 +25,8 @@
   "display_width" : null,
   "label" : "Remove Icon?",
   "required" : false,
-  "locked" : false,
-  "display" : "checkbox",
+  "locked" : true,
+  "display" : "toggle",
   "type" : "boolean",
   "default" : true
 }, {
@@ -348,11 +310,37 @@
     "label" : "Background image",
     "required" : false,
     "locked" : false,
+    "visibility" : {
+      "controlling_field" : "3774604b-5658-0594-531d-575a43809ba1",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
     "type" : "backgroundimage",
     "default" : {
       "background_position" : "MIDDLE_CENTER",
       "background_size" : "cover",
-      "src" : "https://www.remotish.agency/hubfs/IMG_1758%20(1)-compressed.jpg"
+      "src" : "https://www.remotish.agency/hubfs/Image-1.jpeg"
+    }
+  }, {
+    "id" : "f2149236-dbc9-84a9-ebb6-8136c13e0dc5",
+    "name" : "image_overlay",
+    "display_width" : null,
+    "label" : "Image Overlay",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "3774604b-5658-0594-531d-575a43809ba1",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : "#4CBA79",
+      "opacity" : 100
     }
   } ],
   "tab" : "STYLE",
@@ -363,7 +351,11 @@
     "select_background_image" : {
       "background_position" : "MIDDLE_CENTER",
       "background_size" : "cover",
-      "src" : "https://www.remotish.agency/hubfs/IMG_1758%20(1)-compressed.jpg"
+      "src" : "https://www.remotish.agency/hubfs/Image-1.jpeg"
+    },
+    "image_overlay" : {
+      "color" : "#4CBA79",
+      "opacity" : 100
     }
   }
 }, {
